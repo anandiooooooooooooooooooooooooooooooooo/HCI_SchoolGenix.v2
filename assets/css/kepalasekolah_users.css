@@ -130,7 +130,7 @@
     body {
         display: flex;
         height: 100vh;
-        background: #4A5C7C;
+        background: #024078;
     }
     
     .container {
@@ -142,7 +142,7 @@
     /* SIDEBAR */
     .sidebar {
         height: 100vh;
-        width: 20vw;
+        width: 300px;
         background: var(--sidebar-bg);
         color: var(--text-dark);
         display: flex;
@@ -160,9 +160,8 @@
     }
     
     .profile-section img {
-        width: 10vw;
-        height: 10vw;
-        border-radius: 70%;
+        width: 70%;
+        border-radius: 50%;
         margin-bottom: 15px;
     }
     
@@ -196,16 +195,33 @@
         color: white;
     }
 
+    .sidebar button#logout-btn {
+        border: none;
+        background:black;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 12px 0;
+        width: 85%;
+        border-radius: 30px;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .sidebar button#logout-btn:hover {
+        background:rgb(220, 220, 220);
+        color: black;
+    }
+    
     /* MAIN CONTENT */
     .main-content {
         display: flex;
         flex-direction: column;
-        width: 80vw;
+        /* justify-content: space-between; */
+        width: 100vw;
         padding: 30px;
         min-height: 100vh;
-        flex-grow: 1;
+        /* flex-grow: 1; */
         margin-left: 300px;
-        gap: 35px;
     }
     
     .searchbar-section {
@@ -221,8 +237,7 @@
     }
     
     .searchbar {
-        flex: 1;
-        /* width: 100%; */
+        flex:auto;
         padding: 5px 15px;
         border: 1px solid #ccc;
         border-radius: 30px;
@@ -238,218 +253,147 @@
     .search-right-icon img {
         width: 24px;
         height: 24px;
-        border-radius: 10%;
+        border-radius: 50%;
     }
     
     .welcome-text-section {
-        display: flex;
+        display:table-column;
         align-items: center;
-        justify-content: space-between;
+        margin-top: 35px;
     }
     
     .welcome-text-section h1 {
-        font-size: 60px;
+        font-size: 70px;
         line-height: 1;
         color: var(--text-light);
     }
     
     .welcome-text-section h2 {
         font-size: 30px;
+        color: white;
     }
+
+
+/* DROPDOWN MENU */
+.dropdown {
+    align-items: center;
+    position: relative;
+    display: block
+}
+
+.dropdown-btn {
+    color: (--text-dark);
+    font-weight:lighter;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    margin-left: 8px;
+    transition: transform 0.2s ease;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--text-light);
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+    display: none;
+    width: 10vw;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 14px;
+}
+
+.dropdown-menu li:hover {
+    background: #f4f4f4;
+}
+
+.dropdown.active .dropdown-menu {
+    display: block;
+}
+
+.dropdown.active .arrow {
+    transform: rotate(180deg);
+}
+
+
+/* CONTENT MENU */
+.user-menu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2vh;
+}
+
+.user-search {
+    max-width: 30vw;
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+
+
     
-    /* DROPDOWN MENU */
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
-    
-    .dropdown-btn {
-        color: var(--text-light);
-        font-weight: bold;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-    }
-    
-    .arrow {
-        margin-left: 8px;
-        transition: transform 0.2s ease;
-    }
-    
-    .dropdown-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background: var(--text-light);
-        border-radius: 5px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-        list-style: none;
-        padding: 0;
-        margin: 5px 0;
-        display: none;
-        width: 180px;
-        overflow: hidden;
-        z-index: 1000;
-    }
-    
-    .dropdown-menu li {
-        padding: 10px 15px;
-        cursor: pointer;
-        transition: background 0.3s ease;
-        font-size: 14px;
-    }
-    
-    .dropdown-menu li:hover {
-        background: #f4f4f4;
-    }
-    
-    .dropdown.active .dropdown-menu {
-        display: block;
-    }
-    
-    .dropdown.active .arrow {
-        transform: rotate(180deg);
-    }
-    
-    /* MIDDLE CONTENT */
-    .middle-content {
+    /* CLASSES CONTENT */
+    .classes-content {
         display: flex;
         flex-direction: column;
+        /* height: 100%; */
         width: 100%;
         background-color: white;
         padding: 20px;
         border-radius: 12px;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        gap: 20px;
-    }
-    
-    .ID {
-        display: flex;
-        flex-direction: column;
+        gap: 0px;
+        margin-top: 35px;
     }
 
     
-    .student-face {
-        width: 45vw;
-        border-radius: 100%;
+    .class-group {
+        margin-bottom: 0.5vh;
+        display: flex;
+        flex-direction: column;
+        padding: 0.5px;
     }
     
-    .ID-details {
-        font-size: 35px;
+    .class-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        font-size: 18px;
         font-weight: bold;
         color: #333;
     }
-    
-    .header-ID {
+
+    .class-item {
+
+        max-width: 100%;
         display: flex;
-        gap: 60px;
-        margin: 15px;
-    }
+        flex-wrap: 1;
+        overflow: hidden;
 
-    .student-ID {
-        display: row;
-        row-gap: 5px;
-    }
-    .items {
-        padding: 20px;
-        background-color: #f0f0f0;
-        border-radius: 10px;
-        font-size: 14px;
-        display: grid;
-        display: flex;
-        grid-auto-flow: column;
-        flex-wrap: wrap;
-        row-gap: 40px;
-        gap: 1px;
-        justify-content: space-around;
     }
     
-    .widgets {
-        display: flex;
-    }
-    
-    .items> .statistic img{
-        padding: 20px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        font-size: 14px;
-        width: 29vw;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-    
-    .items> .performance img {
-        padding: 20px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        font-size: 14px;
-        width: 20vw;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-    
-    .items> .taskprogress img{
-        padding: 20px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        font-size: 14px;
-        width: 18vw;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-    /* RESPONSIVE DESIGN */
-    /* @media (max-width: 768px) {
-        .sidebar {
-            width: 250px;
-            padding: 40px 15px;
-        }
-        
-        .searchbar-section {
-            flex-direction: column;
-            align-items: stretch;
-        }
-        
-        .searchbar {
-            max-width: 100%;
-        }
-        
-        .annoucement-section {
-            flex-direction: column;
-            gap: 10px;
-        }
-    } */
-    
-    
-    /* THIS IS TEST MSG FOR DEV BRANCH */
-
-
-
-    /* .items> .content {
-        max-width: 300px;
-        padding: 20px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        font-size: 14px;
-        width: 350px;
-        flex-wrap: wrap;
-        gap: 10px;
-        flex: 1 1 200px;
-    } */
-    
-    /* .items> .content img{
-        width: 20vw; 
+    .class-item img{
+        max-width: 100%;
         height: auto;
-        margin-bottom: 10px;
-        gap: vw;
-    } */
+        display: block;
+    }
+
+
+ 
