@@ -306,7 +306,7 @@ margin-right: 0.5vw;
 .section1{
 display: grid;
 grid-template-columns: auto ;
-width: 75vw;
+    width: 75vw;
 column-gap: 1vw;
 gap: 2vh;
 font-size: 1vw;
@@ -345,3 +345,102 @@ font-size: 1.2vw;
 .navigation>img {
     width: 1.5vw;
 }
+
+.box {
+    position: absolute;
+    height:6vw;
+    width: 6vw;
+    border-radius: 50%;
+    border: 0px solid blue;
+
+    background-color: black;
+}
+
+/* Table */
+ .table-container {
+    background: white;
+    overflow: hidden;
+    width: 75vw;
+    border-radius: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 16px;
+    text-align: left;
+    font-size: 14px;
+    color: #3a3a3a;
+  }
+  
+  thead {
+    background-color: #f0f0f0;
+  }
+  
+  .name {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+  }
+  
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #c2c2f2;
+  }
+  
+  .id {
+    color: #f3a5e0;
+  }
+  
+  .contact-icon {
+    margin-right: 8px;
+    color: #fba9ec;
+  }
+  
+  .badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 12px;
+    color: white;
+  }
+  
+  .badge.red {
+    background-color: #ff7b57;
+    
+  }
+  
+  .badge.yellow {
+    background-color: #f7c948;
+  }
+  
+  .badge.pink {
+    background-color: #f7aef8;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+  }
+  
+  .pagination button {
+    border: none;
+    background: none;
+    margin: 0 4px;
+    padding: 8px 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #666;
+    font-weight: bold;
+  }
+  
+  .pagination button.active {
+    background-color: #f7aef8;
+    color: white;
+  }
