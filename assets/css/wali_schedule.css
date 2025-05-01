@@ -196,6 +196,23 @@
         color: white;
     }
 
+    .sidebar button#logout-btn {
+        border: none;
+        background:black;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 12px 0;
+        width: 85%;
+        border-radius: 30px;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .sidebar button#logout-btn:hover {
+        background:rgb(220, 220, 220);
+        color: black;
+    }
+
     /* MAIN CONTENT */
     .main-content {
         display: flex;
@@ -239,7 +256,7 @@
     .search-right-icon img {
         width: 24px;
         height: 24px;
-        border-radius: 10%;
+        border-radius: 100%;
     }
     
     .welcome-text-section {
@@ -394,3 +411,89 @@
     .widgets {
         display: flex;
     } 
+
+    .calendar-container {
+        background: white;
+        border-radius: 16px;
+        padding: 30px 40px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+        width: 100%;
+        /* max-width: 800px; */
+      }
+      
+      .calendar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      
+      .calendar-header h2 {
+        font-size: 20px;
+        color: #2a2a52;
+        margin: 0;
+      }
+      
+      .calendar-month {
+        font-weight: 600;
+        color: #2a2a52;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+      }
+      
+      .calendar-month .arrow {
+        margin-left: 6px;
+        font-size: 12px;
+      }
+      
+      .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 10px;
+        text-align: center;
+      }
+      
+      .day-name {
+        font-size: 14px;
+        color: #a3a0b0;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      
+      .day {
+        padding: 14px 0;
+        font-size: 14px;
+        color: #2a2a52;
+        font-weight: 600;
+        border-radius: 100px;
+      }
+      
+      .other-month {
+        color: #c2bccb;
+      }
+      
+      .today {
+        background: #3f3f97;
+        color: white;
+      }
+      
+      .highlight {
+        background: #f3f3f3;
+        border-radius: 10%;
+      }
+      
+      .red {
+        color: #ff6a4f;
+      }
+      
+      .orange {
+        background: #ff7f5c;
+        color: white;
+      }
+      
+      .yellow {
+        background: #ffc83f;
+        color: white;
+      }
+      
