@@ -108,6 +108,7 @@ font-style: italic;
 
 /* GENERAL STYLES */
 :root {
+    --ijo: #2E4D2E;
     --primary-bg: #762f2f;
     --sidebar-bg: white;
     --text-light: white;
@@ -117,7 +118,6 @@ font-style: italic;
     --searchbar-bg: white;
     --tab-bg: white;
     --tab-active-bg: #f8f8f8;
-    --border-radius: 12px;
 }
 
 * {
@@ -130,7 +130,7 @@ font-style: italic;
 body {
     display: flex;
     height: 100vh;
-    background: #780016;
+    background: #2E4D2E;
 }
 
 .container {
@@ -150,6 +150,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 50px 20px;
+    position: fixed;
 }
 
 .profile-section {
@@ -197,16 +198,18 @@ body {
 .main-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     width: 100%;
     padding: 30px;
     min-height: 100vh;
     flex-grow: 1;
+    margin-left: 300px;
+    gap: 35px;
 }
 
 .searchbar-section {
     background: var(--searchbar-bg);
-    border-radius: var(--border-radius);
+    border-radius: 12px;
     padding: 15px 25px;
     gap: 20px;
     width: 100%;
@@ -218,7 +221,7 @@ body {
 
 .searchbar {
     flex: 1;
-    width: 100%;
+    /* width: 100%; */
     padding: 5px 15px;
     border: 1px solid #ccc;
     border-radius: 30px;
@@ -312,137 +315,56 @@ body {
 
 /* CLASSES CONTENT */
 .classes-content {
-    height: 75%;
-}
-
-/* TABS */
-.tabs {
     display: flex;
-    position: relative;
-}
-
-.tab {
-    background: var(--tab-bg);
-    padding: 12px 20px;
-    border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
-    margin-right: -12px;
-    position: relative;
-    z-index: 1;
-    font-weight: bold;
-    font-size: 14px;
-    color: var(--text-dark);
-    box-shadow: 2px -2px 5px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-.tab.active {
-    z-index: 10;
-    background-color: var(--tab-active-bg);
-    box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.5);
-}
-
-/* PAGE SECTIONS */
-.pages {
-    padding: 20px;
-    background: var(--text-light);
-    height: 100%;
-    border-top-right-radius: var(--border-radius);
-    border-bottom-left-radius: var(--border-radius);
-    border-bottom-right-radius: var(--border-radius);
-}
-
-.page {
-    display: none;
-}
-
-.page.active {
-    display: block;
-}
-
-/* ABSENCE SECTION */
-#absence {
+    flex-direction: column;
+    /* height: 100%; */
     width: 100%;
-    display: flex;
-    flex-direction: row;
+    background-color: white;
     padding: 20px;
-    align-items: center;
-    justify-content: space-between;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 20px;
 }
 
-#absence .left{
-    flex: 1;
+.class-group {
+    /* margin-bottom: 15px; */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 35px;
+    /* padding: 20px; */
 }
 
-#absence .log-session-container{
-    display: flex;
-    justify-content: space-between;
+.class-header {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
 }
 
-#absence .log-session-right{
-    display: flex;
-    align-items: center;
-}
-
-#absence .right {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#absence .right> img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-}
-
-#grades{
-    border: 1px solid black;
-}
-
-#grades .grade-block{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border: 1px solid black;
+.class-list {
     padding: 10px;
-    gap: 50px;
-    border-radius: 10px;
-}
-
-#grades .grade-block .above{
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    font-size: 14px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    /* border: 1px solid black; */
-    gap: 60px;
+    flex-wrap: 1;
 }
-
-#grades .grade-block .above .left img{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-#grades .grade-block .above .right img{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-}
-
-#grades .grade-block .below{
+.class-list> .class-item {
+    /* max-width: 200px; */
+    padding: 20px;
     display: flex;
-    justify-content: space-between;
-    padding: 10px 30px;
-    border-radius: 10px;
-    background-color: red;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px
 }
+
+.class-list> .class-item img{
+    width: 200px;
+    height: 200px;
+    border-radius: 40%;
+    margin-bottom: 10px;
+}
+
 
 /* RESPONSIVE DESIGN */
 /* @media (max-width: 768px) {
@@ -465,3 +387,6 @@ body {
         gap: 10px;
     }
 } */
+
+
+/* THIS IS TEST MSG FOR DEV BRANCH */
