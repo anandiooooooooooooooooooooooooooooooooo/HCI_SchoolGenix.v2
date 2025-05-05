@@ -1,6 +1,4 @@
-<<<<<<< HEAD
- 
-=======
+
 .poppins-thin {
 font-family: "Poppins", sans-serif;
 font-weight: 100;
@@ -109,6 +107,10 @@ font-weight: 900;
 font-style: italic;
 }
 
+:root {
+--searchbar-bg: white;
+}
+
 * {
 margin: 0;
 padding: 0;
@@ -120,7 +122,7 @@ body {
 display: flex;
 height: 100vh;
 /* position: fixed; */
-background: #780016;
+background: #582C4D;
 }
 
 .sidebar {
@@ -179,6 +181,11 @@ background: #d3d2d2;
 
 .logout a{
 width: 13vw;
+background: #1f1f1f;
+color: white;
+}
+.logout a:hover{
+background: #303030;
 }
 
 .content{
@@ -194,11 +201,11 @@ gap: 1vw
 }
 
 .searchbar-section {
-background: #D9D9D9;
-border-radius: 15px;
+background: var(--searchbar-bg);
+border-radius: 12px;
 padding: 15px 25px;
 gap: 20px;
-width: 100%;
+width: 75vw;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -207,7 +214,7 @@ flex-wrap: wrap;
 
 .searchbar {
 flex: 1;
-width: 100%;
+/* width: 100%; */
 padding: 5px 15px;
 border: 1px solid #ccc;
 border-radius: 30px;
@@ -217,7 +224,6 @@ border-radius: 30px;
 display: flex;
 justify-content: flex-end;
 align-items: center;
-width: auto;
 gap: 10px;
 }
 
@@ -226,233 +232,145 @@ width: 24px;
 height: 24px;
 border-radius: 50%;
 }
+
 .main-text-container {
 display: flex;
-width: 85vw;
-padding-left: 5vw;
-color: rgb(255, 255, 255);
+width: 75vw;
+/* padding-left: 5vw; */
+color: white;
+flex-direction: column;
 }
 
 .main-text{
 /* border: 2px solid red; */
 display: flex;
-align-content: flex-start;
 flex-direction: column;
-padding: 1vw 0;
+padding-top: 1vw;
 }
-/*Summary Bar*/
-.summary-bar {
-background-color: rgb(255, 255, 255);
-border-radius: 16px;
-padding: 20px;
+
+.bottom_text {
 display: flex;
-justify-content: space-around;
-align-items: center;
-margin: 30px 0;
-width: 75vw;
+justify-content: space-between;
+
 }
 
-.summary-item {
-text-align: center;
-color: #444;
+#search_students {
+border-radius: 3vw;
+height: 6vh;
+width: 22vw;
 }
 
-.summary-item .icon {
-width: 50px;
-height: 50px;
-border-radius: 25px;
-margin: 0 auto 10px;
+.right {
+display: flex;
+justify-content: space-between;
+width: 21.5vw;
+}
+
+
+
+.right>a {
+border-radius: 3vw;
 display: flex;
 align-items: center;
 justify-content: center;
+height: 6vh;
+width: 10.5vw;
+border: none;
+background-color: #FFBAF8;
 color: white;
-font-size: 24px;
+font-style: none;
+text-decoration: none;
+font-size: 1vw;
 }
 
-.icon.purple {
-background-color: #5b50e5;
+.filter>img {
+width: 1.8vw;
+margin-left: 0.5vw;
 }
 
-.icon.orange {
-background-color: #fb896b;
+.filter {
+background-color: transparent !important;
+border: 0.2vw solid #FFBAF8 !important;
+color: #FFBAF8 !important;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
-.icon.yellow {
-background-color: #facc15;
-color: #000;
+.right>a>strong {
+margin-right: 0.5vw;
 }
 
-.label {
-font-size: 14px;
-color: #999;
-}
-
-.value {
-font-size: 20px;
-font-weight: 700;
-color: #1e1e4b;
-}
-
-.card {
-flex: 1;
-padding: 20px;
-border-radius: 12px;
-color: white;
-text-align: center;
-}
-.card h4 {
-font-size: 1rem;
-}
-.card p {
-font-size: 2rem;
-font-weight: bold;
-}
-.card.purple {
-background-color: #4f46e5;
-}
-.card.orange {
-background-color: #f97316;
-}
-.card.yellow {
-background-color: #facc15;
-color: #000;
-}
+/* Section 1 */
 
 .section1{
 display: grid;
-grid-template-columns: auto;
+grid-template-columns: auto auto auto auto;
 width: 75vw;
 column-gap: 1vw;
 gap: 2vh;
-
-}
-
-.section1,.section2,.section3 {
 font-size: 1vw;
 color: #303972;
 }
 
-.performance>img {
-display: flex;
-width: 72vw;
-}
-
-.performance {
-display: flex;
-flex-direction: column;
-border: 2px solid blue;
-background-color: white;
-height: 30vw;
-border-radius: 10px;
-align-items: center;
-justify-content: center;
-}
-
-.performance>h2 {
-align-self: flex-start;
-padding-left: 1.5vw;
-}
-
-/* Section 2 */
-
-.section2{
-display: grid;
-grid-template-columns: 36.5vw auto ;
-width: 75vw;
-column-gap: 1vw;
-gap: 2vh;
-}
-
-.calendar {
-display: flex;
-flex-direction: column;
-width: 36.5vw;
-}
-.calnedar>ul {list-style-type: none;}
-
-.weekdays {
-padding: 1vw 0;
-background-color: #ddd;
-margin: 0;
-display: grid;
-grid-template-columns: auto auto auto auto auto auto auto;
-}
-
-.weekdays li {
-display: flex;
-width: 4.5vw;
-/* height: 4.5vw; */
-justify-content: center;
-align-items: center;
-color: #666;
-flex-wrap: nowrap;
-font-size:12px;
-}
-
-.days {
-padding: 1vw 0;
-background: #eee;
-margin: 0;
-display: grid;
-grid-template-columns: auto auto auto auto auto auto auto;
-
-}
-
-.days li {
-list-style-type: none;
-display: flex;
-flex-direction: column;
-width: 4.5vw;
-height: 4.5vw;
-align-items: center;
-justify-content: center;
-font-size:12px;
-color: #777;
-/* margin-left: 2vw; */
-}
-
-.days li .active {
-padding: 5px;
-background: #1abc9c;
-color: white !important;
-}
-
-.Attendance>img {
-width: 35vw;
-}
-
-.Attendance>h2 {
-align-self: flex-start;
-}
-
-.Attendance {
-display: flex;
-flex-direction: column;
-align-items: center ;
-}
-
-/* Section 3 */
-
-.section3{
-display: grid;
-grid-template-columns: auto ;
-width: 75vw;
-column-gap: 1vw;
-gap: 2vh;
-}
-
-.unpaid>img {
-width: 72vw;
-}
-
-.calendar,
-.performance,
-.unpaid,
-.Attendance {
+.teacher {
 background-color: white;
 border-radius: 10px;
-padding: 1vw;
+/* padding: 1vw; */
+align-items: center;
+justify-content: center;
+display: flex;
+flex-direction: column;
+/* gap: 1vw; */
+/* height: 34vh; */
+padding: 2vw 1vw 2vw 1vw;
 }
+
+.teacher-top {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 1.5vh;
+}
+
+.teacher-bottom {
+margin-top: 2vh;
+}
+
+.teacher-bottom > img {
+padding-left: 0.5vw;
+padding-right: 0.5vw;
+}
+
+.dot {
+height:6vw;
+width: 6vw;
+background-color: #C1BBEB;
+border-radius: 50%;
+display: inline-block;
+}
+
+.dot-up {
+display: flex;
+gap: 0.2vw;
+margin-left: 12vw;
+margin-bottom: 19.5vh;
+position: absolute;
+align-items: start;
+justify-content: flex-start;
+}
+
+#small {
+height:0.4vw;
+width: 0.4vw;
+background-color: #C1BBEB;
+border-radius: 50%;
+display: inline-block;
+}
+
+
+
 
 .icon {
 display: flex;
@@ -473,5 +391,3 @@ font-size: 1.2vw;
 .navigation>img {
     width: 1.5vw;
 }
-
->>>>>>> origin/admin

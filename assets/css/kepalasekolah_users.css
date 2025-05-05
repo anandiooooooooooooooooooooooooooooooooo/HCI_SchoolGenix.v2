@@ -1,6 +1,3 @@
-<<<<<<< HEAD
- 
-=======
 .poppins-thin {
     font-family: "Poppins", sans-serif;
     font-weight: 100;
@@ -335,6 +332,22 @@
     transform: rotate(180deg);
 }
 
+
+/* CONTENT MENU */
+.user-menu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2vh;
+}
+
+.user-search {
+    max-width: 30vw;
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+
+
     
     /* CLASSES CONTENT */
     .classes-content {
@@ -383,4 +396,4 @@
     }
 
 
->>>>>>> origin/admin
+ 

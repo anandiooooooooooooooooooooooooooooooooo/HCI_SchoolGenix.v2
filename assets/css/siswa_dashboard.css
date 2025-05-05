@@ -201,7 +201,10 @@ body{
     /* margin-left: 300px; */
     min-height: 100vh;
     flex-grow: 1;
+<<<<<<< HEAD
     gap: 35px;
+=======
+>>>>>>> origin/admin
 }
 
 .searchbar-section {
