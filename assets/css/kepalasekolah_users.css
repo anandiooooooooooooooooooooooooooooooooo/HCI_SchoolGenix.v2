@@ -332,6 +332,41 @@
     transform: rotate(180deg);
 }
 
+
+/* CONTENT MENU */
+.user-menu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2vh;
+}
+
+.user-search {
+    max-width: 30vw;
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+
+.user-menu-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.user-menu-section button{
+    border: none;
+    background: var(--button-bg);
+    color: var(--text-dark);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 7px 7px;
+    max-width: fit-content;
+    border-radius: 30px;
+    transition: background 0.3s ease-in-out;
+}
+
     
     /* CLASSES CONTENT */
     .classes-content {
@@ -344,7 +379,7 @@
         border-radius: 12px;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         gap: 0px;
-        margin-top: 35px;
+        margin-top: 2vh;
     }
 
     
@@ -379,80 +414,5 @@
         display: block;
     }
 
-/* CALENDAR */
-.calendar {
-    max-width: 100%;
-    border: 1px solid #e0e0e0;
-  }
-  
-  .calendar-header, .calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    text-align: center;
-  }
-  
-  .calendar-header div, .calendar-grid div {
-    border: 1px solid #e0e0e0; /* Grid lines */
-    padding: 0;
-    font-weight: 600;
-    padding: 15px 0;
+
  
-  }
-  
-  .calendar-header div {
-    font-weight: bold;
-    color: #a0a0b0;
-    background-color: #fafafa;
-
-  }
-  
-  .calendar-grid div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #1f1f3f;
-    background-color: #fff;
-    box-sizing: border-box;
-    /* min-height: 80px; */
-  }
-  
-  .muted {
-    color: #a0a0b0;
-  }
-  
-  .orange {
-    color: #d18763;
-  }
-  
-  .highlight {
-    background-color: #f5f5f5;
-  }
-  
-  .circle {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-
-    color: white;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto; /* center in cell */
-    
-  }
-  
-  .circle.blue {
-    background-color:rgba(77, 68, 181, 1);
-    color:#fff;
-  }
-  
-  .circle.brown {
-    background-color:rgba(251, 125, 91, 1);
-    color:#fff;
-  }
-  
-  .circle.yellow {
-    background-color:rgba(252, 196, 62, 1);
-    color: #fff;
-  }
