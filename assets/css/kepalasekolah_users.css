@@ -259,7 +259,7 @@
     .welcome-text-section {
         display:table-column;
         align-items: center;
-        margin-top: 35px;
+        margin-top: 25px;
     }
     
     .welcome-text-section h1 {
@@ -274,145 +274,126 @@
     }
 
 
-/* DROPDOWN MENU */
-.dropdown {
-    align-items: center;
-    position: relative;
-    display: block
-}
-
-.dropdown-btn {
-    color: (--text-dark);
-    font-weight:lighter;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-}
-
-.arrow {
-    margin-left: 8px;
-    transition: transform 0.2s ease;
-}
-
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: var(--text-light);
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    list-style: none;
-    padding: 0;
-    margin: 5px 0;
-    display: none;
-    width: 10vw;
-    overflow: hidden;
-    z-index: 1000;
-}
-
-.dropdown-menu li {
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    font-size: 14px;
-}
-
-.dropdown-menu li:hover {
-    background: #f4f4f4;
-}
-
-.dropdown.active .dropdown-menu {
-    display: block;
-}
-
-.dropdown.active .arrow {
-    transform: rotate(180deg);
-}
-
-
 /* CONTENT MENU */
-.user-menu {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2vh;
-}
-
-.user-search {
-    max-width: 30vw;
-    padding: 5px 15px;
-    border: 1px solid #ccc;
-    border-radius: 30px;
-}
-
 .user-menu-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 15px;
     width: 100%;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
-.user-menu-section button{
+
+.user-search {
+    width: 25%;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+
+.transparent-button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    padding: 10px 20px; 
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.color-button {
+    background-color: #5E60CE;
+    color: #fff;
     border: none;
-    background: var(--button-bg);
-    color: var(--text-dark);
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+    
+/* CLASSES CONTENT */
+.classes-content {
+    display: flex;
+    flex-direction: column;
+    /* height: 100%; */
+    width: 100%;
+    background-color: transparent;
+    border-radius: 12px;
+    gap: 0px;
+}
+
+    
+.user-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.user-card {
+    background: #f8f8f8;
+    /* min-width: 22%;
+    max-width: 22%; */
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.user-avatar img {
+    width: 80px;
+    height: 80px;
+    background-color: #cfc6f1;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 10px auto;
+}
+
+.user-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.user-subject {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.user-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.icon-btn {
+    background: #2e3c78;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
     font-size: 16px;
     cursor: pointer;
-    padding: 7px 7px;
-    max-width: fit-content;
-    border-radius: 30px;
-    transition: background 0.3s ease-in-out;
 }
 
-    
-    /* CLASSES CONTENT */
-    .classes-content {
-        display: flex;
-        flex-direction: column;
-        /* height: 100%; */
-        width: 100%;
-        background-color: white;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        gap: 0px;
-        margin-top: 2vh;
-    }
+.icon-btn:hover {
+    background: #1d2d5f;
+}
 
-    
-    .class-group {
-        margin-bottom: 0.5vh;
-        display: flex;
-        flex-direction: column;
-        padding: 0.5px;
-    }
-    
-    .class-header {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
-        font-size: 18px;
-        font-weight: bold;
-        color: #333;
-    }
-
-    .class-item {
-
-        max-width: 100%;
-        display: flex;
-        flex-wrap: 1;
-        overflow: hidden;
-
-    }
-    
-    .class-item img{
-        max-width: 100%;
-        height: auto;
-        display: block;
-    }
 
 
  
