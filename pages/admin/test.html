@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>School Finance</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background-color: #3f206e;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .unpaid {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 700px;
+      margin: 50px auto;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2d2d5a;
+      margin-bottom: 20px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .circle {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .blue {
+      background-color: #bfc9ff;
+    }
+
+    .brown {
+      background-color: #c5b4a3;
+    }
+
+    canvas {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">School Finance</div>
+
+    <div class="legend-custom">
+      <div class="legend-item"><span class="circle blue"></span>This Week <strong>1.245</strong></div>
+      <div class="legend-item"><span class="circle brown"></span>Last Week <strong>1.356</strong></div>
+    </div>
+
+    <canvas id="financeChart" height="300"></canvas>
+  </div>
+
+  <script>
+    const crx = document.getElementById('financeChart').getContext('2d');
+
+    new Chart(crx, {
+      type: 'bar',
+      data: {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        datasets: [
+          {
+            label: 'This Week',
+            data: [95, 45, 35, 48, 28, 65, 72],
+            backgroundColor: '#bfc9ff',
+            borderRadius: 6,
+            barPercentage: 0.5,
+          },
+          {
+            label: 'Last Week',
+            data: [75, 58, 29, 43, 20, 83, 55],
+            backgroundColor: '#c5b4a3',
+            borderRadius: 6,
+            barPercentage: 0.5,
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              title: (tooltipItems) => tooltipItems[0].label,
+              label: (tooltipItem) => {
+                const value = tooltipItem.raw;
+                const percent = Math.round((value / 100) * 100);
+                return [`${percent}%`]
+              },
+              labelTextColor: () => '#fff',
+            },
+            backgroundColor: '#4c46a2',
+            titleFont: { weight: 'bold', size: 14 },
+            bodyFont: { weight: 'normal', size: 13 },
+            padding: 10,
+            caretPadding: 5,
+            cornerRadius: 6
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 100,
+            ticks: { color: '#aaa' },
+            grid: { color: '#eee' }
+          },
+          x: {
+            ticks: {
+              color: '#444',
+              font: { weight: (crx) => crx.tick.label === 'Wed' ? 'bold' : 'normal' }
+            },
+            grid: { display: false }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

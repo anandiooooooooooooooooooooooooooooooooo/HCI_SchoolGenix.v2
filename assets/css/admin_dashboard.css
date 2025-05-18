@@ -3,109 +3,91 @@
   font-weight: 100;
   font-style: normal;
 }
-
 .poppins-extralight {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-style: normal;
 }
-
 .poppins-light {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
-
 .poppins-regular {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-
 .poppins-medium {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
-
 .poppins-semibold {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
-
 .poppins-bold {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
-
 .poppins-extrabold {
   font-family: "Poppins", sans-serif;
   font-weight: 800;
   font-style: normal;
 }
-
 .poppins-black {
   font-family: "Poppins", sans-serif;
   font-weight: 900;
   font-style: normal;
 }
-
 .poppins-thin-italic {
   font-family: "Poppins", sans-serif;
   font-weight: 100;
   font-style: italic;
 }
-
 .poppins-extralight-italic {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-style: italic;
 }
-
 .poppins-light-italic {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: italic;
 }
-
 .poppins-regular-italic {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: italic;
 }
-
 .poppins-medium-italic {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: italic;
 }
-
 .poppins-semibold-italic {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: italic;
 }
-
 .poppins-bold-italic {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: italic;
 }
-
 .poppins-extrabold-italic {
   font-family: "Poppins", sans-serif;
   font-weight: 800;
   font-style: italic;
 }
-
 .poppins-black-italic {
   font-family: "Poppins", sans-serif;
   font-weight: 900;
   font-style: italic;
 }
-
 :root {
   --searchbar-bg: white;
 }
@@ -116,13 +98,25 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
 body {
   display: flex;
   height: 100vh;
   /* position: fixed; */
   background: #582C4D;
 }
+
+.section1,.section2,.section3 {
+  font-size: 1vw;
+  color: #303972;
+}
+
+.calendar,.performance,.unpaid,.finance {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1vw;
+}
+
+/* Sidebar Start */
 
 .sidebar {
   /* border: 4px solid red; */
@@ -135,7 +129,6 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   padding: 20px 0;
 }
@@ -145,7 +138,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   padding: 10px;
   width: 15vw;
 }
@@ -195,34 +187,37 @@ body {
   background: #303030;
 }
 
+/* Sidebar End */
+
+
 .content{
   /* border: 4px solid rgb(0, 255, 26); */
   display: flex;  
   width: 85vw;
   flex-direction: column;
   align-items: center;
-  flex-grow: 1;
-  padding: 20px;
+  padding: 2vh;
   margin-left: 15vw;
   gap: 1vw
 }
 
+/* Searchbar Start */
+
 .searchbar-section {
+  /* border: 4px solid rgb(0, 255, 26); */
   background: var(--searchbar-bg);
   border-radius: 12px;
-  padding: 15px 25px;
-  gap: 20px;
+  padding: 1.5vh 1vw;
+  gap: 1vw;
   width: 75vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .searchbar {
   flex: 1;
-  /* width: 100%; */
-  padding: 5px 15px;
+  padding: 0.5vh 1vw;
   border: 1px solid #ccc;
   border-radius: 30px;
 }
@@ -235,10 +230,12 @@ body {
 }
 
 .search-right-icon img {
-  width: 24px;
-  height: 24px;
+  width: 1.5vw;
+  height: 1.5vw;
   border-radius: 50%;
 }
+
+/* Searchbar Ends */
 
 
 .main-text-container {
@@ -256,49 +253,83 @@ body {
   padding: 1vw 0;
 }
 
+/* Section 1 */
+
 .section1{
   display: grid;
   grid-template-columns: auto;
   width: 75vw;
-  column-gap: 1vw;
   gap: 2vh;
-
-}
-
-.section1,.section2,.section3 {
-  font-size: 1vw;
-  color: #303972;
-}
-
-.performance>img {
-  display: flex;
-  width: 72vw;
 }
 
 .performance {
+  /* border: 2px solid blue; */
   display: flex;
-  flex-direction: column;
-  border: 2px solid blue;
   background-color: white;
-  height: 30vw;
   border-radius: 10px;
   align-items: center;
   justify-content: center;
 }
 
-.performance>h2 {
-  align-self: flex-start;
-  padding-left: 1.5vw;
+.container {
+  background: white;
+  width: 71vw;
+  margin: 10px 0 10px 0;
 }
+
+.legend-custom {
+  display: flex;
+  gap: 3vw;
+  font-weight: bold;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6vw;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.green-dot {
+  border: 2px solid #00ff7f;
+}
+
+.red-dot {
+  border: 2px solid red;
+}
+
+.top-performance {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 71vw;
+}
+
+/* Section 1 Ends */
+
+
+
 
 /* Section 2 */
 
 .section2{
   display: grid;
   grid-template-columns: 36.5vw auto ;
-  width: 75vw;
   column-gap: 1vw;
-  gap: 2vh;
+  width: 75vw;
+}
+
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  width: 36.5vw;
+  border-radius: 10px;
+  background-color: white;
 }
 
 .calendar {
@@ -318,19 +349,15 @@ body {
 
 .weekdays li {
   display: flex;
-  width: 4.5vw;
-  /* height: 4.5vw; */
   justify-content: center;
   align-items: center;
   color: #666;
-  flex-wrap: nowrap;
   font-size:12px;
 }
 
 .days {
   padding: 1vw 0;
   background: #eee;
-  margin: 0;
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto;
 
@@ -346,21 +373,12 @@ body {
   justify-content: center;
   font-size:12px;
   color: #777;
-  /* margin-left: 2vw; */
 }
 
 .days li .active {
   padding: 5px;
   background: #1abc9c;
-  color: white !important;
-}
-
-.finance>img {
-  width: 35vw;
-}
-
-.finance>h2 {
-  align-self: flex-start;
+  color: white;
 }
 
 .finance {
@@ -369,7 +387,32 @@ body {
   align-items: center ;
 }
 
-/* Section 3 */
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #444;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.blue {
+  background-color: #bfc9ff;
+}
+
+.brown {
+  background-color: #c5b4a3;
+}
+
+
+
+
+/* Section 3 Start */
 
 .section3{
   display: grid;
@@ -383,14 +426,6 @@ body {
   width: 72vw;
 }
 
-.calendar,
-.performance,
-.unpaid,
-.finance {
-  background-color: white;
-  border-radius: 10px;
-  padding: 1vw;
-}
 
 .icon {
   display: flex;
