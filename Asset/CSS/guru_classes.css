@@ -595,6 +595,219 @@
     color: black;
   }
   
+  /* FORUM MODERN */
+.forum-section {
+  padding: 24px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.forum-title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.forum-post {
+  background: #ffffff;
+  border: 1px solid #dcdde1;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.user-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.post-date {
+  font-size: 12px;
+  color: #7f8c8d;
+}
+
+.badge-important {
+  background: #f39c12;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.post-content {
+  font-size: 15px;
+  color: #2d3436;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.reply-list {
+  border-top: 1px solid #ecf0f1;
+  padding-top: 12px;
+}
+
+.reply {
+  margin-top: 10px;
+}
+
+.reply-content {
+  font-size: 14px;
+  color: #34495e;
+  margin-left: 50px;
+  margin-top: 4px;
+}
+
+.reply-box {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.reply-box input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.reply-box button {
+  background: #3498db;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.reply-box button:hover {
+  background: #2980b9;
+}
+
+.file-upload {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  cursor: pointer;
+  color: #3498db;
+  padding: 0 8px;
+}
+
+.file-upload:hover {
+  color: #2c82c9;
+}
+
+  /* Exam */
+  
+  .exam-section {
+    padding: 20px;
+  }
+  
+  .exam-heading {
+    font-size: 24px;
+    font-weight: 700;
+    color: #80001c;
+    margin-bottom: 24px;
+  }
+  
+  .exam-card {
+    background-color: #fdfdfd;
+    border-radius: 16px;
+    padding: 20px 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+  }
+  
+  .exam-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .exam-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .exam-date {
+    font-size: 14px;
+    color: #666;
+    margin-top: 4px;
+  }
+  
+  .exam-desc {
+    margin: 16px 0;
+    font-size: 15px;
+    color: #444;
+  }
+  
+  .exam-status {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 10px;
+  }
+  
+  .exam-status.ongoing {
+    background-color: #ffeaa7;
+    color: #d35400;
+  }
+  
+  .exam-status.upcoming {
+    background-color: #dfe6e9;
+    color: #636e72;
+  }
+  
+  .exam-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .exam-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .exam-btn.start {
+    background-color: #27ae60;
+    color: white;
+  }
+  
+  .exam-btn.detail {
+    background-color: #0984e3;
+    color: white;
+  }
+  
+  .exam-btn.disabled {
+    background-color: #bdc3c7;
+    color: white;
+    cursor: not-allowed;
+  }
+  
   
   
   /* GRADE */
