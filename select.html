@@ -14,20 +14,32 @@
                 <h1>What Is Your Role??</h1>
                 
                 <div class="select">
-                    <a href="./pages/admin/admin_dashboard.html" class="dot">
-                        <img src="/assets/icon/admin.png" alt="">
-                    </a>
-                    <a href="./pages/guru/guru_dashboard.html" class="dot">
-                        <img src="./assets/icon/teacher.png" alt="">
-                    </a>
-                    <a href="./pages/siswa/siswa_dashboard.html" class="dot">
-                        <img src="./assets/icon/student.png" alt="">
-                    </a>
+
+                    <button class="role-button" onclick="selectRole('student', this)">
+                        <img src="./assets/icon/student.png" alt="Admin Icon">
+                        <p>Students</p>
+                    </button>
+                    <button class="role-button" onclick="selectRole('teacher', this)">
+                        <img src="./assets/icon/teacher.png" alt="Admin Icon">
+                        <p>Teacher</p>
+                    </button>
+                    <button class="role-button" onclick="selectRole('kepsek', this)">
+                        <img src="/assets/icon/admin.png" alt="Admin Icon">
+                        <p>Kepala Sekolah</p>
+                    </button>
+                    <button class="role-button" onclick="selectRole('wali', this)">
+                        <img src="/assets/icon/admin.png" alt="Admin Icon">
+                        <p>Wali</p>                        
+                    </button>
+                    <button class="role-button" onclick="selectRole('admin', this)">
+                        <img src="/assets/icon/admin.png" alt="Admin Icon">
+                        <p>Admin</p>
+                    </button>
+
                 </div>
 
 
-                <a href="#" class="login">Next</a>
-                <!-- <a href="#">Forgot Password?</a> -->
+                <button class="login" onclick="goToLogin()">Next</button>
             </div>
         </div>
         
@@ -36,5 +48,8 @@
         </div>
         
     </div>
+
+
+    <script src="select.js"></script>
 </body>
 </html>

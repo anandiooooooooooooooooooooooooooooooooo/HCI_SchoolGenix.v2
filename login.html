@@ -10,20 +10,30 @@
     <div class="main">
         <div class="left">
             <div class="left_container">
+                <form onsubmit="return redirectToRolePage()">
+                    <h1>Login</h1>
+                    <div class="input">
+                        <p class="input_text">Username</p>
+                        <input type="text" id="text" placeholder="username" required>
+                        <p class="input_text">Password</p>
+                        <input type="password" id="text" placeholder="password" required>
+                    </div>
+                
+                    <div class="check">
+                        <input type="checkbox" name="" id="">
+                        <p style="font-weight: 500;">Remember Me</p>
+                    </div>
+                    <button type="submit" class="login">Login</button>
+                    <br>
+                    <a href="./select.html">Forgot Password?</a>
+                </form>
                 <h1>Login</h1>
                 <div class="input">
                     <p class="input_text">Username</p>
                     <input type="text" id="text" placeholder="username">
                     <p class="input_text">Password</p>
                     <input type="password" id="text" placeholder="password">
-                </div>
-                
-                <div class="check">
-                    <input type="checkbox" name="" id="">
-                    <p style="font-weight: 500;">Remember Me</p>
-                </div>
-                <a href="./select.html" class="login">Login</a>
-                <a href="./select.html">Forgot Password?</a>
+              </div>
             </div>
         </div>
         <div class="right">
@@ -31,5 +41,7 @@
         </div>
         
     </div>
+
+    <script src="login.js"></script>
 </body>
 </html>
