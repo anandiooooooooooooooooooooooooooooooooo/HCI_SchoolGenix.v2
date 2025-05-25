@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select Role</title>
+  <style>
+    .role-button {
+      width: 120px;
+      height: 120px;
+      margin: 10px;
+      border: none;
+      border-radius: 50%;
+      background-color: #ddd;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .role-button img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 8px;
+    }
+
+    .role-button.selected {
+      background-color: grey;
+      color: white;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h2>Select Role</h2>
+
+  <button class="role-button" onclick="selectRole('admin', this)">
+    <img src="admin-icon.png" alt="Admin Icon">
+    Admin
+  </button>
+
+  <button class="role-button" onclick="selectRole('user', this)">
+    <img src="user-icon.png" alt="User Icon">
+    User
+  </button>
+
+  <br><br>
+  <button onclick="goToLogin()">Next</button>
+
+  <script>
+    let selectedRole = null;
+
+    function selectRole(role, button) {
+      selectedRole = role;
+      localStorage.setItem("selectedRole", role);
+
+      const buttons = document.querySelectorAll(".role-button");
+      buttons.forEach(btn => btn.classList.remove("selected"));
+
+      button.classList.add("selected");
+    }
+
+    function goToLogin() {
+      if (!selectedRole) {
+        alert("Please select a role first.");
+        return;
+      }
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
