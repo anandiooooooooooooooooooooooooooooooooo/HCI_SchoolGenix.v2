@@ -425,7 +425,7 @@ body {
     gap: 20px;
 }
 
-.card {
+.statistic-card {
     display: flex;
     background: #fff;
     border-radius: 15px;
