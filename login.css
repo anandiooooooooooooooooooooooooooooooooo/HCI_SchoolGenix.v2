@@ -195,4 +195,14 @@
     border-style: none;
     background-color: rgb(228, 227, 227);
     font-size: 1vw;
+    cursor: pointer;
+    /* margin: 2vh 0px; */
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    align-items: center;
+    justify-content: center;
   }
