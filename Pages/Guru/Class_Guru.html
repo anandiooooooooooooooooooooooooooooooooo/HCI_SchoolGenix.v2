@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>guru_classes</title>
-    <link rel="stylesheet" href="../../Asset/CSS/Class_Guru.css">
+    <link rel="stylesheet" href="/assets/css/guru_classes.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Vampiro+One&display=swap" rel="stylesheet">
@@ -196,14 +196,93 @@
                               
                     <!-- FORUM -->
                     <div id="forum" class="page">
-                        <h2>Forum Page</h2>
-                        <p>Discuss topics with peers in the forum.</p>
+                        <div class="forum-section">
+                            <h2 class="forum-title">💬 Forum Diskusi Matematika</h2>
+                          
+                            <div class="forum-post">
+                              <div class="post-header">
+                                <div class="user-info">
+                                  <img src="../../Asset/IMG/Profile ortu.png" alt="Guru" class="user-avatar">
+                                  <div>
+                                    <h4>Bu Tania (Guru)</h4>
+                                    <span class="post-date">10 Mei 2025, 09:00</span>
+                                  </div>
+                                </div>
+                                <span class="badge-important">📌 Penting</span>
+                              </div>
+                              <p class="post-content">
+                                Anak-anak, tolong diskusikan langkah-langkah penyelesaian soal ini:  
+                                <br><strong>Jika 3x - 2y = 6 dan x + y = 4, berapa nilai x dan y?</strong>
+                              </p>
+                              <div class="reply-list">
+                                <div class="reply">
+                                  <div class="user-info">
+                                    <img src="../../Asset/IMG/Profile.jpeg" alt="Siswa" class="user-avatar">
+                                    <div>
+                                      <h5>Raka</h5>
+                                      <span class="post-date">10 Mei 2025, 09:12</span>
+                                    </div>
+                                  </div>
+                                  <p class="reply-content">Saya eliminasi dulu, Bu. Hasilnya x = 2, y = 2. Mohon koreksi 🙏</p>
+                                </div>
+                              </div>
+                              <div class="reply-box">
+                                <label class="file-upload">📎<input type="file" hidden></label>
+                                <input type="text" placeholder="Tulis balasan..." />
+                                <button>Kirim</button>
+                              </div>
+                              
+                            </div>
+                          
+                          </div>
+                          
                     </div>
-                    <!-- EXAM -->
-                    <div id="exam" class="page">
-                        <h2>Exam Page</h2>
-                        <p>Find exam schedules and results here.</p>
-                    </div>
+                
+                   <!-- EXAM -->
+                        <div id="exam" class="page">
+                            <div class="exam-section">
+                            <h2 class="exam-heading">Ujian Kelas Matematika</h2>
+                        
+                            <div class="exam-card">
+                                <div class="exam-header">
+                                <div>
+                                    <h3 class="exam-title">📘 Ujian Tengah Semester</h3>
+                                    <p class="exam-date">🗓 3 Mei 2025 | ⏰ 90 menit</p>
+                                </div>
+                                <span class="exam-status ongoing">Sedang Berlangsung</span>
+                                </div>
+                        
+                                <p class="exam-desc">
+                                Materi: SPLDV, Persamaan Kuadrat, dan Pertidaksamaan Linear Dua Variabel.
+                                </p>
+                        
+                                <div class="exam-actions">
+                                <button class="exam-btn start">🚀 Masuk Ujian</button>
+                                <button class="exam-btn detail">📄 Detail</button>
+                                </div>
+                            </div>
+                        
+                            <div class="exam-card">
+                                <div class="exam-header">
+                                <div>
+                                    <h3 class="exam-title">📕 Ujian Akhir Semester</h3>
+                                    <p class="exam-date">🗓 10 Juni 2025 | ⏰ 120 menit</p>
+                                </div>
+                                <span class="exam-status upcoming">Belum Dimulai</span>
+                                </div>
+                        
+                                <p class="exam-desc">
+                                Materi: Keseluruhan semester, termasuk peluang, fungsi, dan statistika.
+                                </p>
+                        
+                                <div class="exam-actions">
+                                <button class="exam-btn disabled" disabled>🔒 Terkunci</button>
+                                <button class="exam-btn detail">📄 Detail</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        
                     <!-- GRADE -->
                     <div id="grades" class="page grades-grid">
                         <div class="class-box">
