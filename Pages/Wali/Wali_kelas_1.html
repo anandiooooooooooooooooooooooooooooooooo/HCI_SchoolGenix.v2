@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Parent Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/Wali_kelas_1.css"/>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="/Asset/IMG/Profile ortu.png" alt="Parent Photo" class="profile-img" />
+        <h3>Budi</h3>
+        <p class="subtitle">Parent of Anandhio Varistama</p>
+      </div>
+      <nav class="menu">
+        <a href="#">Dashboard</a>
+        <a href="#">Attendance</a>
+        <a href="#" class="active">Schedule</a>
+        <a href="#">Financial</a>
+      </nav>
+      <button class="logout">Log out</button>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <!-- Top bar -->
+      <div class="search-bar">
+        <input type="text" placeholder="Search anything" />
+        <div class="icons">
+          <span>✉️</span>
+          <span>🔔</span>
+          <span>⚙️</span>
+        </div>
+      </div>
+
+      <!-- Greeting -->
+      <h1>Hello, parent of <span class="highlight">Varistama</span>!</h1>
+
+      <!-- Student Card -->
+      <section class="student-card">
+        <img src="/Asset/IMG/Profile.jpeg" alt="Student" class="student-img" />
+        <div>
+          <h2>Anandhio Varistama</h2>
+          <p class="student-id">Student – 2802415791</p>
+        </div>
+      </section>
+
+      <!-- Cards Section -->
+      <section class="cards">
+        <!-- Statistics Card -->
+        <div class="stats-card">
+          <div class="left-section">
+            <div>
+              <h2>Statistics</h2>
+              <p>January – June 2025</p>
+            </div>
+      
+            <div class="stat-item">
+              <div class="stat-icon blue">👤</div>
+              <div class="stat-text">
+                <span>Absence</span>
+                <span>90%</span>
+              </div>
+            </div>
+      
+            <div class="stat-item">
+              <div class="stat-icon green">✅</div>
+              <div class="stat-text">
+                <span>Tasks & Exam</span>
+                <span>70%</span>
+              </div>
+            </div>
+      
+            <div class="stat-item">
+              <div class="stat-icon orange">⏰</div>
+              <div class="stat-text">
+                <span>Quiz</span>
+                <span>85%</span>
+              </div>
+            </div>
+          </div>
+      
+          <div class="circle-chart">
+            <svg width="150" height="150">
+              <circle class="circle-bg" cx="75" cy="75" r="70"/>
+              <circle class="circle" cx="75" cy="75" r="70"/>
+            </svg>
+            <div class="circle-label">
+              <h3>75%</h3>
+              <p>Grades Completed</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Performance Card -->
+        <div class="performance-card">
+          <h2 class="section-title">Performance</h2>
+         
+          <div class="performance-header">
+            <div class="label">
+              <span class="legend">
+                <span class="dot"></span> Assignment Submission Performance
+              </span>
+            </div>
+            <select class="dropdown">
+              <option>Monthly</option>
+              <option>Weekly</option>
+            </select>
+          </div>
+        
+          <div class="gauge-wrapper">
+            <div class="gauge" id="gauge">
+              <div class="needle" id="needle"></div>
+              <div class="center-dot"></div>
+            </div>
+            <div class="grade-label">Your Grade: <strong id="grade-value">89.3</strong></div>
+          </div>
+        </div>
+        
+        
+        <!-- Task Progress Card -->
+        <div class="card progress-card">
+          <h3>Task Progress</h3>
+          <div class="progress-group">
+            <label>Web Programming</label>
+            <progress value="5" max="10"></progress>
+          </div>
+          <div class="progress-group">
+            <label>Data Structures</label>
+            <progress value="4" max="15"></progress>
+          </div>
+          <div class="progress-group">
+            <label>Calculus</label>
+            <progress value="2" max="20"></progress>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/Asset/js/Dashboard_Perfomance.js"></script>
+</body>
+</html>
