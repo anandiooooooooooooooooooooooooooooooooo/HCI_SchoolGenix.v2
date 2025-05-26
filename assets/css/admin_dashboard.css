@@ -447,3 +447,95 @@ body {
     width: 1.5vw;
 }
 
+    /* h2 {
+      color: #1a1a5e;
+    } */
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    thead {
+      text-align: left;
+      font-weight: bold;
+      color: #3f3f70;
+    }
+
+    th, td {
+      padding: 14px;
+      vertical-align: middle;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid #eee;
+    }
+
+    .checkbox {
+      accent-color: #e08dff;
+      width: 20px;
+      height: 20px;
+    }
+
+    .avatar {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .avatar-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #d1c5f9;
+      margin-right: 10px;
+    }
+
+    .name {
+      font-weight: 600;
+      color: #2d2d5e;
+    }
+
+    .id {
+      color: #f08ddc;
+      font-weight: 500;
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      opacity: 0.7;
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+    }
+
+    .grade {
+      padding: 8px 14px;
+      border-radius: 20px;
+      color: white;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .grade.vii-a {
+      background-color: #f87171;
+    }
+
+    .grade.vii-b {
+      background-color: #fbbf24;
+    }
+
+    .grade.vii-c {
+      background-color: #f9a8d4;
+    }
+
+    .dots {
+      font-size: 24px;
+      cursor: pointer;
+      color: #999;
+    }
+
