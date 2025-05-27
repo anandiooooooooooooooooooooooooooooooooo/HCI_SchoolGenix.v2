@@ -1,40 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login page</title>
-    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="./assets/css/_login.css" />
 </head>
 <body>
     <div class="main">
-        <div class="left">
-            <div class="left_container">
-                <form onsubmit="return redirectToRolePage()">
-                    <h1>Login</h1>
-                    <div class="input">
-                        <p class="input_text">Username</p>
-                        <input type="text" id="text" placeholder="username" required>
-                        <p class="input_text">Password</p>
-                        <input type="password" id="text" placeholder="password" required>
-                    </div>
-                
-                    <div class="check">
-                        <input type="checkbox" name="" id="">
-                        <p style="font-weight: 500;">Remember Me</p>
-                    </div>
-                    <button type="submit" class="login">Login</button>
-                    <br>
-                    <a href="./select.html">Forgot Password?</a>
-                </form>
+        <form onsubmit="return redirectToRolePage()">
+            <h1>Login</h1>
+
+            <!-- Input fields -->
+            <div class="input">
+                <p class="input_text">Username</p>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="username"
+                    required
+                />
+
+                <p class="input_text">Password</p>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="password"
+                    required
+                />
             </div>
-        </div>
-        <div class="right">
-            <img src="../../assets/img/school.jpg" alt="">
-        </div>
-        
+
+            <!-- Remember me checkbox -->
+            <div class="check">
+                <input type="checkbox" id="remember" name="remember" />
+                <p style="font-weight: 500;">Remember Me</p>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="login">Login</button>
+            <br />
+
+            <!-- Forgot password link -->
+            <a href="./select.html">Forgot Password?</a>
+        </form>
     </div>
 
+    <!-- JavaScript -->
     <script src="./assets/js/login.js"></script>
 </body>
 </html>

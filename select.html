@@ -1,50 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login page</title>
-    <link rel="stylesheet" href="./assets/css/select.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./assets/css/_select.css" />
 </head>
+
 <body>
     <div class="main">
+        <h1>What is your role?</h1>
 
-        <div class="sel">
-            <div class="left_container">
-                <h1>What Is Your Role??</h1>
-                
-                <div class="select">
+        <div class="select">
+            <button class="role-button" onclick="selectRole('student', this)">
+                <img src="./assets/icon/student.png" alt="Student Icon" />
+                <p>Student</p>
+            </button>
 
-                    <button class="role-button" onclick="selectRole('student', this)">
-                        <img src="./assets/icon/student.png" alt="Admin Icon">
-                        <p>Students</p>
-                    </button>
-                    <button class="role-button" onclick="selectRole('teacher', this)">
-                        <img src="./assets/icon/teacher.png" alt="Admin Icon">
-                        <p>Teacher</p>
-                    </button>
-                    <button class="role-button" onclick="selectRole('kepsek', this)">
-                        <img src="/assets/icon/admin.png" alt="Admin Icon">
-                        <p>Kepala Sekolah</p>
-                    </button>
-                    <button class="role-button" onclick="selectRole('wali', this)">
-                        <img src="/assets/icon/admin.png" alt="Admin Icon">
-                        <p>Wali</p>                        
-                    </button>
-                    <button class="role-button" onclick="selectRole('admin', this)">
-                        <img src="/assets/icon/admin.png" alt="Admin Icon">
-                        <p>Admin</p>
-                    </button>
+            <button class="role-button" onclick="selectRole('teacher', this)">
+                <img src="./assets/icon/teacher.png" alt="Teacher Icon" />
+                <p>Teacher</p>
+            </button>
 
-                </div>
+            <button class="role-button" onclick="selectRole('kepsek', this)">
+                <img src="./assets/icon/admin.png" alt="Principal Icon" />
+                <p>Kepala<br>Sekolah</p>
+            </button>
 
+            <button class="role-button" onclick="selectRole('wali', this)">
+                <img src="./assets/icon/admin.png" alt="Wali Icon" />
+                <p>Wali</p>
+            </button>
 
-                <button class="login" onclick="goToLogin()">Next</button>
-            </div>
+            <button class="role-button" onclick="selectRole('admin', this)">
+                <img src="./assets/icon/admin.png" alt="Admin Icon" />
+                <p>Admin</p>
+            </button>
         </div>
-    </div>
 
+        <button class="login" onclick="goToLogin()">Next</button>
+    </div>
 
     <script src="./assets/js/select.js"></script>
 </body>
+
 </html>
