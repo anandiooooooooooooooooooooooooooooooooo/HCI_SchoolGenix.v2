@@ -427,10 +427,11 @@ display: flex;
 
 .grades{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-#grades .grade-block{
+.grades .grade-block{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -440,7 +441,7 @@ display: flex;
     border-radius: 10px;
 }
 
-#grades .grade-block .above{
+.grades .grade-block .above{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -448,19 +449,19 @@ display: flex;
     gap: 60px;
 }
 
-#grades .grade-block .above .left img{
+.grades .grade-block .above .left img{
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
 
-#grades .grade-block .above .right img{
+.grades .grade-block .above .right img{
     width: 80px;
     height: 80px;
     border-radius: 50%;
 }
 
-#grades .grade-block .below{
+.grades .grade-block .below{
     display: flex;
     justify-content: space-between;
     padding: 10px 30px;
