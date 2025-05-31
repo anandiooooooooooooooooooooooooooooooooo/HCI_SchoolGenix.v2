@@ -319,87 +319,46 @@ body {
     display: flex;
 }
 
-.calendar-container {
-    background: white;
-    border-radius: 16px;
-    padding: 30px 40px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-    width: 100%;
-    /* max-width: 800px; */
+.grades {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.calendar-header {
+.grades .grade-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 10px;
+    gap: 50px;
+    border-radius: 10px;
+}
+
+.grades .grade-block .above {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    gap: 60px;
+}
+
+.grades .grade-block .above .left img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.grades .grade-block .above .right img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.grades .grade-block .below {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.calendar-header h2 {
-    font-size: 20px;
-    color: #2a2a52;
-    margin: 0;
-}
-
-.calendar-month {
-    font-weight: 600;
-    color: #2a2a52;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-}
-
-.calendar-month .arrow {
-    margin-left: 6px;
-    font-size: 12px;
-}
-
-.calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
-    text-align: center;
-}
-
-.day-name {
-    font-size: 14px;
-    color: #a3a0b0;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.day {
-    padding: 14px 0;
-    font-size: 14px;
-    color: #2a2a52;
-    font-weight: 600;
-    border-radius: 100px;
-}
-
-.other-month {
-    color: #c2bccb;
-}
-
-.today {
-    background: #3f3f97;
-    color: white;
-}
-
-.highlight {
-    background: #f3f3f3;
-    border-radius: 10%;
-}
-
-.red {
-    color: #ff6a4f;
-}
-
-.orange {
-    background: #ff7f5c;
-    color: white;
-}
-
-.yellow {
-    background: #ffc83f;
-    color: white;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background-color: red;
 }
