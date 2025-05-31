@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TABS-TITLE -->
+    <title>SchoolGenix - Teachers - Classes</title>
+    <link rel="shortcut icon" href="../../assets/png/logo.png" type="image/png" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&family=Vampiro+One&display=swap"
+        rel="stylesheet" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/__reset.css" />
+    <link rel="stylesheet" href="../../assets/css/guru-classes.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="creator">
+            <p>Created by Muhammad Rizki Akbar & Calvin Chandra Tangguh</p>
+        </div>
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <!-- PROFILE -->
+            <div class="profile-section">
+                <img src="../../Asset/IMG/profile.png" alt="photo profile">
+                <h2>Anandhio Varistama</h2>
+                <p class="poppins-regular">Teacher - Mathematic</p>
+            </div>
+
+            <!-- SIDEBAR MENU -->
+            <div class="sidebar-menu">
+                <a href="./guru-dashboard.html">Dashboard</a>
+                <a href="./guru-classes.html">Classes</a>
+                <a href="./guru-schedule.html">Schedule</a>
+            </div>
+
+            <!-- LOGOUT BUTTON -->
+            <button id="logout-btn">Logout</button>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <!-- SEARCH BAR -->
+            <div class="searchbar-section">
+                <input class="searchbar" type="text" placeholder="Search...">
+                <div class="search-right-icon">
+                    <img src="../../assets/test-img/testing.png" alt="notification">
+                    <img src="../../assets/test-img/testing.png" alt="notification">
+                    <img src="../../assets/test-img/testing.png" alt="notification">
+                </div>
+            </div>
+
+            <!-- WELCOME TEXT -->
+            <div class="welcome-text-section">
+                <h1 class="poppins-bold">My Classes</h1>
+
+                <!-- DROPDOWN -->
+                <div class="dropdown">
+                    <p class="dropdown-btn">
+                        2025, 1st Semester <span class="arrow">&#9662;</span>
+                    </p>
+                    <ul class="dropdown-menu">
+                        <li>2024, 2nd Semester</li>
+                        <li>2025, 1st Semester</li>
+                        <li>2025, 2nd Semester</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="classes-content">
+                <!-- NAV TABS -->
+                <div class="tabs">
+                    <div class="tab active" data-page="absence">Absence</div>
+                    <div class="tab" data-page="sessions">Sessions</div>
+                    <div class="tab" data-page="assessment">Assessment</div>
+                    <div class="tab" data-page="forum">Forum</div>
+                    <div class="tab" data-page="exam">Exam</div>
+                    <div class="tab" data-page="grades">Grades</div>
+                </div>
+
+                <!-- PAGES/CONTENT -->
+                <div class="pages">
+                    <!-- ABSENCE -->
+                    <div id="absence" class="page">
+                        <div class="absence-section">
+                            <h2 class="section-title">Riwayat Absensi - Matematika</h2>
+
+                            <div class="absence-card">
+                                <div class="card-left">
+                                    <h3>Pertemuan 1</h3>
+                                    <p>Senin, 11 Januari 2025</p>
+                                    <p>08:00 - 09:30</p>
+                                </div>
+                                <div class="card-right">
+                                    <p><strong>Hadir:</strong> 22/25</p>
+                                    <p><strong>Izin:</strong> 2</p>
+                                    <p><strong>Alfa:</strong> 1</p>
+                                    <button class="btn-detail">Lihat Detail</button>
+                                </div>
+                            </div>
+
+                            <div class="absence-card">
+                                <div class="card-left">
+                                    <h3>Pertemuan 2</h3>
+                                    <p>Rabu, 18 Januari 2025</p>
+                                    <p>08:00 - 09:30</p>
+                                </div>
+                                <div class="card-right">
+                                    <p><strong>Hadir:</strong> 24/25</p>
+                                    <p><strong>Izin:</strong> 1</p>
+                                    <p><strong>Alfa:</strong> 0</p>
+                                    <button class="btn-detail">Lihat Detail</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- SESSION -->
+
+                    <div id="sessions" class="page">
+                        <div class="session-wrapper">
+                            <!-- LEFT: List of sessions -->
+                            <div class="session-left">
+                                <button class="session-button">
+                                    <span>Mathematics 1</span>
+                                    <span>⋯</span>
+                                </button>
+                                <button class="session-button">
+                                    <span>Mathematics 1</span>
+                                    <span>⋯</span>
+                                </button>
+                                <button class="session-button">
+                                    <span>Mathematics 1</span>
+                                    <span>⋯</span>
+                                </button>
+                                <button class="session-button">
+                                    <span>Mathematics 1</span>
+                                    <span>⋯</span>
+                                </button>
+                                <button class="session-button">
+                                    <span>Mathematics 1</span>
+                                    <span>⋯</span>
+                                </button>
+                            </div>
+
+                            <!-- RIGHT: Upload Materi Panel -->
+                            <div class="session-right">
+                                <h2>Upload Materi</h2>
+                                <div class="material-item">
+                                    <input type="checkbox" />
+                                    <span>Permutation</span>
+                                    <span class="duration">– 20m</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ASESSMENT -->
+                    <div id="assessment" class="page">
+                        <div class="assessment-container">
+
+                            <!-- Kiri: Daftar Assessment -->
+                            <div class="assessment-list-column">
+                                <div class="assessment-list-item">
+                                    📝 Ulangan Harian 1
+                                    <span class="dots">⋯</span>
+                                </div>
+                                <div class="assessment-list-item">
+                                    🧪 Tugas Matematika
+                                    <span class="dots">⋯</span>
+                                </div>
+                                <div class="assessment-list-item">
+                                    📊 Quiz SPLDV
+                                    <span class="dots">⋯</span>
+                                </div>
+                            </div>
+
+                            <!-- Kanan: Detail Assessment -->
+                            <div class="assessment-detail-column">
+                                <h2 class="assessment-heading">📊 Penilaian Kelas Matematika</h2>
+
+                                <div class="assessment-detail-card">
+                                    <div class="assessment-card-header">
+                                        <h3>📝 Ulangan Harian 1</h3>
+                                        <span class="assessment-date">12 April 2025</span>
+                                    </div>
+                                    <p class="assessment-desc">Materi: SPLDV, menyusun model dan menyelesaikan sistem.
+                                    </p>
+                                    <div class="assessment-progress">
+                                        <div class="assessment-progress-bar" style="width: 70%;"></div>
+                                    </div>
+                                    <div class="assessment-actions">
+                                        <button class="assessment-btn view">📥 Lihat Nilai</button>
+                                        <button class="assessment-btn edit">✏️ Edit</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- FORUM -->
+                    <div id="forum" class="page">
+                        <div class="forum-section">
+                            <h2 class="forum-title">💬 Forum Diskusi Matematika</h2>
+
+                            <div class="forum-post">
+                                <div class="post-header">
+                                    <div class="user-info">
+                                        <img src="../../Asset/IMG/Profile ortu.png" alt="Guru" class="user-avatar">
+                                        <div>
+                                            <h4>Bu Tania (Guru)</h4>
+                                            <span class="post-date">10 Mei 2025, 09:00</span>
+                                        </div>
+                                    </div>
+                                    <span class="badge-important">📌 Penting</span>
+                                </div>
+                                <p class="post-content">
+                                    Anak-anak, tolong diskusikan langkah-langkah penyelesaian soal ini:
+                                    <br><strong>Jika 3x - 2y = 6 dan x + y = 4, berapa nilai x dan y?</strong>
+                                </p>
+                                <div class="reply-list">
+                                    <div class="reply">
+                                        <div class="user-info">
+                                            <img src="../../Asset/IMG/Profile.jpeg" alt="Siswa" class="user-avatar">
+                                            <div>
+                                                <h5>Raka</h5>
+                                                <span class="post-date">10 Mei 2025, 09:12</span>
+                                            </div>
+                                        </div>
+                                        <p class="reply-content">Saya eliminasi dulu, Bu. Hasilnya x = 2, y = 2. Mohon
+                                            koreksi 🙏</p>
+                                    </div>
+                                </div>
+                                <div class="reply-box">
+                                    <label class="file-upload">📎<input type="file" hidden></label>
+                                    <input type="text" placeholder="Tulis balasan..." />
+                                    <button>Kirim</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- EXAM -->
+                    <div id="exam" class="page">
+                        <div class="exam-section">
+                            <h2 class="exam-heading">Ujian Kelas Matematika</h2>
+
+                            <div class="exam-card">
+                                <div class="exam-header">
+                                    <div>
+                                        <h3 class="exam-title">📘 Ujian Tengah Semester</h3>
+                                        <p class="exam-date">🗓 3 Mei 2025 | ⏰ 90 menit</p>
+                                    </div>
+                                    <span class="exam-status ongoing">Sedang Berlangsung</span>
+                                </div>
+
+                                <p class="exam-desc">
+                                    Materi: SPLDV, Persamaan Kuadrat, dan Pertidaksamaan Linear Dua Variabel.
+                                </p>
+
+                                <div class="exam-actions">
+                                    <button class="exam-btn start">🚀 Masuk Ujian</button>
+                                    <button class="exam-btn detail">📄 Detail</button>
+                                </div>
+                            </div>
+
+                            <div class="exam-card">
+                                <div class="exam-header">
+                                    <div>
+                                        <h3 class="exam-title">📕 Ujian Akhir Semester</h3>
+                                        <p class="exam-date">🗓 10 Juni 2025 | ⏰ 120 menit</p>
+                                    </div>
+                                    <span class="exam-status upcoming">Belum Dimulai</span>
+                                </div>
+
+                                <p class="exam-desc">
+                                    Materi: Keseluruhan semester, termasuk peluang, fungsi, dan statistika.
+                                </p>
+
+                                <div class="exam-actions">
+                                    <button class="exam-btn disabled" disabled>🔒 Terkunci</button>
+                                    <button class="exam-btn detail">📄 Detail</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- GRADE -->
+                    <div id="grades" class="page grades-grid">
+                        <div class="class-box">
+                            <div class="class-header">
+                                <p>Matematika</p>
+                                <span class="grade green">A</span>
+                            </div>
+                            <div class="class-footer">
+                                <p>📘 24</p>
+                                <p>🗓️ 3</p>
+                                <p>👥 2/17</p>
+                            </div>
+                        </div>
+                        <div class="class-box">
+                            <div class="class-header">
+                                <p>Agama</p>
+                                <span class="grade green">B</span>
+                            </div>
+                            <div class="class-footer">
+                                <p>📘 24</p>
+                                <p>🗓️ 3</p>
+                                <p>👥 2/17</p>
+                            </div>
+                        </div>
+                        <!-- Sisanya N/A -->
+                        <!-- Ulangi sebanyak yang kamu perlukan -->
+                        <div class="class-box">
+                            <div class="class-header">
+                                <p>Pelajaran</p>
+                                <span class="grade gray">N/A</span>
+                            </div>
+                            <div class="class-footer">
+                                <p>📘 24</p>
+                                <p>🗓️ 3</p>
+                                <p>👥 2/17</p>
+                            </div>
+                        </div>
+                        <!-- Tambahkan lebih banyak box di sini sesuai kebutuhan -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <script src="../../Asset/js/guru-classes.js"></script>
+</body>
+
+</html>
