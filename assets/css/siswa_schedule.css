@@ -23,7 +23,7 @@
     position: fixed;
     bottom: 10px;
     right: 10px;
-    background-color: #222; 
+    background-color: #222;
     color: #fff;
     padding: 10px 14px;
     border-radius: 8px;
@@ -31,6 +31,7 @@
     box-shadow: 0 0px 12px rgba(255, 255, 255, 0.4);
     z-index: 1000;
 }
+
 /* GENERAL/ALL */
 
 /* SIDEBAR */
@@ -139,12 +140,12 @@
     border-radius: 50%;
 }
 
-.welcome-text-section h1{
+.welcome-text-section h1 {
     font-size: 70px;
     line-height: 1;
 }
 
-.welcome-text-section h2{
+.welcome-text-section h2 {
     font-size: 30px;
 }
 
@@ -201,17 +202,39 @@
 }
 
 /* Event Colors */
-.red { background: #FF6B6B; }
-.green { background: #58A55C; }
-.yellow { background: #F8C471; }
-.blue { background: #5DADE2; }
-.purple { background: #A569BD; }
+.red {
+    background: #FF6B6B;
+}
+
+.green {
+    background: #58A55C;
+}
+
+.yellow {
+    background: #F8C471;
+}
+
+.blue {
+    background: #5DADE2;
+}
+
+.purple {
+    background: #A569BD;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .calendar { width: 95%; }
-    .calendar-grid { grid-template-columns: repeat(7, 1fr); }
-    .day { min-height: 60px; }
+    .calendar {
+        width: 95%;
+    }
+
+    .calendar-grid {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .day {
+        min-height: 60px;
+    }
 }
 
 /* MAIN CONTENT */

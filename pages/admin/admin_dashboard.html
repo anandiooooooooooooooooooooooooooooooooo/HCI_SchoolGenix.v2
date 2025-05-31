@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SchoolGenix</title>
-    <link rel="stylesheet" href="../../assets/css/admin_dashboard.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Vampiro+One&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TABS-TITLE -->
+    <title>SchoolGenix - Admin - Dashboard</title>
+    <link rel="shortcut icon" href="../../assets/png/logo.png" type="image/png" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&family=Vampiro+One&display=swap"
+        rel="stylesheet" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/__reset.css" />
+    <link rel="stylesheet" href="../../assets/css/admin_dashboard.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
     <div class="main-page">
         <div class="creator">
@@ -22,7 +30,7 @@
                 <h2 class="poppins-bold">Anandhio Varistama</h2>
                 <h3 class="poppins-regular">ADMIN</h3>
             </div>
-    
+
             <div class="sidebar-menu">
                 <a href="./admin_dashboard.html">Dashboard</a>
                 <a href="./admin_student_1.html">Students</a>
@@ -34,10 +42,10 @@
             </div>
         </div>
 
-        
+
         <!-- Content -->
         <div class="content">
-            
+
             <!-- Searchbar -->
             <div class="searchbar-section">
                 <input class="searchbar" type="text" placeholder="Search...">
@@ -47,105 +55,114 @@
                     <img src="../../assets/test-img/testing.png" alt="notification">
                 </div>
             </div>
-            
+
             <!-- MainText (Hello, [student_surname]!) -->
             <div class="main-text-container">
-                
+
                 <div class="main-text">
-                    <h1 class="poppins-bold">Hello, Admin   !</h1>
+                    <h1 class="poppins-bold">Hello, Admin !</h1>
                     <p class="poppins-regular">Lets do something cool today!</p>
                 </div>
             </div>
-            
+
             <section class="section1">
                 <div class="performance">
                     <div class="container">
                         <div class="top-performance">
-                           <h2>School Performance</h2>
+                            <h2>School Performance</h2>
                             <div class="legend-custom">
                                 <div class="legend-item">
-                                <div class="dot green-dot"></div>
-                                This Week <strong style="margin-left: 6px;">1.245</strong>
+                                    <div class="dot green-dot"></div>
+                                    This Week <strong style="margin-left: 6px;">1.245</strong>
                                 </div>
                                 <div class="legend-item">
-                                <div class="dot red-dot"></div>
-                                Last Week <strong style="margin-left: 6px;">1.356</strong>
+                                    <div class="dot red-dot"></div>
+                                    Last Week <strong style="margin-left: 6px;">1.356</strong>
                                 </div>
-                            </div> 
                             </div>
-                        
+                        </div>
+
                         <canvas id="performanceChart" height="100"></canvas>
-                    
-                        
-                      </div>
+
+
+                    </div>
                 </div>
             </section>
 
             <section class="section2">
-                    <div class="calendar-container">
-                        <div class="calendar">
-                            <h2>School Calendar</h2>
-                            <ul class="weekdays">
-                                <li>Mon</li> <li>Tu</li> <li>We</li> <li>Th</li> <li>Fr</li> <li>Sa</li> <li>Su</li>
-                            </ul>
+                <div class="calendar-container">
+                    <div class="calendar">
+                        <h2>School Calendar</h2>
+                        <ul class="weekdays">
+                            <li>Mon</li>
+                            <li>Tu</li>
+                            <li>We</li>
+                            <li>Th</li>
+                            <li>Fr</li>
+                            <li>Sa</li>
+                            <li>Su</li>
+                        </ul>
 
-                            <ul class="days">  
-                                <li>1</li>
-                                <li>2</li>
-                                <li>3</li>
-                                <li>4</li>
-                                <li>5</li>
-                                <li>6</li>
-                                <li>7</li>
-                                <li>8</li>
-                                <li>9</li>
-                                <li><span class="active">10</span></li>
-                                <li>11</li>
-                                <li>12</li>
-                                <li>13</li>
-                                <li>14</li>
-                                <li>15</li>
-                                <li>16</li>
-                                <li>17</li>
-                                <li>18</li>
-                                <li>19</li>
-                                <li>20</li>
-                                <li>21</li>
-                                <li>22</li>
-                                <li>23</li>
-                                <li>24</li>
-                                <li>25</li>
-                                <li>26</li>
-                                <li>27</li>
-                                <li>28</li>
-                                <li>29</li>
-                                <li>30</li>
-                                <li>31</li>
-                            </ul>
-                        </div>
+                        <ul class="days">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>8</li>
+                            <li>9</li>
+                            <li><span class="active">10</span></li>
+                            <li>11</li>
+                            <li>12</li>
+                            <li>13</li>
+                            <li>14</li>
+                            <li>15</li>
+                            <li>16</li>
+                            <li>17</li>
+                            <li>18</li>
+                            <li>19</li>
+                            <li>20</li>
+                            <li>21</li>
+                            <li>22</li>
+                            <li>23</li>
+                            <li>24</li>
+                            <li>25</li>
+                            <li>26</li>
+                            <li>27</li>
+                            <li>28</li>
+                            <li>29</li>
+                            <li>30</li>
+                            <li>31</li>
+                        </ul>
                     </div>
-                    
-                    <div class="finance">
-                        <div class="top-performance" style="width: 35vw;">
-                            <h2>School Finance</h2>
-                            <div class="legend-custom">
-                                <div class="legend-item"><span class="circle blue"></span>This Week <strong>1.245</strong></div>
-                                <div class="legend-item"><span class="circle brown"></span>Last Week <strong>1.356</strong></div>
+                </div>
+
+                <div class="finance">
+                    <div class="top-performance" style="width: 35vw;">
+                        <h2>School Finance</h2>
+                        <div class="legend-custom">
+                            <div class="legend-item"><span class="circle blue"></span>This Week <strong>1.245</strong>
+                            </div>
+                            <div class="legend-item"><span class="circle brown"></span>Last Week <strong>1.356</strong>
                             </div>
                         </div>
-
-                        <canvas id="financeChart" height="300"></canvas>
                     </div>
+
+                    <canvas id="financeChart" height="300"></canvas>
+                </div>
             </section>
 
             <section class="section3">
                 <div class="unpaid">
                     <h2>Student List</h2>
                     <img src="../../assets/img/student_list.png" alt="" srcset="">
-                </div>               
+                </div>
             </section>
         </div>
     </div>
 </body>
 <script src="../../assets/js/admin_dashboard.js"></script>
+
 </html>

@@ -22,7 +22,7 @@
     position: fixed;
     bottom: 10px;
     right: 10px;
-    background-color: #222; 
+    background-color: #222;
     color: #fff;
     padding: 10px 14px;
     border-radius: 8px;
@@ -241,7 +241,8 @@
     display: flex;
     flex-wrap: 1;
 }
-.class-list> .class-item {
+
+.class-list>.class-item {
     /* max-width: 200px; */
     padding: 20px;
     display: flex;
@@ -252,7 +253,7 @@
     font-size: 14px
 }
 
-.class-list> .class-item img{
+.class-list>.class-item img {
     width: 200px;
     height: 200px;
     border-radius: 40%;

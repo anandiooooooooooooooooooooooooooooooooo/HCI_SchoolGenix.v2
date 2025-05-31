@@ -22,7 +22,7 @@
     position: fixed;
     bottom: 10px;
     right: 10px;
-    background-color: #222; 
+    background-color: #222;
     color: #fff;
     padding: 10px 14px;
     border-radius: 8px;
@@ -268,7 +268,7 @@
     gap: 20px;
 }
 
-#absence .absence-summary-container{
+#absence .absence-summary-container {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -278,7 +278,7 @@
     border-radius: 10px;
 }
 
-#absence .table-absence-container{
+#absence .table-absence-container {
     width: 100%;
 }
 
@@ -292,7 +292,8 @@ table {
     border: 1px solid black;
 }
 
-th, td {
+th,
+td {
     padding: 12px 15px;
 }
 
@@ -301,7 +302,7 @@ th {
     font-weight: bold;
 }
 
-td{
+td {
     background-color: var(--ijo);
     color: white;
 }
@@ -339,17 +340,17 @@ tr:hover {
 }
 
 /* SESSIONS SECTION */
-#sessions{
+#sessions {
     padding: 20px;
     gap: 30px;
     border: 2px red solid;
 }
 
-#sessions> .left{
+#sessions>.left {
     width: 100%;
 }
 
-#sessions> .left> .content{
+#sessions>.left>.content {
     display: flex;
     justify-content: space-between;
     border: 1px solid black;
@@ -360,7 +361,7 @@ tr:hover {
     width: 100%;
 }
 
-#sessions> .right{
+#sessions>.right {
     background-color: var(--ijo);
     height: 100%;
     width: 55%;
@@ -373,7 +374,7 @@ tr:hover {
     color: white;
 }
 
-#sessions> .right> .content{
+#sessions>.right>.content {
     display: flex;
     justify-content: space-between;
     /* border: 1px solid black; */
@@ -385,18 +386,18 @@ tr:hover {
     width: 100%;
 }
 
-#sessions> .right> .content img{
+#sessions>.right>.content img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
 
 /* GRADES SECTION */
-#grades{
+#grades {
     border: 1px solid black;
 }
 
-#grades .grade-block{
+#grades .grade-block {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -406,7 +407,7 @@ tr:hover {
     border-radius: 10px;
 }
 
-#grades .grade-block .above{
+#grades .grade-block .above {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -414,19 +415,19 @@ tr:hover {
     gap: 60px;
 }
 
-#grades .grade-block .above .left img{
+#grades .grade-block .above .left img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
 
-#grades .grade-block .above .right img{
+#grades .grade-block .above .right img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
 }
 
-#grades .grade-block .below{
+#grades .grade-block .below {
     display: flex;
     justify-content: space-between;
     padding: 10px 30px;
