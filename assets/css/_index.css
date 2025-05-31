@@ -2,11 +2,26 @@
     width: 100%;
 }
 
+.wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
 
 /* HERO */
 .hero {
-    background-color: green;
-    padding: 60px 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #254F1A;
+    padding: 60px 90px 120px;
+    /* height: 100vh; */
+    gap: 110px;
 }
 
 .hero-navbar {
@@ -16,41 +31,99 @@
     background: #fff;
     padding: 0 30px;
     border-radius: 50px;
+    height: 70px;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.hero-brand{
+    font-weight: 900;
 }
 
 .hero-menu {
     display: flex;
-    gap: 30px;
+    gap: 50px;
     flex-wrap: wrap;
+    font-weight: normal;
+}
+
+.hero-login{
+    font-weight: bold;
+    background: lightgrey;
+    padding: 10px 20px;
+    border-radius: 30px;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+    align-items: top;
+    width: 100%;
 }
 
 .hero-left {
-    min-width: 300px;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
+    gap: 50px;
+}
+
+.hero-main-text{
+    font-weight: bolder;
+    font-size: 70px;
+    line-height: 70px;
+    color: #D2E823;
+}
+
+.hero-sub-text{
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    color: #D2E823;
+}
+
+.hero-start-btn{
+    font-weight: bold;
+    font-size: 15px;
+    background: #E9C0E9;
+    padding: 10px 20px;
+    border-radius: 30px;
+    width: fit-content;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-left .hero-sub-text{
     text-align: justify;
 }
 
+/* .hero-img{
+    height: 100%;
+} */
+
 
 /* FEATURES */
 .features {
-    padding: 60px 110px;
-    background: pink;
+    padding: 120px 90px;
+    background: #E9C0E9;
+    color: #502274;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 50px;
     width: 100%;
+}
+
+.features-title{
+    font-weight: bolder;
+    font-size: 70px;
 }
 
 .features-sec-1,
@@ -62,41 +135,79 @@
     gap: 50px;
 }
 
-.features-sec-1 .features-left, .features-right{
+.features-sec-1 .features-left-sec-1, .features-right-sec-1{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     text-align: center;
+    max-width: 600px;
+    gap: 20px;
+}
+
+.features-main{
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.features-sub{
+    font-weight: normal;
+    font-size: 18px;
 }
 
 .features-sec-1 .features-sub{
     text-align: justify;
 }
 
-.features-wrap-1{
+.features-sec-1 img{
+    width: 200px;
+}
+
+.features-left-sec-2 img{
+    width: 600px;
+}
+
+.features-right-sec-2{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.features-right-sec-2 img{
+    width: 75px;
+}
+
+.features-wrap{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
     text-align: left;
+    gap: 20px;
+    max-width: 600px;
 }
 
-.features-wrap-1 .features-sub{
+
+.features-wrap .features-sub{
     text-align: justify;
 }
 
 
 /* DEMO */
 .demo {
-    padding: 60px 110px;
-    background: red;
+    padding: 120px 90px;
+    background: #780016;
+    color: #E9C0E9;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+}
+
+.demo-title{
+    font-weight: bolder;
+    font-size: 70px;
 }
 
 .demo .demo-video{
@@ -117,12 +228,15 @@
 
 /* TESTIMONI */
 .testimoni{
-    padding: 60px 110px;
-    background: purple;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 120px 90px;
+    background: #502274;
+    color: #E9C0E9;
     width: 100%;
+}
+
+.testimoni-title{
+    font-weight: bolder;
+    font-size: 70px;
 }
 
 .testimoni .testimoni-main{
@@ -134,7 +248,7 @@
     flex-direction: row;
 }
 
-.testimoni .sec-1{
+.testimoni .sec{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -142,16 +256,77 @@
     width: 100%;
 }
 
+.testimoni-left{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 600px;
+}
+
+.testimoni-left img{
+    width: 50px;
+    border-radius: 50%;
+}
+
+.testimoni-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+    gap: 10px;
+}
+
+.testimoni-profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.testimoni-name{
+    font-weight: bold;
+}
+
+.testimoni-role{
+    font-weight: normal;
+}
+
+.testimoni-right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+}
+
+.testimoni-right> .testimoni-video img{
+    height: 800px;
+    width: 600px;
+}
+
+.testimoni-right> .testimoni-profile img{
+    width: 80px;
+    border-radius: 50%;
+}
 
 /* CTA */
 .CTA{
     padding: 60px 110px;
-    background: yellow;
+    background: #998E74;
+    width: 100%;
+}
+
+.CTA> .wrapper{
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-    width: 100%;
+    align-items: center;
+    gap: 50px;
+}
+
+.CTA-title{
+    font-weight: bolder;
+    font-size: 50px;
+    color: white;
 }
 
 .CTA .CTA-btn{
@@ -159,18 +334,32 @@
     background: white;
     display: flex;
     justify-content: space-between;
+    border-radius: 30px;
 }
 
 
 /* FOOTER */
 .footer{
     padding: 20px 110px;
-    background: wheat;
+    background: white;
+    width: 100%;
+}
+
+.footer> .wrapper{
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-    width: 100%;
+    align-items: center;
+    gap: 50px;
+}
+
+.footer-menu{
+    display: flex;
+    gap: 10px;
+}
+
+.footer-menu img{
+    width: 20px;
 }
 
 
@@ -179,8 +368,8 @@
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #333;
-    color: #fff;
+    background-color: black;
+    color: white;
     border: none;
     border-radius: 50%;
     width: 40px;
