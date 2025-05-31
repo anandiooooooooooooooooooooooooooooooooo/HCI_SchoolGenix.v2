@@ -68,7 +68,7 @@ html {
 
 body {
     margin: 0;
-    overflow-y: scroll;
+    overflow: auto;          
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
