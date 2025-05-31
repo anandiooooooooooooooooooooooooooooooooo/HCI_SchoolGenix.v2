@@ -12,6 +12,19 @@
     --tab-active-bg: #f8f8f8;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background: #2E4D2E;
+}
+
 .container {
     display: flex;
     width: 100%;

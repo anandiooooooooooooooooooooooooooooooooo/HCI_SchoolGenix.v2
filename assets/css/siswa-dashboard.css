@@ -12,6 +12,19 @@
     --tab-active-bg: #f8f8f8;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background: #ffffff;
+}
+
 .container {
     display: flex;
     width: 100%;
@@ -104,7 +117,6 @@
     margin-left: 300px;
     min-height: 100vh;
     flex-grow: 1;
-    gap: 35px;
 }
 
 .searchbar-section {
