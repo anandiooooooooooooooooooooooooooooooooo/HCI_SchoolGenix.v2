@@ -1,15 +1,22 @@
-let selectedRole = null;
+let selectedRole = localStorage.getItem("selectedRole") || null;
 
 function selectRole(role, button) {
-  selectedRole = role;
-
-  localStorage.setItem("selectedRole", role);
-
   const buttons = document.querySelectorAll(".role-button");
-  buttons.forEach(btn => btn.classList.remove("selected"));
 
-  button.classList.add("selected");
+  if (selectedRole === role) {
+    selectedRole = null;
+    localStorage.removeItem("selectedRole");
+
+    buttons.forEach(btn => btn.classList.remove("selected"));
+  } else {
+    selectedRole = role;
+    localStorage.setItem("selectedRole", role);
+
+    buttons.forEach(btn => btn.classList.remove("selected"));
+    button.classList.add("selected");
+  }
 }
+
 
 function goToLogin() {
   if (!selectedRole) {
