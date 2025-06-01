@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- TABS-TITLE -->
-    <title>SchoolGenix - Admin - Teachers</title>
+    <title>SchoolGenix - Admin - Student</title>
     <link rel="shortcut icon" href="../../assets/png/logo.png" type="image/png" />
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,66 +14,66 @@
         rel="stylesheet" />
     <!-- CSS -->
     <link rel="stylesheet" href="../../assets/css/__reset.css" />
-    <link rel="stylesheet" href="../../assets/css/admin-teacher-2.css" />
+    <link rel="stylesheet" href="../../assets/css/admin-student-2.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
-
     <div class="main-page">
         <div class="creator">
             <p>Created by Jason Tirta</p>
         </div>
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <div class="profile">
-                <img src="../../assets/img/profile.png" alt="profile-picture">
-                <h2 class="poppins-bold">Anandhio Varistama</h2>
-                <h3 class="poppins-regular">ADMIN</h3>
+        <!-- SIDEBAR -->
+        <navbar class="sidebar">
+            <!-- PROFILE -->
+            <div class="profile-section">
+                <img src="../../assets/jpg/profile.png" alt="photo profile">
+                <div class="profile-wrap">
+                    <p class="profile-name">Fajar Sutisna</p>
+                    <p class="profile-role">ADMIN</p>
+                </div>
             </div>
 
-            <div class="sidebar-menu">
-                <a href="./admin-dashboard.html">Dashboard</a>
-                <a href="./admin-student-1.html">Students</a>
-                <a href="./admin-teacher-1.html">Teachers</a>
-                <a href="#">Schools</a>
+            <!-- sidebar menu -->
+            <div class="sidebar-menu-section">
+                <a href="./admin-dashboard.html"><img src="../../assets/png/dashboard.png" alt="">Dashboard</a>
+                <a href="./admin-student-1.html"><img src="../../assets/png/student.png" alt="">Student</a>
+                <a href="./admin-teacher-1.html"><img src="../../assets/png/teacher.png" alt="">Teachers</a>
             </div>
-            <div class="logout">
-                <a href="../../index.html">Log Out</a>
-            </div>
-        </div>
 
+            <!-- logout button -->
+            <a href="../../index.html" class="logout-btn"><img src="../../assets/png/shutdown.png" alt="">Logout</a>
+        </navbar>
 
-        <!-- Content -->
-        <div class="content">
-
-            <!-- Searchbar -->
+        <div class="main-content">
+            <!-- search bar -->
             <div class="searchbar-section">
                 <input class="searchbar" type="text" placeholder="Search...">
                 <div class="search-right-icon">
-                    <img src="../../assets/test-img/testing.png" alt="notification">
-                    <img src="../../assets/test-img/testing.png" alt="notification">
-                    <img src="../../assets/test-img/testing.png" alt="notification">
+                    <img src="../../assets/png/email-envelope.png" alt="">
+                    <img src="../../assets/png/notification-bell.png" alt="">
+                    <img src="../../assets/png/help-question.png" alt="">
                 </div>
             </div>
 
             <!-- MainText (Hello, [student-surname]!) -->
             <div class="main-text-container">
-                <div class="main-text">
-                    <h1 class="poppins-bold" style="font-size: 6vw; margin-top: 4vw;">Teachers</h1>
-                </div>
-                <div class="bottom-text">
-                    <div class="left">
-                        <input type="text" id="search-students">
-                    </div>
-                    <div class="right">
-                        <a href="#" class="filter">Newest <img src="../../assets/icon/dropdown.png" alt=""></a>
-                        <a href="#" class="add"><strong>+ </strong>New Student</a>
-                    </div>
+                <!-- welcome text -->
+                <div class="welcome-text-section">
+                    <p class="welcome-main">New Teacher</p>
                 </div>
             </div>
 
             <section class="section1">
+                <div class="bottom-text">
+                    <div class="left">
+                        <input type="text" id="search-students" placeholder="Search...">
+                    </div>
+                    <div class="right">
+                        <a href="#" class="filter">Newest<img src="../../assets/png/dropdown-icon.png" alt=""></a>
+                        <a href="./admin-student-2.html" class="add"><strong>+ </strong>New Student</a>
+                    </div>
+                </div>
                 <div class="personal">
                     <div class="top">
                         <h1 class="poppins-medium">Personal Details</h1>
@@ -98,6 +98,7 @@
                     </div>
                 </div>
             </section>
+
         </div>
     </div>
 </body>
