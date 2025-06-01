@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TABS-TITLE -->
+    <title>SchoolGenix - Pricipal - Dashboard</title>
+    <link rel="shortcut icon" href="../../assets/png/logo.png" type="image/png" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&family=Vampiro+One&display=swap"
+        rel="stylesheet" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/__reset.css" />
+    <link rel="stylesheet" href="../../assets/css/kepalasekolah-dashboard.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- SIDEBAR -->
+        <navbar class="sidebar">
+            <!-- PROFILE -->
+            <div class="profile-section">
+                <img src="../../assets/jpg/profile.png" alt="photo profile">
+                <div class="profile-wrap">
+                    <p class="profile-name">Fajar Sutisna</p>
+                    <p class="profile-role">PRINCIPAL</p>
+                </div>
+            </div>
+
+            <!-- sidebar menu -->
+            <div class="sidebar-menu-section">
+                <a href="./kepalasekolah-dashboard.html"><img src="../../assets/png/dashboard.png" alt="">Dashboard</a>
+                <a href="./kepalasekolah-users.html"><img src="../../assets/png/mass.png" alt="">Users</a>
+                <a href="./kepalasekolah-schedule.html"><img src="../../assets/png/schedule-icon.png" alt="">Schedule</a>
+            </div>
+
+            <!-- logout button -->
+            <a href="../../index.html" class="logout-btn"><img src="../../assets/png/shutdown.png" alt="">Logout</a>
+        </navbar>
+
+        <div class="main-content">
+            <!-- search bar -->
+            <div class="searchbar-section">
+                <input class="searchbar" type="text" placeholder="Search...">
+                <div class="search-right-icon">
+                    <img src="../../assets/png/email-envelope.png" alt="">
+                    <img src="../../assets/png/notification-bell.png" alt="">
+                    <img src="../../assets/png/help-question.png" alt="">
+                </div>
+            </div>
+
+            <!-- welcome text -->
+            <div class="welcome-text-section">
+                <p class="welcome-main">Hello, Fajar!</p>
+                <p class="welcome-sub">Lets learn something new today!</p>
+            </div>
+
+            <!-- School Peformance Index -->
+            <div class="classes-content">
+                <div class="class-group">
+                    <div class="class-header">School Peformance Index</div>
+                    <div class="class-item">
+                        <img src="../../assets/jpg/school-index.png" alt="class icon">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- School Calendar and School Finance -->
+            <div class="class-content" style="display: flex; gap: 3%">
+                <!-- School Calendar -->
+                <div class="classes-content" style="width: 50%;">
+                    <div class="class-group">
+                        <div class="class-header">School Calendar</div>
+                        <div class="class-item">
+                            <img src="../../assets/jpg/school-calendar.png" alt="class icon">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- School Finance -->
+                <div class="classes-content" style="width: 50%;">
+                    <div class="class-group">
+                        <div class="class-header">School Finance</div>
+                        <div class="class-item">
+                            <img src="../../assets/jpg/school-finance.png" alt="class icon">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Unpaid Student Tuition -->
+            <div class="classes-content">
+                <div class="class-group">
+                    <div class="class-header">Unpaid Student Tuition</div>
+                    <div class="class-item">
+                        <img src="../../assets/jpg/unpaid-student-2.png" alt="class icon">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/js/siswa-classes.js"></script>
+</body>
+
+</html>

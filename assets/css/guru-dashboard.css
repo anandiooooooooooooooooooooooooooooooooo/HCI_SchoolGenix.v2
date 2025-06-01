@@ -1,0 +1,400 @@
+.creator {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #222;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 0px 12px rgba(255, 255, 255, 0.4);
+    z-index: 1000;
+}
+
+/* GENERAL/ALL */
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* padding: 20px; */
+}
+
+/* SIDEBAR */
+.sidebar {
+    flex-shrink: 0;
+    height: 100vh;
+    width: 225px;
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 30px;
+    position: fixed;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-section img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+
+.profile-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile-name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sidebar-menu-section {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 25px;
+}
+
+.sidebar-menu-section img {
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar a {
+    border: none;
+    color: black;
+    font-weight: normal;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+}
+
+.sidebar button:hover {
+    background: #333;
+}
+
+.logout-btn {
+    width: 108.28px;
+}
+
+.logout-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 30px;
+    padding: 50px 40px;
+    margin-left: 225px;
+    background: #762f2f;
+    min-height: 100vh;
+}
+
+.searchbar-section {
+    background: white;
+    border-radius: 15px;
+    padding: 10px 20px;
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchbar {
+    flex: 1;
+    width: 100%;
+    padding: 5px 15px;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+.search-right-icon {
+    display: flex;
+    align-items: center;
+    width: auto;
+    gap: 20px;
+}
+
+.search-right-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+/* WELCOME TEXT */
+.welcome-text-section {
+    color: white;
+}
+
+.welcome-main {
+    font-weight: bold;
+    font-size: 70px;
+}
+
+.welcome-sub {
+    font-weight: normal;
+    font-size: 40px;
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+/*Summary Bar*/
+.summary-bar {
+    background-color: rgb(255, 255, 255);
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.summary-item {
+    text-align: center;
+    color: #444;
+}
+
+.summary-item .icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+}
+
+.icon.purple {
+    background-color: #5b50e5;
+}
+
+.icon.orange {
+    background-color: #fb896b;
+}
+
+.icon.yellow {
+    background-color: #facc15;
+    color: #000;
+}
+
+.label {
+    font-size: 14px;
+    color: #999;
+}
+
+.value {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e1e4b;
+}
+
+.card {
+    flex: 1;
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+}
+
+.card h4 {
+    font-size: 1rem;
+}
+
+.card p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.card.purple {
+    background-color: #4f46e5;
+}
+
+.card.orange {
+    background-color: #f97316;
+}
+
+.card.yellow {
+    background-color: #facc15;
+    color: #000;
+}
+
+.section1 {
+    display: grid;
+    grid-template-columns: auto;
+    width: 100%;
+    column-gap: 1vw;
+    gap: 2vh;
+
+}
+
+.section1,
+.section2,
+.section3 {
+    font-size: 1vw;
+    color: #303972;
+}
+
+.performance>img {
+    display: flex;
+    width: 72vw;
+}
+
+.performance {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 30vw;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.performance>h2 {
+    align-self: flex-start;
+}
+
+/* Section 2 */
+
+.section2 {
+    display: grid;
+    grid-template-columns: 36.5vw auto;
+    width: 100%;
+    column-gap: 1vw;
+    gap: 2vh;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    width: 36.5vw;
+}
+
+.calnedar>ul {
+    list-style-type: none;
+}
+
+.weekdays {
+    padding: 1vw 0;
+    background-color: #ddd;
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+}
+
+.weekdays li {
+    display: flex;
+    width: 4.5vw;
+    /* height: 4.5vw; */
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    flex-wrap: nowrap;
+    font-size: 12px;
+}
+
+.days {
+    padding: 1vw 0;
+    background: #eee;
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+
+}
+
+.days li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: 4.5vw;
+    height: 4.5vw;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #777;
+    /* margin-left: 2vw; */
+}
+
+.days li .active {
+    padding: 5px;
+    background: #1abc9c;
+    color: white !important;
+}
+
+.Attendance>img {
+    width: 35vw;
+}
+
+.Attendance>h2 {
+    align-self: flex-start;
+}
+
+.Attendance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Section 3 */
+
+.section3 {
+    display: grid;
+    grid-template-columns: auto;
+    width: 100%;
+    column-gap: 1vw;
+    gap: 2vh;
+}
+
+.unpaid>img {
+    width: 100%;
+}
+
+.calendar,
+.performance,
+.unpaid,
+.Attendance,
+.summary-bar {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.icon {
+    display: flex;
+    justify-content: space-between;
+    width: 10vw;
+}
+
+.profile>img {
+    width: 13vw;
+}
+
+.sidebar h3,
+.sidebar h2 {
+    font-size: 1.2vw;
+}
+
+
+.navigation>img {
+    width: 1.5vw;
+}

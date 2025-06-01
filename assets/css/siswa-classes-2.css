@@ -1,0 +1,638 @@
+/* GENERAL STYLES */
+:root {
+    --ijo: #2E4D2E;
+    --primary-bg: #762f2f;
+    --sidebar-bg: white;
+    --text-light: white;
+    --text-dark: black;
+    --button-bg: rgb(220, 220, 220);
+    --button-hover-bg: #333;
+    --searchbar-bg: white;
+    --tab-bg: white;
+    --tab-active-bg: #f8f8f8;
+}
+
+.creator {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #222;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 0px 12px rgba(255, 255, 255, 0.4);
+    z-index: 1000;
+}
+
+/* GENERAL/ALL */
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* padding: 20px; */
+}
+
+/* SIDEBAR */
+.sidebar {
+    flex-shrink: 0;
+    height: 100vh;
+    width: 225px;
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 30px;
+    position: fixed;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-section img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+
+.profile-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile-name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sidebar-menu-section {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 25px;
+}
+
+.sidebar-menu-section img {
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar a {
+    border: none;
+    color: black;
+    font-weight: normal;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+}
+
+.sidebar button:hover {
+    background: #333;
+}
+
+.logout-btn {
+    width: 108.28px;
+}
+
+.logout-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 50px;
+    width: 100%;
+    padding: 50px 40px;
+    margin-left: 225px;
+    background: #254F1A;
+    min-height: 100vh;
+}
+
+.searchbar-section {
+    background: white;
+    border-radius: 15px;
+    padding: 10px 20px;
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchbar {
+    flex: 1;
+    width: 100%;
+    padding: 5px 15px;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+.search-right-icon {
+    display: flex;
+    align-items: center;
+    width: auto;
+    gap: 20px;
+}
+
+.search-right-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+/* WELCOME TEXT */
+.welcome-text-section {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.welcome-main {
+    font-weight: bold;
+    font-size: 70px;
+}
+
+/* DROPDOWN MENU */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    color: var(--text-light);
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    margin-left: 8px;
+    transition: transform 0.2s ease;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--text-light);
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+    display: none;
+    width: 180px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 14px;
+}
+
+.dropdown-menu li:hover {
+    background: #f4f4f4;
+}
+
+.dropdown.active .dropdown-menu {
+    display: block;
+}
+
+.dropdown.active .arrow {
+    transform: rotate(180deg);
+}
+
+
+/* TABS */
+.classes-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.tabs {
+    display: flex;
+    position: relative;
+}
+
+.tab {
+    background: var(--tab-bg);
+    padding: 12px 20px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    margin-right: -12px;
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--text-dark);
+    box-shadow: 2px -2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.tab.active {
+    z-index: 10;
+    background-color: var(--tab-active-bg);
+    box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* PAGE SECTIONS */
+.pages {
+    background: var(--text-light);
+    padding: 20px;
+    height: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+/* ABSENCE SECTION */
+#absence {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#absence .absence-summary-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 20px;
+    background: var(--ijo);
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#absence .table-absence-container {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    border-radius: 10px;
+    border-collapse: separate;
+    overflow: hidden;
+    text-align: left;
+    border: 1px solid black;
+}
+
+th,
+td {
+    padding: 12px 15px;
+}
+
+th {
+    background: #f4f4f4;
+    font-weight: bold;
+}
+
+td {
+    background-color: var(--ijo);
+    color: white;
+}
+
+.check {
+    color: green;
+    font-weight: bold;
+}
+
+.cross {
+    color: red;
+    font-weight: bold;
+}
+
+.check::before {
+    content: "✔ ";
+}
+
+.cross::before {
+    content: "✖ ";
+}
+
+.requirement {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.requirement::before {
+    content: "✔";
+}
+
+tr:hover {
+    background: black;
+}
+
+
+/* SESSIONS SECTION */
+#sessions {
+    padding: 20px;
+    gap: 20px;
+}
+
+#sessions>.left {
+    width: 100%;
+    flex: 1;
+}
+
+#sessions>.left>.content {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 15px 20px;
+    gap: 10px;
+    border-radius: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+#sessions>.right {
+    background-color: var(--ijo);
+    height: 100%;
+    width: 42%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 15px 20px;
+    border-radius: 12px;
+    color: white;
+}
+
+#sessions>.right>.content {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+}
+
+#sessions>.right>.content img {
+    width: 35px;
+    border-radius: 50%;
+}
+
+
+/* ASSESMENT SECTION */
+#assessment {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#assessment .table-absence-container {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    border-radius: 10px;
+    border-collapse: separate;
+    overflow: hidden;
+    text-align: left;
+    border: 1px solid black;
+}
+
+th,
+td {
+    padding: 12px 15px;
+}
+
+th {
+    background: #f4f4f4;
+    font-weight: bold;
+}
+
+td {
+    background-color: var(--ijo);
+    color: white;
+}
+
+.check {
+    color: green;
+    font-weight: bold;
+}
+
+.cross {
+    color: red;
+    font-weight: bold;
+}
+
+.check::before {
+    content: "✔ ";
+}
+
+.cross::before {
+    content: "✖ ";
+}
+
+.requirement {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.requirement::before {
+    content: "✔";
+}
+
+tr:hover {
+    background: black;
+}
+
+
+/* FORUM SECTION */
+#forum {
+    padding: 20px;
+    gap: 20px;
+}
+
+#forum>.left {
+    width: 20%;
+}
+
+#forum>.left>.content {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 15px 20px;
+    gap: 10px;
+    border-radius: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+#forum>.right {
+    background-color: var(--ijo);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 15px 20px;
+    border-radius: 12px;
+    color: white;
+    flex: 1;
+    gap: 20px;
+}
+
+#forum>.right> p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#forum>.right>.bubble-left {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    gap: 10px;
+    border-radius: 10px;
+    align-items: left;
+    justify-content: left;
+    width: 100%;
+}
+
+#forum>.right>.bubble-left img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#forum>.right>.bubble-left p {
+    width: 45%;
+}
+
+#forum>.right>.bubble-right {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    gap: 10px;
+    border-radius: 10px;
+    align-items: right;
+    justify-content: right;
+    width: 100%;
+}
+
+#forum>.right>.bubble-right img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+#forum>.right>.bubble-right p {
+    width: 50%;
+    text-align: right;
+}
+
+#forum .input-chat{
+    padding: 10px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-radius: 15px;
+    gap: 30px;
+}
+
+#forum .input-chat> input{
+    width: 100%;
+    border: none;
+}
+
+#forum .input-chat > input:focus {
+    outline: none;
+    border: none;
+}
+
+#forum .input-chat> img{
+    width: 25px;
+    height: auto;
+}
+
+
+/* GRADES SECTION */
+#grades {
+    border: 1px solid black;
+}
+
+#grades .grade-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 10px;
+    gap: 50px;
+    border-radius: 10px;
+}
+
+#grades .grade-block .above {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    gap: 60px;
+}
+
+#grades .grade-block .above .left img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#grades .grade-block .above .right img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+#grades .grade-block .below {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background-color: red;
+}
