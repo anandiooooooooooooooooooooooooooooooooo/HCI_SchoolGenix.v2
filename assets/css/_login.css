@@ -56,6 +56,11 @@ input[type="password"] {
   height: 50px;
 }
 
+.input> input:focus {
+    outline: none;
+    border: none;
+}
+
 ::placeholder {
   color: grey;
   opacity: 0.6;

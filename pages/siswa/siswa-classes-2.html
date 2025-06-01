@@ -23,24 +23,26 @@
             <p>Created by Anandhio Varistama</p>
         </div>
         <!-- SIDEBAR -->
-        <aside class="sidebar">
+        <navbar class="sidebar">
             <!-- PROFILE -->
             <div class="profile-section">
-                <img src="../../assets/test-img/testing.png" alt="photo profile">
-                <h2>Anandhio Varistama</h2>
-                <p class="poppins-regular">Student - IPA</p>
+                <img src="../../assets/jpg/profile.png" alt="photo profile">
+                <div class="profile-wrap">
+                    <p class="profile-name">Fajar Sutisna</p>
+                    <p class="profile-role">Student - IPA</p>
+                </div>
             </div>
 
             <!-- sidebar menu -->
             <div class="sidebar-menu-section">
-                <a href="./siswa-dashboard.html">Dashboard</a>
-                <a href="./siswa-classes-1.html">Classes</a>
-                <a href="./siswa-schedule.html">Schedule</a>
+                <a href="./siswa-dashboard.html"><img src="../../assets/png/dashboard.png" alt="">Dashboard</a>
+                <a href="./siswa-classes-1.html"><img src="../../assets/png/classes-2.png" alt="">Classes</a>
+                <a href="./siswa-schedule.html"><img src="../../assets/png/schedule-icon.png" alt="">Schedule</a>
             </div>
 
             <!-- logout button -->
-            <a href="../../index.html" id="logout-btn">Logout</a>
-        </aside>
+            <a href="../../index.html" class="logout-btn"><img src="../../assets/png/shutdown.png" alt="">Logout</a>
+        </navbar>
 
         <!-- MAIN CONTENT -->
         <div class="main-content">
@@ -48,26 +50,26 @@
             <div class="searchbar-section">
                 <input class="searchbar" type="text" placeholder="Search...">
                 <div class="search-right-icon">
-                    <img src="../../assets/test-img/testing.png" alt="notification">
-                    <img src="../../assets/test-img/testing.png" alt="notification">
-                    <img src="../../assets/test-img/testing.png" alt="notification">
+                    <img src="../../assets/png/email-envelope.png" alt="">
+                    <img src="../../assets/png/notification-bell.png" alt="">
+                    <img src="../../assets/png/help-question.png" alt="">
                 </div>
             </div>
 
             <!-- WELCOME TEXT -->
             <div class="welcome-text-section">
-                <h1 class="poppins-bold">My Classes</h1>
+                <p class="welcome-main" id="class-name">My Classes</p>
 
                 <!-- DROPDOWN -->
-                <div class="dropdown">
-                    <h2 class="dropdown-btn">
-                        2025, 1st Semester <span class="arrow">&#9662;</span>
-                    </h2>
-                    <ul class="dropdown-menu">
-                        <li>2024, 2nd Semester</li>
-                        <li>2025, 1st Semester</li>
-                        <li>2025, 2nd Semester</li>
-                    </ul>
+                <div class=" dropdown">
+                <p class="dropdown-btn">
+                    2025, 1st Semester <span class="arrow">&#9662;</span>
+                </p>
+                <ul class="dropdown-menu">
+                    <li>2024, 2nd Semester</li>
+                    <li>2025, 1st Semester</li>
+                    <li>2025, 2nd Semester</li>
+                </ul>
                 </div>
             </div>
 
@@ -78,7 +80,6 @@
                     <div class="tab" data-page="sessions">Sessions</div>
                     <div class="tab" data-page="assessment">Assessment</div>
                     <div class="tab" data-page="forum">Forum</div>
-                    <div class="tab" data-page="exam">Exam</div>
                     <div class="tab" data-page="grades">Grades</div>
                 </div>
 
@@ -87,8 +88,8 @@
                     <!-- ABSENCE -->
                     <div id="absence" class="page">
                         <div class="absence-summary-container">
-                            <h1>Absence Summary</h1>
-                            <h1>2/25</h1>
+                            <p>Absence Summary</p>
+                            <p>2/25</p>
                         </div>
                         <div class="table-absence-container">
                             <table>
@@ -113,7 +114,7 @@
                     <div id="sessions" class="page">
                         <div class="left">
                             <div class="content">
-                                <h2>Sesi 1</h2>
+                                <p>Sesi 1</p>
                                 <p>11, Januari 2025</p>
                             </div>
                         </div>
@@ -125,19 +126,64 @@
                             </div>
                         </div>
                     </div>
+
                     <div id="assessment" class="page">
-                        <h2>Assessment Page</h2>
-                        <p>View assessments and results here.</p>
-                    </div>
-                    <div id="forum" class="page">
-                        <h2>Forum Page</h2>
-                        <p>Discuss topics with peers in the forum.</p>
-                    </div>
-                    <div id="exam" class="page">
-                        <div class="eligible-container">
-                            <h2>you're eligible</h2>
+                        <div class="table-assessment-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Session</th>
+                                        <th>Title</th>
+                                        <th>Issues Date</th>
+                                        <th>Deadline</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>04 Feb 2025, 09:20 GMT+7</td>
+                                        <td>Blablablbalbaabla</td>
+                                        <td>01/01/2025</td>
+                                        <td>11/01/2025</td>
+                                        <td>Submitted</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
+
+
+                    <div id="forum" class="page">
+                        <div class="left">
+                            <div class="content">
+                                <p>Sesi 1</p>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <p>Session 1</p>
+                            <div class="bubble-left">
+                                <img src="../../assets/jpg/profile.png" alt="materi">
+                                <p>Guys, soal trigonometri yang di latihan kemarin susah banget Ada yang ngerti cara ngerjain nomor 7?</p>
+                            </div>
+                            <div class="bubble-right">
+                                <p>Itu yang pakai rumus sinus dua sudut kan? Aku pakai rumus sin(2x) = 2sin(x)cos(x), coba deh pake itu.</p>
+                                <img src="../../assets/jpg/profile.png" alt="materi">
+                            </div>
+                            <div class="bubble-left">
+                                <img src="../../assets/jpg/profile.png" alt="materi">
+                                <p>Betul, Farhan. Nomor 7 memang uji pemahaman rumus identitas trigonometri. Saya sudah unggah video penjelasannya juga di bagian Materi Digital, silakan dicek ya.</p>
+                            </div>
+                            <div class="bubble-right">
+                                <p>Itu yang pakai rumus sinus dua sudut kan? Aku pakai rumus sin(2x) = 2sin(x)cos(x), coba deh pake itu.</p>
+                                <img src="../../assets/jpg/profile.png" alt="materi">
+                            </div>
+                            <div class="input-chat">
+                                <input type="text" placeholder="Type a message">
+                                <img src="../../assets/png/send.png" alt="send">
+                            </div>
+                        </div>
+                    </div>
+
 
                     <div id="grades" class="page">
                         <div class="grade-block">
@@ -169,6 +215,7 @@
         </div>
     </div>
     <script src="../../assets/js/siswa-classes.js"></script>
+    <script src="../../assets/js/siswa-classes-2.js"></script>
 </body>
 
 </html>
