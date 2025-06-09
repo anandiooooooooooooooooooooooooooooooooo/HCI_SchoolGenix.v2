@@ -1,0 +1,360 @@
+.creator {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #222;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 0px 12px rgba(255, 255, 255, 0.4);
+    z-index: 1000;
+}
+
+/* GENERAL/ALL */
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* padding: 20px; */
+}
+
+/* SIDEBAR */
+.sidebar {
+    flex-shrink: 0;
+    height: 100vh;
+    width: 225px;
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 30px;
+    position: fixed;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-section img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+
+.profile-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile-name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sidebar-menu-section {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 25px;
+}
+
+.sidebar-menu-section img {
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar a {
+    border: none;
+    color: black;
+    font-weight: normal;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+}
+
+.sidebar button:hover {
+    background: #333;
+}
+
+.logout-btn {
+    width: 108.28px;
+}
+
+.logout-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 30px;
+    padding: 50px 40px;
+    margin-left: 225px;
+    background: #1ABC9C;
+    min-height: 100vh;
+}
+
+.searchbar-section {
+    background: white;
+    border-radius: 15px;
+    padding: 10px 20px;
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchbar {
+    flex: 1;
+    width: 100%;
+    padding: 5px 15px;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+.search-right-icon {
+    display: flex;
+    align-items: center;
+    width: auto;
+    gap: 20px;
+}
+
+.search-right-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+/* WELCOME TEXT */
+.welcome-text-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.welcome-main {
+    font-weight: bold;
+    font-size: 70px;
+}
+
+.welcome-sub {
+    font-weight: normal;
+    font-size: 40px;
+}
+
+/* Calendar Container */
+.calendar {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Calendar Header */
+.calendar-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+/* Calendar Grid */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    padding: 10px;
+}
+
+/* Calendar Days */
+.day {
+    position: relative;
+    background: white;
+    border-radius: 5px;
+    min-height: 80px;
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+.day span {
+    font-weight: bold;
+}
+
+/* Event Styling */
+.event {
+    font-size: 12px;
+    padding: 3px;
+    margin-top: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Event Colors */
+.red {
+    background: #FF6B6B;
+}
+
+.green {
+    background: #58A55C;
+}
+
+.yellow {
+    background: #F8C471;
+}
+
+.blue {
+    background: #5DADE2;
+}
+
+.purple {
+    background: #A569BD;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .calendar {
+        width: 95%;
+    }
+
+    .calendar-grid {
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    .day {
+        min-height: 60px;
+    }
+}
+
+
+/* STYLE UNTUK MODAL LOGOUT    */
+
+
+
+.modal-konfirmasi {
+  display: none; 
+  position: fixed; 
+  z-index: 9999; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); 
+  
+  backdrop-filter: blur(5px); 
+  -webkit-backdrop-filter: blur(5px);
+}
+
+
+.modal-konten {
+  background-color: #ffffff;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal-konten h4 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.modal-konten p {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+
+.modal-tombol {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+
+.modal-tombol button,
+.modal-tombol a {
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+
+#tombolBatal {
+  background-color: #e9ecef;
+  color: #495057;
+  border: 1px solid #ced4da;
+}
+
+#tombolBatal:hover {
+    background-color: #d6dbe0;
+}
+
+
+#tombolKonfirmasiLogout {
+  background-color: #e74c3c; 
+  color: white;
+}
+
+#tombolKonfirmasiLogout:hover {
+    background-color: #c0392b;
+}
+
+/* MAIN CONTENT */
+
+
+/* RESPONSIVE DESIGN */
+/* @media (max-width: 768px) {
+.sidebar {
+    width: 250px;
+    padding: 40px 15px;
+}
+
+.searchbar-section {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.searchbar {
+    max-width: 100%;
+}
+
+.annoucement-section {
+    flex-direction: column;
+    gap: 10px;
+}
+} */

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TABS-TITLE -->
+    <title>SchoolGenix - Login</title>
+    <link rel="shortcut icon" href="./assets/png/logo.png" type="image/png" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&family=Vampiro+One&display=swap"
+        rel="stylesheet" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/__reset.css" />
+    <link rel="stylesheet" href="./assets/css/_login.css" />
+</head>
+
+<body>
+    <div id="custom-alert" class="custom-alert"></div>
+    <div class="main">
+        <div class="wrapper">
+            <form onsubmit="return redirectToRolePage()">
+            <p class="title">Login</p>
+
+            <!-- Input fields -->
+            <div class="input">
+                <input type="text" id="username" name="username" placeholder="Username" />
+                <input type="password" id="password" name="password" placeholder="Password" />
+            </div>
+
+            <!-- Remember me checkbox -->
+            <div class="check">
+                <input type="checkbox" id="remember" name="remember" />
+                <label for="remember" class="check_text">Remember Me</label>
+            </div>
+
+            <!-- Submit button -->
+            <div class="btn">
+                <button type="button" class="back" onclick="goToBack()">Back</button>
+                <button type="button" class="login" onclick="redirectToRolePage()">Login</button>
+            </div>
+        </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./assets/js/login.js"></script>
+</body>
+
+</html>

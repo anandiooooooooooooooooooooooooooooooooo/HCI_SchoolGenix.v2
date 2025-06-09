@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TABS-TITLE -->
+    <title>SchoolGenix - Student - Classes</title>
+    <link rel="shortcut icon" href="../../assets/png/logo.png" type="image/png" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&family=Vampiro+One&display=swap"
+        rel="stylesheet" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/__reset.css" />
+    <link rel="stylesheet" href="../../assets/css/siswa-classes-1.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="creator">
+            <p>Created by Anandhio Varistama</p>
+        </div>
+        <!-- SIDEBAR -->
+        <navbar class="sidebar">
+            <!-- PROFILE -->
+            <div class="profile-section">
+                <img src="../../assets/jpg/profile.png" alt="photo profile">
+                <div class="profile-wrap">
+                    <p class="profile-name">Fajar Sutisna</p>
+                    <p class="profile-role">Student - IPA</p>
+                </div>
+            </div>
+
+            <!-- sidebar menu -->
+            <div class="sidebar-menu-section">
+                <a href="./siswa-dashboard.html"><img src="../../assets/png/dashboard.png" alt="">Dashboard</a>
+                <a href="./siswa-classes-1.html"><img src="../../assets/png/classes-2.png" alt="">Classes</a>
+                <a href="./siswa-schedule.html"><img src="../../assets/png/schedule-icon.png" alt="">Schedule</a>
+            </div>
+
+            <!-- logout button -->
+            <a href="../../index.html" class="logout-btn"><img src="../../assets/png/shutdown.png" alt="">Logout</a>
+        </navbar>
+
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <!-- SEARCH BAR -->
+            <div class="searchbar-section">
+                <input class="searchbar" type="text" placeholder="Search...">
+                <div class="search-right-icon">
+                    <img src="../../assets/png/email-envelope.png" alt="">
+                    <img src="../../assets/png/notification-bell.png" alt="">
+                    <img src="../../assets/png/help-question.png" alt="">
+                </div>
+            </div>
+
+            <!-- WELCOME TEXT -->
+            <div class="welcome-text-section">
+                <p class="welcome-main"">My Classes</p>
+
+                <!-- DROPDOWN -->
+                <div class="dropdown">
+                    <p class="dropdown-btn">
+                        2025, 1st Semester <span class="arrow">&#9662;</span>
+                    </p>
+                    <ul class="dropdown-menu">
+                        <li>2024, 2nd Semester</li>
+                        <li>2025, 1st Semester</li>
+                        <li>2025, 2nd Semester</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="classes-content">
+                <div class="class-group">
+                    <div class="class-header">A</div>
+                    <div class="class-list">
+                        <div class="class-item">
+                            <a href="#" onclick="selectClass('Agama')"><img src="../../assets/png/religion-icon.png"
+                                    alt=""></a>
+                            <p>Agama</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-bar"></div>
+                <div class="class-group">
+                    <div class="class-header">B</div>
+                    <div class="class-list">
+                        <div class="class-item">
+                            <a href="#" onclick="selectClass('Biology')"><img src="../../assets/png/biology.png"
+                                    alt=""></a>
+                            <p>biology</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-bar"></div>
+                <div class="class-group">
+                    <div class="class-header">M</div>
+                    <div class="class-list">
+                        <div class="class-item">
+                            <a href="#" onclick="selectClass('Matematika')"><img src="../../assets/png/math-icon.png"
+                                    alt=""></a>
+                            <p>Matematika</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/js/siswa.js"></script>
+</body>
+
+</html>

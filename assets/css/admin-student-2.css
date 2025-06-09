@@ -1,0 +1,268 @@
+:root {
+  --searchbar-bg: white;
+}
+
+.creator {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #222;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 0px 12px rgba(255, 255, 255, 0.4);
+  z-index: 1000;
+}
+
+/* SIDEBAR */
+.sidebar {
+    flex-shrink: 0;
+    height: 100vh;
+    width: 225px;
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 30px;
+    position: fixed;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-section img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+
+.profile-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile-name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sidebar-menu-section {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 25px;
+}
+
+.sidebar-menu-section img {
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar a {
+    border: none;
+    color: black;
+    font-weight: normal;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+}
+
+.sidebar button:hover {
+    background: #333;
+}
+
+.logout-btn {
+    width: 108.28px;
+}
+
+.logout-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 50px;
+    padding: 50px 40px;
+    margin-left: 225px;
+    background: #582C4D;
+    min-height: 100vh;
+}
+
+.searchbar-section {
+    background: white;
+    border-radius: 15px;
+    padding: 10px 20px;
+    gap: 20px;
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+.searchbar {
+    flex: 1;
+    padding: 5px 15px;
+    border: 1px solid black;
+    border-radius: 30px;
+    box-sizing: border-box;
+    min-width: 0; /* optional but useful inside flex */
+}
+
+.search-right-icon {
+    display: flex;
+    align-items: center;
+    width: auto;
+    gap: 20px;
+}
+
+.search-right-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+/* WELCOME TEXT */
+.welcome-text-section {
+    color: white;
+}
+
+.welcome-main {
+    font-weight: bold;
+    font-size: 70px;
+}
+
+
+/* SEARCH */
+.bottom-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#search-students {
+  padding: 10px 20px;
+  border-radius: 20px;
+  height: 45px;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.right > a {
+  border-radius: 3vw; /* keep just one */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border: none;
+  background-color: #FFBAF8;
+  color: white;
+  text-decoration: none;
+  font-size: 1vw;
+  text-align: center;
+  width: fit-content;
+  height: 45px;
+}
+
+.filter>img {
+  height: 20px;
+}
+
+.filter {
+  background-color: transparent !important;
+  border: 0.2vw solid #FFBAF8 !important;
+  color: #FFBAF8 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.right>a>strong {
+  margin-right: 0.5vw;
+}
+
+/* Section 1 */
+.section1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.personal {
+  width: 100%;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.top {
+  display: flex;
+  color: white;
+  background-color: #FFBAF8;
+  border-top-left-radius: 1vw;
+  border-top-right-radius: 1vw;
+  height: 6vh;
+  align-items: center;
+  padding: 30px;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+  color: #303972;
+  padding: 0 50px 30px;
+  margin-top: 20px;
+}
+
+#form-input {
+  width: 30vw;
+  border-radius: 0.4vw;
+  border-style: solid;
+  height: 4vh;
+}
+
+
+#address {
+  margin-top: 1vh;
+  width: 30vw;
+  height: 10vh;
+  resize: none;
+}
+
+.icon {
+  display: flex;
+  justify-content: space-between;
+  width: 10vw;
+}
+
+.profile>img {
+  width: 13vw;
+}
+
+.sidebar h3,
+.sidebar h2 {
+  font-size: 1.2vw;
+}

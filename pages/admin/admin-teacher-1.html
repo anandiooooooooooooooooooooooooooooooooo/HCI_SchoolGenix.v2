@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TABS-TITLE -->
+    <title>SchoolGenix - Admin - Student</title>
+    <link rel="shortcut icon" href="../../assets/png/logo.png" type="image/png" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&family=Vampiro+One&display=swap"
+        rel="stylesheet" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/__reset.css" />
+    <link rel="stylesheet" href="../../assets/css/admin-student-1.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="main-page">
+        <div class="creator">
+            <p>Created by Jason Tirta</p>
+        </div>
+        <!-- SIDEBAR -->
+        <navbar class="sidebar">
+            <!-- PROFILE -->
+            <div class="profile-section">
+                <img src="../../assets/jpg/profile.png" alt="photo profile">
+                <div class="profile-wrap">
+                    <p class="profile-name">Fajar Sutisna</p>
+                    <p class="profile-role">ADMIN</p>
+                </div>
+            </div>
+
+            <!-- sidebar menu -->
+            <div class="sidebar-menu-section">
+                <a href="./admin-dashboard.html"><img src="../../assets/png/dashboard.png" alt="">Dashboard</a>
+                <a href="./admin-student-1.html"><img src="../../assets/png/student.png" alt="">Student</a>
+                <a href="./admin-teacher-1.html"><img src="../../assets/png/teacher.png" alt="">Teachers</a>
+            </div>
+
+            <!-- logout button -->
+            <a href="../../index.html" class="logout-btn"><img src="../../assets/png/shutdown.png" alt="">Logout</a>
+        </navbar>
+
+        <div class="main-content">
+            <!-- search bar -->
+            <div class="searchbar-section">
+                <input class="searchbar" type="text" placeholder="Search...">
+                <div class="search-right-icon">
+                    <img src="../../assets/png/email-envelope.png" alt="">
+                    <img src="../../assets/png/notification-bell.png" alt="">
+                    <img src="../../assets/png/help-question.png" alt="">
+                </div>
+            </div>
+
+            <!-- MainText (Hello, [student-surname]!) -->
+            <div class="main-text-container">
+                <!-- welcome text -->
+                <div class="welcome-text-section">
+                    <p class="welcome-main">Teacher</p>
+                </div>
+            </div>
+
+            <section class="section1">
+                <div class="bottom-text">
+                    <div class="left">
+                        <input type="text" id="search-students" placeholder="Search...">
+                    </div>
+                    <div class="right">
+                        <a href="#" class="filter">Newest<img src="../../assets/png/dropdown-icon.png" alt=""></a>
+                        <a href="./admin-teacher-2.html" class="add"><strong>+ </strong>New Student</a>
+                    </div>
+                </div>
+                <div class="students-list">
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" disabled /></th>
+                                    <th>Name</th>
+                                    <th>ID</th>
+                                    <th>Date</th>
+                                    <th>Parent Name</th>
+                                    <th>City</th>
+                                    <th>Contact</th>
+                                    <th style="text-align: center;">Grade</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" checked /></td>
+                                    <td>
+                                        <div class="name">
+                                            <div class="avatar"></div>
+                                            Samanta William
+                                        </div>
+                                    </td>
+                                    <td class="id">#123456789</td>
+                                    <td>March 25, 2021</td>
+                                    <td>Mana William</td>
+                                    <td>Jakarta</td>
+                                    <td>
+                                        <span class="contact-icon">📞</span>
+                                        <span class="contact-icon">✉️</span>
+                                    </td>
+                                    <td style="text-align: center;"><span class="badge red">VII A</span></td>
+                                    <td>...</td>
+                                </tr>
+
+                                <tr>
+                                    <td><input type="checkbox" checked /></td>
+                                    <td style="text-align: center;">
+                                        <div class="name">
+                                            <div class="avatar"></div>
+                                            Jason
+                                        </div>
+                                    </td>
+                                    <td class="id">#123456789</td>
+                                    <td>March 25, 2021</td>
+                                    <td>Mana William</td>
+                                    <td>Jakarta</td>
+                                    <td>
+                                        <span class="contact-icon">📞</span>
+                                        <span class="contact-icon">✉️</span>
+                                    </td>
+                                    <td style="text-align: center;"><span class="badge yellow">VII A</span></td>
+                                    <td>...</td>
+                                </tr>
+
+                                <!-- Repeat for other rows -->
+                            </tbody>
+                        </table>
+                        <div class="pagination">
+                            <button>&lt;</button>
+                            <button class="active">1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <button>&gt;</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</body>
+
+</html>

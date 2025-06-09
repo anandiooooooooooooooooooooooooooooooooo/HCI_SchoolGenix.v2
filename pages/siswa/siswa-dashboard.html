@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TABS-TITLE -->
+    <title>SchoolGenix - Student - Classes</title>
+    <link rel="shortcut icon" href="../../assets/png/logo.png" type="image/png" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&family=Vampiro+One&display=swap"
+        rel="stylesheet" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../assets/css/__reset.css" />
+    <link rel="stylesheet" href="../../assets/css/siswa-dashboard.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="creator">
+            <p>Created by Anandhio Varistama</p>
+        </div>
+        <!-- SIDEBAR -->
+        <navbar class="sidebar">
+            <!-- PROFILE -->
+            <div class="profile-section">
+                <img src="../../assets/jpg/profile.png" alt="photo profile">
+                <div class="profile-wrap">
+                    <p class="profile-name">Fajar Sutisna</p>
+                    <p class="profile-role">Student - IPA</p>
+                </div>
+            </div>
+
+            <!-- sidebar menu -->
+            <div class="sidebar-menu-section">
+                <a href="./siswa-dashboard.html"><img src="../../assets/png/dashboard.png" alt="">Dashboard</a>
+                <a href="./siswa-classes-1.html"><img src="../../assets/png/classes-2.png" alt="">Classes</a>
+                <a href="./siswa-schedule.html"><img src="../../assets/png/schedule-icon.png" alt="">Schedule</a>
+            </div>
+
+            <!-- logout button -->
+            <a href="../../index.html" class="logout-btn"><img src="../../assets/png/shutdown.png" alt="">Logout</a>
+        </navbar>
+
+        <div class="main-content">
+            <!-- search bar -->
+            <div class="searchbar-section">
+                <input class="searchbar" type="text" placeholder="Search...">
+                <div class="search-right-icon">
+                    <img src="../../assets/png/email-envelope.png" alt="">
+                    <img src="../../assets/png/notification-bell.png" alt="">
+                    <img src="../../assets/png/help-question.png" alt="">
+                </div>
+            </div>
+
+            <!-- welcome text -->
+            <div class="welcome-text-section">
+                <p class="welcome-main">Hello, Fajar!</p>
+                <p class="welcome-sub">Lets learn something new today!</p>
+            </div>
+
+            <!-- section1 cards -->
+            <div class="section1-cards-section">
+                <!-- statistics card -->
+                <div class="statistics-card">
+                    <div class="stats-left">
+
+                        <div class="stats-title">
+                            <p class="stats-main">Statistics</p>
+                            <p class="stats-sub">January-June 2025</p>
+                        </div>
+
+                        <div class="stats-details">
+                            <div class="stats-wrap">
+                                <img src="../../assets/png/absence.png" alt="">
+                                <div class="text">
+                                    <p class="text-main">Absence</p>
+                                    <p class="text-sub">90%</p>
+                                </div>
+                            </div>
+
+                            <div class="stats-wrap">
+                                <img src="../../assets/png/tasks.png" alt="">
+                                <div class="text">
+                                    <p class="text-main">Tasks</p>
+                                    <p class="text-sub">80%</p>
+                                </div>
+                            </div>
+
+                            <div class="stats-wrap">
+                                <img src="../../assets/png/quiz.png" alt="">
+                                <div class="text">
+                                    <p class="text-main">Quiz</p>
+                                    <p class="text-sub">70%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="stats-right">
+                        <div class="circular-progress">
+                            <svg>
+                                <circle class="bg" cx="75" cy="75" r="70"></circle>
+                                <circle class="progress" cx="75" cy="75" r="70"></circle>
+                            </svg>
+                            <div class="text">
+                                <h2>75%</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- task progress card -->
+                <div class="task-progress-card">
+                    <p class="task-title">Task Progress</p>
+
+
+                    <div class="task-wrap">
+                        <div class="task-details">
+                            <div class="task-text">
+                                <p class="task-left">Matematika</p>
+                                <p class="task-right">2/8</p>
+                            </div>
+                            <div style="width: 100%; background: #ccc; border-radius: 10px; height: 7px;">
+                                <div style="width: 20%; background: green; border-radius: 10px; height: 7px;"></div>
+                            </div>
+                        </div>
+
+                        <div class="task-details">
+                            <div class="task-text">
+                                <p class="task-left">Fisika</p>
+                                <p class="task-right">4/10</p>
+                            </div>
+                            <div style="width: 100%; background: #ccc; border-radius: 10px; height: 7px;">
+                                <div style="width: 40%; background: green; border-radius: 10px; height: 7px;"></div>
+                            </div>
+                        </div>
+                        <div class="task-details">
+                            <div class="task-text">
+                                <p class="task-left">Biologi</p>
+                                <p class="task-right">8/8</p>
+                            </div>
+                            <div style="width: 100%; background: #ccc; border-radius: 10px; height: 7px;">
+                                <div style="width: 100%; background: green; border-radius: 10px; height: 7px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- performance card -->
+                <div class="performance-card">
+                    <p class="performance-title">Performance</p>
+                    <div class="performance-details">
+                        <div class="performance-info">
+                            <div class="rectangle"></div>
+                            <p>Task</p>
+                        </div>
+                        <div class="peformance-img">
+                            <img src="../../assets/png/performance.png" alt="">
+                        </div>
+                        <p>Your grade: <b>80</b></p>
+                    </div>
+                </div>
+
+                <!-- calendar card -->
+                <div class="calendar-card">
+                    <div class="calendar-header">
+                        <button class="nav-btn">&#10094;</button>
+                        <div class="calendar-month">January 2025</div>
+                        <button class="nav-btn">&#10095;</button>
+                    </div>
+                    <div class="calendar-weekdays">
+                        <div>SUN</div>
+                        <div>MON</div>
+                        <div>TUE</div>
+                        <div>WED</div>
+                        <div>THR</div>
+                        <div>FRI</div>
+                        <div>SAT</div>
+                    </div>
+                    <div class="calendar-days">
+                        <div class="red">1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                        <div>7</div>
+                        <div class="red">8</div>
+                        <div>9</div>
+                        <div>10</div>
+                        <div>11</div>
+                        <div>12</div>
+                        <div>13</div>
+                        <div>14</div>
+                        <div class="red">15</div>
+                        <div>16</div>
+                        <div>17</div>
+                        <div>18</div>
+                        <div>19</div>
+                        <div>20</div>
+                        <div>21</div>
+                        <div class="red">22</div>
+                        <div>23</div>
+                        <div>24</div>
+                        <div>25</div>
+                        <div>26</div>
+                        <div>27</div>
+                        <div>28</div>
+                        <div class="red">29</div>
+                        <div>30</div>
+                        <div>31</div>
+                        <div class="gray">1</div>
+                        <div class="gray">2</div>
+                        <div class="gray">3</div>
+                        <div class="gray">4</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- annoucement cards -->
+            <div class="annoucement-section">
+                <p class="annoucement-title">Whats new?</p>
+
+                <div class="annoucement-content">
+                    <div class="annoucement-card">
+                        <div class="annoucement-details">
+                            <div class="annoucement-img">
+                                <img src="../../assets/jpg/annoucement-banner.jpg" alt="">
+                            </div>
+                            <div class="annoucement-text">
+                                <p class="main">Annoucement</p>
+                                <p class="sub">IMPORTANT</p>
+                            </div>
+                            <div class="annoucement-profile">
+                                <img src="../../assets/jpg/profile.png" alt="">
+                                <div class="profile-text">
+                                    <p class="profile-name">Fajar Sutisna</p>
+                                    <p class="profile-role">Student - IPA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="annoucement-card">
+                        <div class="annoucement-details">
+                            <div class="annoucement-img">
+                                <img src="../../assets/jpg/annoucement-banner.jpg" alt="">
+                            </div>
+                            <div class="annoucement-text">
+                                <p class="main">Annoucement</p>
+                                <p class="sub">IMPORTANT</p>
+                            </div>
+                            <div class="annoucement-profile">
+                                <img src="../../assets/jpg/profile.png" alt="">
+                                <div class="profile-text">
+                                    <p class="profile-name">Fajar Sutisna</p>
+                                    <p class="profile-role">Student - IPA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="annoucement-card">
+                        <div class="annoucement-details">
+                            <div class="annoucement-img">
+                                <img src="../../assets/jpg/annoucement-banner.jpg" alt="">
+                            </div>
+                            <div class="annoucement-text">
+                                <p class="main">Annoucement</p>
+                                <p class="sub">IMPORTANT</p>
+                            </div>
+                            <div class="annoucement-profile">
+                                <img src="../../assets/jpg/profile.png" alt="">
+                                <div class="profile-text">
+                                    <p class="profile-name">Fajar Sutisna</p>
+                                    <p class="profile-role">Student - IPA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/js/siswa.js"></script>
+</body>
+
+</html>
