@@ -73,6 +73,10 @@
     font-size: 20px;
 }
 
+.profile-role {
+    text-align: center;
+}
+
 .sidebar-menu-section {
     display: flex;
     flex-direction: column;
@@ -120,7 +124,7 @@
     width: 100%;
     padding: 50px 40px;
     margin-left: 225px;
-    background: #4A5C7C;
+    background: #C0392B;
     min-height: 100vh;
 }
 

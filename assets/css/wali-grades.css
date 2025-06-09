@@ -73,6 +73,10 @@
     font-size: 20px;
 }
 
+.profile-role {
+    text-align: center;
+}
+
 .sidebar-menu-section {
     display: flex;
     flex-direction: column;
@@ -120,7 +124,7 @@
     width: 100%;
     padding: 50px 40px;
     margin-left: 225px;
-    background: #4A5C7C;
+    background: #C0392B;
     min-height: 100vh;
 }
 
@@ -170,15 +174,15 @@
 
 /* MIDDLE CONTENT */
 .middle-content {
-display: flex;
-flex-direction: column;
-/* height: 100%; */
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+justify-content: space-around;
+gap: 50px;
 width: 100%;
 background-color: white;
 padding: 20px;
 border-radius: 12px;
 box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-gap: 20px;
 }
 
 .ID {
@@ -248,23 +252,17 @@ gap: 10vw;
 display: flex;
 } 
 
-.grades{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.grades .grade-block{
+.grade-block{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     border: 1px solid black;
     padding: 10px;
-    gap: 50px;
+    gap: 4em;
     border-radius: 10px;
+    max-width: 1000px;
 }
 
-.grades .grade-block .above{
+.grade-block .above{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -272,13 +270,13 @@ display: flex;
     gap: 60px;
 }
 
-.grades .grade-block .above .left img{
+.grade-block .above .left img{
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
 
-.grades .grade-block .above .right img{
+.grade-block .above .right img{
     width: 80px;
     height: 80px;
     border-radius: 50%;
