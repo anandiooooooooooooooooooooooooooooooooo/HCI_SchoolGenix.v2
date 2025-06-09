@@ -79,12 +79,18 @@
     gap: 10px;
 }
 
-.sidebar button:hover {
+/* .sidebar button:hover {
     background: #333;
-}
+} */
 
 .logout-btn {
     width: 108.28px;
+    gap: 1vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: none;
 }
 
 .logout-btn img {

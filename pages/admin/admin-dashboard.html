@@ -42,7 +42,19 @@
             </div>
 
             <!-- logout button -->
-            <button id="confirmButton" class="logout-btn"><img src="../../assets/png/shutdown.png" alt="">Logout</button>
+            <button class="logout-btn"><img src="../../assets/png/shutdown.png" alt="">Logout</button>
+            
+            <div id="modalLogout" class="modal-konfirmasi">
+                <div class="modal-konten">
+                    <h4>Konfirmasi Logout</h4>
+                    <p>Apakah Anda yakin ingin keluar?</p>
+                    <div class="modal-tombol">
+                        <button id="tombolBatal">Batal</button>
+                        <a href="#" id="tombolKonfirmasiLogout">Ya, Logout</a>
+                    </div>
+                </div>
+            </div>    
+
         </navbar>
 
         <div class="main-content">
@@ -284,5 +296,6 @@
     </div>
 </body>
 <script src="../../assets/js/admin-dashboard.js"></script>
+<script src="../../assets/js/admin-logout.js"></script>
 
 </html>
