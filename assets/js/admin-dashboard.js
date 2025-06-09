@@ -144,3 +144,24 @@ new Chart(ctx, {
         }
       }
     });
+
+    const confirmButton = document.getElementById('confirmButton');
+
+        // Add a 'click' event listener to the button
+        confirmButton.addEventListener('click', function() {
+            // Use window.confirm() to show a confirmation dialog.
+            // It returns `true` if the user clicks "OK" and `false` if the user clicks "Cancel".
+            const userChoice = window.confirm("Are you sure you want to go to the main page?");
+
+            // Check the user's choice
+            if (userChoice) {
+                // If the user clicked "OK" (true), redirect them to the main page.
+                // You can change 'https://www.google.com' to your desired URL.
+                console.log("User chose YES. Redirecting...");
+                window.location.href = '../../index.html'; 
+            } else {
+                // If the user clicked "Cancel" (false), do nothing.
+                // The script will end, and the user will stay on the current page.
+                console.log("User chose NO. Staying on the page.");
+            }
+        });
