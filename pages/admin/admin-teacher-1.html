@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teachers</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TABS-TITLE -->
+    <title>SchoolGenix - Admin - Student</title>
+    <link rel="shortcut icon" href="../../assets/png/logo.png" type="image/png" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&family=Vampiro+One&display=swap"
+        rel="stylesheet" />
+    <!-- CSS -->
     <link rel="stylesheet" href="../../assets/css/__reset.css" />
-    <link rel="stylesheet" href="../../assets/css/admin-teacher-1.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Vampiro+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/admin-teacher-1.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
-    
     <div class="main-page">
         <div class="creator">
             <p>Created by Jason Tirta</p>
@@ -38,10 +45,7 @@
             <button id="confirmButton" class="logout-btn"><img src="../../assets/png/shutdown.png" alt="">Logout</button>
         </navbar>
 
-        
-        <!-- Content -->
-        <div class="content">
-            
+        <div class="main-content">
             <!-- search bar -->
             <div class="searchbar-section">
                 <input class="searchbar" type="text" placeholder="Search...">
@@ -51,22 +55,25 @@
                     <img src="../../assets/png/help-question.png" alt="">
                 </div>
             </div>
-            
-            <!-- MainText (Hello, [student_surname]!) -->
+
+            <!-- MainText (Hello, [student-surname]!) -->
             <div class="main-text-container">
-                <div class="main-text">
-                    <h1 class="poppins-bold" style="font-size: 6vw;">Teachers</h1>
-                </div>
-                <div class="bottom_text">
-                    <div class="left">
-                        <input type="text" id="search_students" >
-                    </div>
-                    <div class="right">
-                        <a href="#" class="filter">Newest <img src="../../assets/icon/dropdown.png" alt=""></a> 
-                        <a href="./admin_teacher_2.html" class="add"><strong>+ </strong>New Teachers</a>
-                    </div>
+                <!-- welcome text -->
+                <div class="welcome-text-section">
+                    <p class="welcome-main">Teacher</p>
                 </div>
             </div>
+
+            <div class="bottom-text">
+                <div class="left">
+                    <input type="text" id="search-students" placeholder="Search...">
+                </div>
+                <div class="right">
+                    <a href="#" class="filter">Newest<img src="../../assets/png/dropdown-icon.png" alt=""></a>
+                    <a href="./admin-student-2.html" class="add"><strong>+ </strong>New Student</a>
+                </div>
+            </div>
+
 
             <section class="section1">
 
@@ -289,8 +296,12 @@
                     </div>
                 </div>   
             </section>
+
+
+
         </div>
     </div>
     <script src="../../assets/js/admin-logout.js"></script>
 </body>
+
 </html>
