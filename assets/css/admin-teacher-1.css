@@ -181,8 +181,8 @@ border-radius: 50%;
   justify-content: center;
   padding: 10px 20px;
   border: none;
-  background-color: #FFBAF8;
-  color: white;
+  background-color: #ecf0f1;
+  color: #303972;
   text-decoration: none;
   font-size: 1vw;
   text-align: center;
@@ -196,8 +196,8 @@ border-radius: 50%;
 
 .filter {
   background-color: transparent !important;
-  border: 0.2vw solid #FFBAF8 !important;
-  color: #FFBAF8 !important;
+  border: 0.2vw solid #ecf0f1 !important;
+  color: #ecf0f1 !important;
   display: flex;
   align-items: center;
   justify-content: center;
