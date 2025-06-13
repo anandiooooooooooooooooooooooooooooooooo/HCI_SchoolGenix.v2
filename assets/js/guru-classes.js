@@ -1,4 +1,7 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {
+    // 🔹 Dropdown Menu Toggle
     const dropdownToggle = document.querySelector(".dropdown-btn");
     const dropdownMenu = document.querySelector(".dropdown-menu");
     const dropdown = document.querySelector(".dropdown");
@@ -15,8 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 dropdown.classList.remove("active");
             }
         });
+    } else {
+        console.warn("⚠ Dropdown elements not found. Skipping dropdown setup.");
     }
 
+    // 🔹 Tabs and Pages Management
     const tabs = document.querySelectorAll(".tab");
     const pages = document.querySelectorAll(".page");
 
@@ -45,14 +51,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 selectedPage.classList.add("active");
                 selectedPage.style.display = "flex";
             } else {
+                console.error("❌ Page not found:", tabId);
                 return;
             }
 
             const selectedTab = document.querySelector(`[data-page="${tabId}"]`);
             if (selectedTab) {
                 selectedTab.classList.add("active");
+            } else {
+                console.error("❌ Tab not found:", tabId);
             }
-
+            
             localStorage.setItem("activeTab", tabId);
         }
 
@@ -64,5 +73,39 @@ document.addEventListener("DOMContentLoaded", function () {
                 activateTab(targetId);
             });
         });
+    } else {
+        console.warn("⚠ Tabs or pages not found. Skipping tab setup.");
     }
+
+    // 🔹 MODAL LOGOUT FUNCTIONALITY
+    const modalLogout = document.getElementById('modalLogout');
+    const tombolLogout = document.querySelector('.logout-btn');
+    const tombolBatal = document.getElementById('tombolBatal');
+    const tombolKonfirmasiLogout = document.getElementById('tombolKonfirmasiLogout');
+
+    if (modalLogout && tombolLogout && tombolBatal && tombolKonfirmasiLogout) {
+        
+        tombolLogout.addEventListener('click', function (event) {
+            event.preventDefault();
+            modalLogout.style.display = 'block';
+        });
+
+        tombolBatal.addEventListener('click', function () {
+            modalLogout.style.display = 'none';
+        });
+
+        tombolKonfirmasiLogout.addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = tombolLogout.href;
+        });
+
+        window.addEventListener('click', function (event) {
+            if (event.target == modalLogout) {
+                modalLogout.style.display = 'none';
+            }
+        });
+    } else {
+        console.warn("⚠ Logout modal elements not found. Skipping logout modal setup.");
+    }
+
 });

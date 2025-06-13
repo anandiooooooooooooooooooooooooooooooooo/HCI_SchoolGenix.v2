@@ -105,6 +105,7 @@
     width: 100%;
     padding: 50px 40px;
     margin-left: 225px;
+    overflow: auto;
     background: #254F1A;
     min-height: 100vh;
 }
@@ -459,10 +460,10 @@
     gap: 20px;
 }
 
-.annoucement-title{
+.annoucement-title {
     font-size: 20px;
     font-weight: bold;
-    color:  white;
+    color: white;
 }
 
 .annoucement-content {
@@ -478,7 +479,8 @@
     color: black;
     flex: 1;
     width: fit-content;
-    height: fit-content;;
+    height: fit-content;
+    ;
     display: flex;
     flex-direction: column;
 }
@@ -490,7 +492,7 @@
     object-fit: cover;
 }
 
-.annoucement-text{
+.annoucement-text {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -498,12 +500,12 @@
     margin-bottom: 40px;
 }
 
-.annoucement-text .main{
+.annoucement-text .main {
     font-weight: bold;
     font-size: 20px;
 }
 
-.annoucement-text .sub{
+.annoucement-text .sub {
     padding: 3px 10px;
     border-radius: 30px;
     font-weight: bold;
@@ -512,24 +514,24 @@
     border: 2px solid red;
 }
 
-.annoucement-profile{
+.annoucement-profile {
     display: flex;
     flex-direction: row;
     gap: 10px;
     align-items: center;
 }
 
-.annoucement-profile img{
+.annoucement-profile img {
     width: 35px;
     border-radius: 50%;
 }
 
-.annoucement-profile .profile-name{
+.annoucement-profile .profile-name {
     font-size: 16px;
     font-weight: bold;
 }
 
-.annoucement-profile .profile-role{
+.annoucement-profile .profile-role {
     font-size: 14px;
     font-weight: normal;
 }
