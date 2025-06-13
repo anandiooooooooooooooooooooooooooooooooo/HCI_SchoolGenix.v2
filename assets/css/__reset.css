@@ -249,8 +249,3 @@ template {
 [hidden] {
     display: none
 }
-
-.sidebar a:hover {
-    opacity: 0.5;
-
-}
