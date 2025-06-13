@@ -13,7 +13,7 @@
 
 /* GENERAL STYLES */
 :root {
-    --primary-bg: #762f2f;
+    --primary-bg: #1ABC9C;
     --sidebar-bg: white;
     --text-light: white;
     --text-dark: black;
@@ -238,7 +238,7 @@
 .absence-card {
     display: flex;
     justify-content: space-between;
-    background-color: #fff;
+    background-color: #1ABC9C;
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     padding: 20px;
@@ -252,6 +252,7 @@
 
 .card-left h3 {
     margin: 0;
+    color: #fff;
     font-size: 20px;
     font-weight: 600;
 }
@@ -259,13 +260,13 @@
 .card-left p,
 .card-right p {
     margin: 4px 0;
-    color: #333;
+    color: #fff;
 }
 
 .btn-detail {
     margin-top: 8px;
-    background-color: #4a90e2;
-    color: white;
+    background-color: #fff;
+    color: #1ABC9C;
     border: none;
     padding: 8px 12px;
     border-radius: 8px;
@@ -293,8 +294,8 @@
 }
 
 .session-button {
-    background-color: #f0f0f0;
-    color: #000;
+    background-color: #1ABC9C;
+    color: #fff;
     font-weight: 600;
     padding: 0.8rem 1.2rem;
     border: none;
@@ -313,7 +314,7 @@
 
 .session-right {
     flex: 1;
-    background-color: #e0e0e0;
+    background-color: #1ABC9C;
     border-radius: 20px;
     width: 50%;
     padding: 20px;
@@ -322,7 +323,7 @@
 .session-right h2 {
     font-size: 2rem;
     font-weight: 800;
-    color: #800020;
+    color: #fff;
     /* Dark maroon */
     font-family: 'Poppins', sans-serif;
     margin-bottom: 1.5rem;
@@ -342,6 +343,7 @@
 
 .material-item span {
     font-weight: 600;
+    color: #fff;
 }
 
 .material-item .duration {
@@ -365,10 +367,11 @@
 }
 
 .assessment-list-item {
-    background-color: #f1f1f1;
+    background-color: #1ABC9C;
     padding: 16px 20px;
     border-radius: 16px;
     font-weight: bold;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -387,7 +390,7 @@
 
 .assessment-detail-column {
     width: 50%;
-    background-color: #f7f7f7;
+    background-color: #1ABC9C;
     padding: 24px;
     border-radius: 20px;
 }
@@ -395,7 +398,7 @@
 .assessment-heading {
     font-size: 24px;
     font-weight: 700;
-    color: #80001c;
+    color: #fff;
     margin-bottom: 20px;
 }
 
@@ -471,11 +474,11 @@
     font-size: 26px;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: #1ABC9C;
 }
 
 .forum-post {
-    background: #ffffff;
+    background: #1ABC9C;
     border: 1px solid #dcdde1;
     border-radius: 16px;
     padding: 20px;
@@ -504,7 +507,7 @@
 
 .post-date {
     font-size: 12px;
-    color: #7f8c8d;
+    color: #fff;
 }
 
 .badge-important {
@@ -517,7 +520,7 @@
 
 .post-content {
     font-size: 15px;
-    color: #2d3436;
+    color: #fff;
     margin-bottom: 15px;
     line-height: 1.5;
 }
@@ -533,7 +536,7 @@
 
 .reply-content {
     font-size: 14px;
-    color: #34495e;
+    color: #fff;
     margin-left: 50px;
     margin-top: 4px;
 }
@@ -588,12 +591,12 @@
 .exam-heading {
     font-size: 24px;
     font-weight: 700;
-    color: #80001c;
+    color: #1ABC9C;
     margin-bottom: 24px;
 }
 
 .exam-card {
-    background-color: #fdfdfd;
+    background-color: #1ABC9C;
     border-radius: 16px;
     padding: 20px 24px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -609,20 +612,21 @@
 
 .exam-title {
     font-size: 20px;
+    color: #fff;
     font-weight: 600;
     margin: 0;
 }
 
 .exam-date {
     font-size: 14px;
-    color: #666;
+    color: #fff;
     margin-top: 4px;
 }
 
 .exam-desc {
     margin: 16px 0;
     font-size: 15px;
-    color: #444;
+    color: #fff;
 }
 
 .exam-status {
@@ -715,7 +719,7 @@
     justify-content: space-between;
     margin-top: 12px;
     font-size: 14px;
-    color: #555;
+    color: #1ABC9C;
 }
 
 .grade {
