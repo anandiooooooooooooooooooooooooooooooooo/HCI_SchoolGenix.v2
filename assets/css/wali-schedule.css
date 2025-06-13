@@ -73,6 +73,10 @@
     font-size: 20px;
 }
 
+.profile-role {
+    text-align: center;
+}
+
 .sidebar-menu-section {
     display: flex;
     flex-direction: column;
@@ -120,7 +124,7 @@
     width: 100%;
     padding: 50px 40px;
     margin-left: 225px;
-    background: #4A5C7C;
+    background: #C0392B;
     min-height: 100vh;
 }
 
@@ -330,4 +334,88 @@ color: white;
 .yellow {
 background: #ffc83f;
 color: white;
+}
+
+.modal-konfirmasi {
+    display: none; /* Sembunyikan secara default */
+    position: fixed; /* Tetap di posisi yang sama bahkan saat di-scroll */
+    z-index: 9999; /* Pastikan muncul di atas segalanya */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Warna hitam transparan */
+    /* Tambahkan sedikit blur ke background di belakangnya */
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/* Kotak konten modal */
+.modal-konten {
+    background-color: #ffffff;
+    /* Atur agar posisinya di tengah */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal-konten h4 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.modal-konten p {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+/* Wadah untuk tombol */
+.modal-tombol {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Gaya untuk semua tombol di modal */
+.modal-tombol button,
+.modal-tombol a {
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+/* Tombol Batal */
+#tombolBatal {
+    background-color: #e9ecef;
+    color: #495057;
+    border: 1px solid #ced4da;
+}
+
+#tombolBatal:hover {
+    background-color: #d6dbe0;
+}
+
+/* Tombol Konfirmasi Logout */
+#tombolKonfirmasiLogout {
+    background-color: #e74c3c; /* Warna merah untuk aksi destruktif */
+    color: white;
+}
+
+#tombolKonfirmasiLogout:hover {
+    background-color: #c0392b;
 }
