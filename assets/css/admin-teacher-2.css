@@ -13,7 +13,7 @@ body {
   display: flex;
   height: 100vh;
   /* position: fixed; */
-  background: #582C4D;
+  background: #2c3e50;
 }
 
 .creator {
@@ -110,7 +110,7 @@ body {
   border-radius: 12px;
   padding: 15px 25px;
   gap: 20px;
-  width: 75vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
