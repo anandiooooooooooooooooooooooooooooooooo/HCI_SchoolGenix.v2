@@ -212,10 +212,13 @@
 }
 
 .demo .demo-video {
-    background: white;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+}
+
+.demo-video video{
+    border-radius: 10px;
 }
 
 .demo .demo-sub {

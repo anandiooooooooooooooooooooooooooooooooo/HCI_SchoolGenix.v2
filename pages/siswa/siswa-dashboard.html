@@ -4,16 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TABS-TITLE -->
-    <title>SchoolGenix - Student - Classes</title>
+    <title>SchoolGenix - Student - Dashboard</title>
     <link rel="shortcut icon" href="../../assets/png/logo.png" type="image/png" />
-    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&family=Vampiro+One&display=swap"
         rel="stylesheet" />
-    <!-- CSS -->
     <link rel="stylesheet" href="../../assets/css/__reset.css" />
+    <link rel="stylesheet" href="../../assets/css/siswa.css" />
     <link rel="stylesheet" href="../../assets/css/siswa-dashboard.css" />
 </head>
 
@@ -41,7 +39,9 @@
             </div>
 
             <!-- logout button -->
-            <a href="../../index.html" class="logout-btn"><img src="../../assets/png/shutdown.png" alt="">Logout</a>
+            <div class="logout-section">
+                <a href="../../index.html" class="logout-btn"><img src="../../assets/png/shutdown.png" alt="">Logout</a>
+            </div>
         </navbar>
 
         <div class="main-content">
@@ -284,7 +284,12 @@
             </div>
         </div>
     </div>
+
+    <ai-chat-widget></ai-chat-widget>
+    <logout-modal></logout-modal>
+
     <script src="../../assets/js/siswa.js"></script>
+    <script src="../../assets/components/_components.js"></script>
 </body>
 
 </html>

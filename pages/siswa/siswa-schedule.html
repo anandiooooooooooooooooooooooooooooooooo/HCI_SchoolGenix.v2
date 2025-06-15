@@ -14,6 +14,7 @@
         rel="stylesheet" />
     <!-- CSS -->
     <link rel="stylesheet" href="../../assets/css/__reset.css" />
+    <link rel="stylesheet" href="../../assets/css/siswa.css" />
     <link rel="stylesheet" href="../../assets/css/siswa-schedule.css" />
 </head>
 
@@ -41,7 +42,9 @@
             </div>
 
             <!-- logout button -->
-            <a href="../../index.html" class="logout-btn"><img src="../../assets/png/shutdown.png" alt="">Logout</a>
+            <div class="logout-section">
+                <a href="../../index.html" class="logout-btn"><img src="../../assets/png/shutdown.png" alt="">Logout</a>
+            </div>
         </navbar>
 
         <!-- MAIN CONTENT -->
@@ -127,8 +130,12 @@
             </div>
         </div>
     </div>
-    </div>
+
+    <ai-chat-widget></ai-chat-widget>
+    <logout-modal></logout-modal>
+
     <script src="../../assets/js/siswa.js"></script>
+    <script src="../../assets/components/_components.js"></script>
 </body>
 
 </html>

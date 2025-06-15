@@ -14,6 +14,7 @@
         rel="stylesheet" />
     <!-- CSS -->
     <link rel="stylesheet" href="../../assets/css/__reset.css" />
+    <link rel="stylesheet" href="../../assets/css/siswa.css" />
     <link rel="stylesheet" href="../../assets/css/siswa-classes-2.css" />
 </head>
 
@@ -41,7 +42,9 @@
             </div>
 
             <!-- logout button -->
-            <a href="../../index.html" class="logout-btn"><img src="../../assets/png/shutdown.png" alt="">Logout</a>
+            <div class="logout-section">
+                <a href="../../index.html" class="logout-btn"><img src="../../assets/png/shutdown.png" alt="">Logout</a>
+            </div>
         </navbar>
 
         <!-- MAIN CONTENT -->
@@ -62,14 +65,14 @@
 
                 <!-- DROPDOWN -->
                 <div class=" dropdown">
-                <p class="dropdown-btn">
-                    2025, 1st Semester <span class="arrow">&#9662;</span>
-                </p>
-                <ul class="dropdown-menu">
-                    <li>2024, 2nd Semester</li>
-                    <li>2025, 1st Semester</li>
-                    <li>2025, 2nd Semester</li>
-                </ul>
+                    <p class="dropdown-btn">
+                        2025, 1st Semester <span class="arrow">&#9662;</span>
+                    </p>
+                    <ul class="dropdown-menu">
+                        <li>2024, 2nd Semester</li>
+                        <li>2025, 1st Semester</li>
+                        <li>2025, 2nd Semester</li>
+                    </ul>
                 </div>
             </div>
 
@@ -160,21 +163,28 @@
                         </div>
                         <div class="right">
                             <p>Session 1</p>
-                            <div class="bubble-left">
-                                <img src="../../assets/jpg/profile.png" alt="materi">
-                                <p>Guys, soal trigonometri yang di latihan kemarin susah banget Ada yang ngerti cara ngerjain nomor 7?</p>
-                            </div>
-                            <div class="bubble-right">
-                                <p>Itu yang pakai rumus sinus dua sudut kan? Aku pakai rumus sin(2x) = 2sin(x)cos(x), coba deh pake itu.</p>
-                                <img src="../../assets/jpg/profile.png" alt="materi">
-                            </div>
-                            <div class="bubble-left">
-                                <img src="../../assets/jpg/profile.png" alt="materi">
-                                <p>Betul, Farhan. Nomor 7 memang uji pemahaman rumus identitas trigonometri. Saya sudah unggah video penjelasannya juga di bagian Materi Digital, silakan dicek ya.</p>
-                            </div>
-                            <div class="bubble-right">
-                                <p>Itu yang pakai rumus sinus dua sudut kan? Aku pakai rumus sin(2x) = 2sin(x)cos(x), coba deh pake itu.</p>
-                                <img src="../../assets/jpg/profile.png" alt="materi">
+                            <div class="chat-area">
+                                <div class="bubble-left">
+                                    <img src="../../assets/jpg/profile.png" alt="materi">
+                                    <p>Guys, soal trigonometri yang di latihan kemarin susah banget Ada yang ngerti cara
+                                        ngerjain nomor 7?</p>
+                                </div>
+                                <div class="bubble-right">
+                                    <p>Itu yang pakai rumus sinus dua sudut kan? Aku pakai rumus sin(2x) =
+                                        2sin(x)cos(x), coba deh pake itu.</p>
+                                    <img src="../../assets/jpg/profile.png" alt="materi">
+                                </div>
+                                <div class="bubble-left">
+                                    <img src="../../assets/jpg/profile.png" alt="materi">
+                                    <p>Betul, Farhan. Nomor 7 memang uji pemahaman rumus identitas trigonometri. Saya
+                                        sudah unggah video penjelasannya juga di bagian Materi Digital, silakan dicek
+                                        ya.</p>
+                                </div>
+                                <div class="bubble-right">
+                                    <p>Itu yang pakai rumus sinus dua sudut kan? Aku pakai rumus sin(2x) =
+                                        2sin(x)cos(x), coba deh pake itu.</p>
+                                    <img src="../../assets/jpg/profile.png" alt="materi">
+                                </div>
                             </div>
                             <div class="input-chat">
                                 <input type="text" placeholder="Type a message">
@@ -212,7 +222,11 @@
             </div>
         </div>
     </div>
+    <ai-chat-widget></ai-chat-widget>
+    <logout-modal></logout-modal>
+
     <script src="../../assets/js/siswa.js"></script>
+    <script src="../../assets/components/_components.js"></script>
 </body>
 
 </html>
