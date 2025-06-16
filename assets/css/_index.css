@@ -1,5 +1,5 @@
 /* =================================
-   INTERESTING & GLOBAL STYLES
+   GLOBAL & ANIMATION STYLES
 ==================================== */
 
 html {
@@ -7,32 +7,9 @@ html {
 }
 
 body {
-    /* Better default font */
     font-family: 'Poppins', sans-serif;
 }
 
-/* Add smooth transitions to buttons and links */
-.hero-start-btn,
-.hero-login,
-.CTA-btn,
-.footer-menu a {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    will-change: transform;
-}
-
-.hero-start-btn:hover,
-.hero-login:hover,
-.CTA-btn:hover {
-    box-shadow: 0 10px 25px rgba(210, 232, 35, 0.2);
-    cursor: pointer;
-    transform: translateY(-1px) scale(1.05);
-}
-
-.footer-menu a:hover {
-    transform: scale(1.1);
-}
-
-/* Styles for scroll animations */
 .reveal-on-scroll {
     opacity: 0;
     transform: translateY(30px);
@@ -45,13 +22,12 @@ body {
 }
 
 /* =================================
-   ORIGINAL DESKTOP STYLES
+   MAIN STYLES WITH UNIFIED GLASS
 ==================================== */
 
 .container {
     width: 100%;
     overflow-x: hidden;
-    /* Prevent horizontal scroll */
 }
 
 .wrapper {
@@ -65,7 +41,7 @@ body {
     gap: 50px;
 }
 
-/* HERO */
+/* HERO - Original background color is kept */
 .hero {
     display: flex;
     flex-direction: column;
@@ -75,49 +51,74 @@ body {
     gap: 110px;
 }
 
+/* UPDATED: Navbar with your specified glass style */
 .hero-navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #fff;
-    padding: 0 30px;
-    border-radius: 50px;
     height: 70px;
     width: 100%;
     max-width: 1400px;
-    position: relative;
-    /* Needed for menu positioning */
+    padding: 0 30px;
     z-index: 1001;
-    /* Ensure navbar is on top */
+    /* Your new glass style */
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    /* Essential additions for the glass effect */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 50px;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+/* PENTING: Aturan yang hilang untuk menata garis-garis */
+.hamburger-menu .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333;
+    /* Warna default, akan diubah untuk mobile */
+    transition: all 0.3s ease-in-out;
+    border-radius: 2px;
 }
 
 .hero-brand {
     font-weight: 900;
     font-size: 24px;
+    color: #FFFFFF;
+    /* White text for contrast on dark glass */
 }
 
 .hero-menu {
     display: flex;
-    gap: 50px;
-    font-weight: normal;
+    gap: 40px;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .hero-menu a {
     text-decoration: none;
-    color: #333;
+    color: #FFFFFF;
+    /* White text */
     font-weight: 500;
     position: relative;
 }
 
-/* Cool underline effect */
 .hero-menu a::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #502274;
+    background-color: #FFFFFF;
     transition: width 0.3s ease;
 }
 
@@ -125,23 +126,11 @@ body {
     width: 100%;
 }
 
-.hero-login {
-    font-weight: bold;
-    background: #D2E823;
-    padding: 10px 20px;
-    border-radius: 30px;
-}
-
-.hero-login a {
-    text-decoration: none;
-    color: #333;
-}
-
+/* HERO CONTENT - Original colors are kept */
 .hero-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Vertically center content */
     width: 100%;
     gap: 40px;
 }
@@ -168,48 +157,60 @@ body {
     text-align: justify;
 }
 
-.hero-start-btn {
-    font-weight: bold;
-    font-size: 16px;
-    background: #E9C0E9;
-    padding: 15px 30px;
+
+/* UPDATED: Buttons with your specified glass style */
+.hero-login,
+.hero-start-btn,
+.CTA-btn {
     border-radius: 30px;
-    width: fit-content;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.hero-start-btn a {
-    text-decoration: none;
-    color: #502274;
-    display: block;
-    transition: transform 0.3s ease;
-    will-change: transform;
-}
-
-/* Hamburger Menu Styles */
-.hamburger-menu {
-    display: none;
-    /* Hidden on desktop */
-    background: none;
-    border: none;
     cursor: pointer;
-    padding: 10px;
-    z-index: 1002;
+    transition: all 0.3s ease;
+    /* Your new glass style */
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    /* Essential additions for the glass effect */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
-.hamburger-menu .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: #333;
-    transition: all 0.3s ease-in-out;
+.hero-login a,
+.hero-start-btn a,
+.CTA-btn a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-/* (The rest of the desktop styles are largely the same) */
+.hero-login {
+    padding: 10px 20px;
+}
+
+.hero-start-btn {
+    padding: 15px 30px;
+    width: fit-content;
+}
+
+.CTA-btn {
+    padding: 20px 60px;
+}
+
+.hero-login:hover,
+.hero-start-btn:hover,
+.CTA-btn:hover {
+    background: rgba(0, 0, 0, 0.3);
+    /* Darken slightly on hover */
+    transform: translateY(-3px);
+}
+
+
+/* SECTION STYLES - Original backgrounds are kept */
 .features,
 .demo,
-.testimoni {
+.testimoni,
+.CTA,
+.footer {
     padding: 120px 90px;
     width: 100%;
 }
@@ -229,17 +230,30 @@ body {
     color: #E9C0E9;
 }
 
+.CTA {
+    background: #998E74;
+    color: #FFFFFF;
+}
+
+.footer {
+    padding: 40px;
+    background: white;
+    border-top: 1px solid #eee;
+    color: #333;
+}
+
 .features-title,
 .demo-title,
-.testimoni-title {
+.testimoni-title,
+.CTA-title {
     font-weight: 900;
     font-size: 70px;
     text-align: center;
 }
 
+/* FEATURES SECTION */
 .features-sec-1,
-.features-sec-2,
-.testimoni .sec {
+.features-sec-2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -248,7 +262,7 @@ body {
 }
 
 .features-sec-1 .features-left-sec-1,
-.features-right-sec-1 {
+.features-sec-1 .features-right-sec-1 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -256,27 +270,6 @@ body {
     max-width: 600px;
     gap: 20px;
     width: 100%;
-}
-
-.features-text{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    background: rgba(80, 34, 116, 0.05);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.features-main {
-    font-weight: 700;
-    font-size: 20px;
-}
-
-.features-sub,
-.testimoni-main {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.6;
 }
 
 .features-sec-1 img {
@@ -305,15 +298,62 @@ body {
     width: 75px;
 }
 
+.features-main {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.features-sub {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* UPDATED: Content cards with your specified glass style */
+.features-text,
+.testimoni-wrap {
+    gap: 15px;
+    padding: 25px;
+    /* Your new glass style */
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    /* Essential additions for the glass effect */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+/* Text color inside these new dark cards must be light */
+.features-text,
+.features-text .features-main,
+.features-text .features-sub,
+.testimoni-wrap,
+.testimoni-wrap .testimoni-main,
+.testimoni-wrap .testimoni-name,
+.testimoni-wrap .testimoni-role {
+    color: #FFFFFF;
+}
+
+/* DEMO & TESTIMONI */
+.demo .demo-sub {
+    padding: 0 100px;
+    text-align: center;
+}
+
 .demo-video video,
 .testimoni-video video {
     border-radius: 10px;
     max-width: 100%;
 }
 
-.demo .demo-sub {
-    padding: 0 100px;
-    text-align: center;
+.testimoni .sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 50px;
 }
 
 .testimoni-left {
@@ -321,15 +361,6 @@ body {
     flex-direction: column;
     gap: 40px;
     max-width: 600px;
-}
-
-.testimoni-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 20px;
-    border-radius: 10px;
 }
 
 .testimoni-profile {
@@ -342,17 +373,6 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-}
-
-.testimoni-name {
-    font-weight: bold;
-    text-align: left;
-}
-
-.testimoni-role {
-    font-size: 14px;
-    opacity: 0.8;
-    text-align: left;
 }
 
 .testimoni-right {
@@ -376,42 +396,8 @@ body {
     object-fit: cover;
 }
 
-.CTA {
-    padding: 60px 110px;
-    background: #998E74;
-    width: 100%;
-}
-
-.CTA>.wrapper {
-    flex-direction: row;
-    gap: 25px;
-}
-
-.CTA-title {
-    font-weight: 900;
-    font-size: 50px;
-    color: white;
-}
-
-.CTA .CTA-btn {
-    padding: 20px 60px;
-    background: white;
-    border-radius: 30px;
-}
-
-.CTA .CTA-btn a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #998E74;
-}
-
-.footer {
-    padding: 40px;
-    background: white;
-    width: 100%;
-    border-top: 1px solid #eee;
-}
-
+/* CTA & FOOTER */
+.CTA>.wrapper,
 .footer>.wrapper {
     flex-direction: row;
 }
@@ -425,6 +411,8 @@ body {
     width: 24px;
 }
 
+
+/* RESPONSIVE & BACK-TO-TOP (Unchanged but with fixes for glass effect) */
 .back-to-top {
     position: fixed;
     bottom: 30px;
@@ -449,11 +437,6 @@ body {
     visibility: visible;
 }
 
-/* =================================
-   RESPONSIVE STYLES
-==================================== */
-
-/* == TABLET (max-width: 1024px) == */
 @media (max-width: 1024px) {
     .hero {
         padding: 30px 40px 80px;
@@ -517,14 +500,13 @@ body {
     }
 }
 
-/* == MOBILE (max-width: 768px) == */
 @media (max-width: 768px) {
     .hero {
         padding: 20px 20px 60px;
         gap: 40px;
     }
 
-    .wrapper{
+    .wrapper {
         padding: 0 20px;
     }
 
@@ -534,20 +516,32 @@ body {
         padding: 60px 20px;
     }
 
-    /* Show hamburger and hide login button (it will be in the menu) */
-    .hamburger-menu {
-        display: block;
-    }
-
-    .hero-login {
-        display: none;
-    }
-
     .hero-navbar {
         padding: 0 20px;
     }
 
-    /* Mobile Menu Styling */
+    /* === Hamburger Menu Display & Logic === */
+
+    /* Show the hamburger on mobile */
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        /* ADDED: To show it's clickable */
+        z-index: 1002;
+        /* ADDED: To place it above everything */
+    }
+
+    /* ADDED: This new rule makes the hamburger bars white and visible */
+    .hamburger-menu .bar {
+        background-color: #FFFFFF;
+    }
+
+    /* Hide the desktop login button */
+    .hero-login {
+        display: none;
+    }
+
+    /* Style the mobile menu container */
     .hero-menu {
         position: fixed;
         top: 0;
@@ -555,26 +549,40 @@ body {
         /* Start off-screen */
         width: 100%;
         height: 100vh;
-        background-color: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
+
+        /* Glass effect for the background */
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+
+        /* Layout for menu items */
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 40px;
+
+        /* Smooth transition for sliding in/out */
         transition: right 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+
+        /* Ensure menu appears above all other content */
+        z-index: 1001;
     }
 
+    /* The active state for the menu (when hamburger is clicked) */
     .hero-menu.active {
         right: 0;
-        /* Slide in */
+        /* Slide into view */
     }
 
+    /* Style for links inside the mobile menu */
     .hero-menu a {
         font-size: 24px;
-        color: #502274;
+        color: #FFFFFF;
+        /* Ensure text is white and visible */
     }
 
-    /* Animate Hamburger to 'X' */
+    /* Animate hamburger bars into an 'X' shape */
     .hamburger-menu.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
@@ -587,7 +595,7 @@ body {
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    /* Adjust font sizes and layouts for mobile */
+    /* Other mobile styles */
     .hero-main-text,
     .features-title,
     .demo-title,
@@ -609,6 +617,7 @@ body {
 
     .features-wrap {
         flex-direction: column;
+        text-align: center;
     }
 
     .demo .demo-sub {

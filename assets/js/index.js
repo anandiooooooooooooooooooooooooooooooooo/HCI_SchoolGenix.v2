@@ -1,65 +1,79 @@
-// Wait for the DOM to be fully loaded before running scripts
-document.addEventListener('DOMContentLoaded', () => {
-
-    // --- BACK-TO-TOP BUTTON ---
-    const backToTopButton = document.getElementById('backToTop');
-
-    window.addEventListener('scroll', () => {
-        // Show the button if user has scrolled down 200px
-        if (window.scrollY > 200) {
-            backToTopButton.classList.add('show');
-        } else {
-            backToTopButton.classList.remove('show');
-        }
-    });
-
-    backToTopButton.addEventListener('click', () => {
-        // Smoothly scroll to the top of the page
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-
-    // --- HAMBURGER MENU ---
+document.addEventListener('DOMContentLoaded', function () {
+    // =========================================================================
+    // 1. HAMBURGER MENU TOGGLE
+    // =========================================================================
+    // Select the hamburger button and the menu from the DOM.
     const hamburger = document.querySelector('.hamburger-menu');
-    const navMenu = document.querySelector('.hero-menu');
+    const heroMenu = document.querySelector('.hero-menu');
 
+    // Add a click event listener to the hamburger button.
     hamburger.addEventListener('click', () => {
-        // Toggle 'active' class on both hamburger and menu
+        // When clicked, toggle the 'active' class on both the button and the menu.
+        // This triggers the CSS animations for the 'X' and slides the menu in/out.
         hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
+        heroMenu.classList.toggle('active');
     });
 
-    // Close menu when a link is clicked
-    document.querySelectorAll('.hero-menu a').forEach(navLink => {
-        navLink.addEventListener('click', () => {
+    // =========================================================================
+    // 2. CLOSE MENU ON LINK CLICK
+    // =========================================================================
+    // Select all the links within the hero menu.
+    const menuLinks = document.querySelectorAll('.hero-menu a');
+
+    // Add a click event listener to each menu link.
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // When a link is clicked, remove the 'active' class to close the menu.
+            // This is great for user experience on single-page sites.
             hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
+            heroMenu.classList.remove('active');
         });
     });
-    
-    // --- SCROLL REVEAL ANIMATIONS ---
+
+    // =========================================================================
+    // 3. REVEAL ON SCROLL ANIMATION
+    // =========================================================================
+    // This is the logic for the .reveal-on-scroll animation you already had in your HTML.
     const revealElements = document.querySelectorAll('.reveal-on-scroll');
-    
+
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-            // If the element is in the viewport
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                // Stop observing the element after it has been revealed
-                observer.unobserve(entry.target);
-
+                // Optional: Stop observing the element once it's visible.
+                // observer.unobserve(entry.target);
             }
         });
     }, {
-        root: null, // observes intersections relative to the viewport
-        threshold: 0.1 // trigger when 10% of the element is visible
+        threshold: 0.1 // Trigger when 10% of the element is visible
     });
 
-    // Observe each element with the reveal class
     revealElements.forEach(element => {
         revealObserver.observe(element);
     });
 
+    // =========================================================================
+    // 4. BACK TO TOP BUTTON
+    // =========================================================================
+    // Select the "Back to Top" button.
+    const backToTopButton = document.getElementById('backToTop');
+
+    // Show or hide the button based on scroll position.
+    window.addEventListener('scroll', () => {
+        // If the user has scrolled down more than 300 pixels, show the button.
+        if (window.scrollY > 300) {
+            backToTopButton.classList.add('show');
+        } else {
+            // Otherwise, hide it.
+            backToTopButton.classList.remove('show');
+        }
+    });
+
+    // Add a click event listener to scroll to the top of the page.
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // For a smooth scrolling animation
+        });
+    });
 });

@@ -1,8 +1,8 @@
 /* =================================
-   DYNAMIC ANIMATIONS & 5-COLOR THEME
+   DYNAMIC & THEMED LOGIN STYLES
 ==================================== */
 
-/* === Keyframe Animations (Unchanged) === */
+/* === Keyframe Animations === */
 @keyframes gradient-shift {
   0% {
     background-position: 0% 50%;
@@ -56,13 +56,11 @@ body {
   min-height: 100vh;
   width: 100%;
   padding: 20px;
-
-  /* UPDATED: Animated background combining all 5 of your colors */
-  background: linear-gradient(135deg, #5D3EBF, #E74C3C, #F1C40F, #1ABC9C, #2C3E50);
-  background-size: 300% 300%;
-  /* Made size slightly smaller for more color movement */
-  animation: gradient-shift 20s ease infinite;
-  /* Made animation slightly slower */
+  transition: background 1s ease;
+  /* This is the DEFAULT background. JS will override it based on role. */
+  background: linear-gradient(135deg, #34495E, #2C3E50);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
 }
 
 .wrapper {
@@ -76,15 +74,16 @@ form {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  /* Glass Effect */
   background: rgba(0, 0, 0, 0.25);
-  /* Made glass slightly darker for better contrast */
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   padding: 40px 35px;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-  animation: float 6s ease-in-out infinite;
+  /* Animations */
+  animation: float 8s ease-in-out infinite, fadeInUp 0.8s ease-out forwards;
 }
 
 /* === Staggered Entrance Animations === */
@@ -94,6 +93,10 @@ form {
 .btn {
   opacity: 0;
   animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.title {
+  animation-delay: 0.1s;
 }
 
 .input-area {
@@ -114,7 +117,6 @@ form {
   font-size: 40px;
   margin-bottom: 30px;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  /* UPDATED: Title is now white for best contrast */
   color: #FFFFFF;
 }
 
@@ -154,18 +156,19 @@ input[type="password"] {
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* UPDATED: Focus uses Purple, which will contrast against the background */
 input[type="text"]:focus,
 input[type="password"]:focus {
   outline: none;
-  border-color: #5D3EBF;
+  border-color: #1ABC9C;
+  /* Teal Focus */
   background-color: rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 20px rgba(93, 62, 191, 0.4);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 20px rgba(26, 188, 156, 0.4);
 }
 
 input[type="text"]:focus+.icon,
 input[type="password"]:focus+.icon {
-  color: #5D3EBF;
+  color: #1ABC9C;
+  /* Teal Focus */
 }
 
 ::placeholder {
@@ -178,7 +181,7 @@ input:-webkit-autofill {
   -webkit-text-fill-color: white !important;
 }
 
-/* === Checkbox Area === */
+/* === Checkbox & Buttons === */
 .check {
   display: flex;
   align-items: center;
@@ -187,7 +190,6 @@ input:-webkit-autofill {
   margin-top: 20px;
 }
 
-/* UPDATED: Checkbox uses Yellow for consistency with Login button */
 .check input[type="checkbox"] {
   appearance: none;
   width: 18px;
@@ -200,8 +202,8 @@ input:-webkit-autofill {
 }
 
 .check input[type="checkbox"]:checked {
-  background-color: #F1C40F;
-  border-color: #F1C40F;
+  background-color: #FFFFFF;
+  border-color: #FFFFFF;
 }
 
 .check input[type="checkbox"]:checked::after {
@@ -222,7 +224,6 @@ input:-webkit-autofill {
   color: #FFFFFF;
 }
 
-/* === Button Area === */
 .btn {
   display: flex;
   gap: 20px;
@@ -240,11 +241,8 @@ input:-webkit-autofill {
   cursor: pointer;
   transition: all 0.3s ease;
   border: 2px solid transparent;
-  position: relative;
-  overflow: hidden;
 }
 
-/* UPDATED: Back button is now a neutral white outline */
 .back {
   background: none;
   border-color: #FFFFFF;
@@ -256,56 +254,49 @@ input:-webkit-autofill {
   color: #2C3E50;
 }
 
-/* Login button still uses Yellow */
 .login {
-  background: #F1C40F;
+  /* Default style before JS applies a role-specific class */
+  background: #FFFFFF;
   color: #2C3E50;
-  border-color: #F1C40F;
+  border-color: #FFFFFF;
 }
 
-.login:hover {
-  background: #f39c12;
-  border-color: #f39c12;
-  box-shadow: 0 0 20px rgba(241, 196, 15, 0.4);
-}
-
-.login::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-  transform: translateX(-150%) skewX(-30deg);
-  transition: transform 0.8s ease;
-}
-
-.login:hover::after {
-  transform: translateX(250%) skewX(-30deg);
-}
-
-/* === Alert === */
+/* === Alert & Responsive === */
 .custom-alert {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  /* Alert uses Red */
   background-color: #E74C3C;
+  /* Using the Red from your palette */
   color: white;
-  padding: 12px 20px;
+  padding: 14px 22px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
   font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  /* Consistent font */
   z-index: 9999;
+
+  /* 1. Start invisible and slightly moved down */
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+
+  /* 2. Define a smooth transition for all changes */
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
 }
 
-/* === Responsive === */
+.custom-alert.show {
+  /* 3. When .show is added, become visible and move to final position */
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
 @media (max-width: 480px) {
   form {
     padding: 40px 25px;
     animation: none;
-    /* Disable float on mobile */
   }
 
   .title {
