@@ -1,122 +1,207 @@
-.wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+/* =================================
+   DYNAMIC ANIMATIONS & 5-COLOR THEME
+==================================== */
+
+/* === Keyframe Animations (Unchanged) === */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Base Styles === */
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
 }
 
 .main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
-  position: fixed;
-  background: #E9C0E9;
+  padding: 20px;
+
+  /* UPDATED: Animated background combining all 5 of your colors */
+  background: linear-gradient(135deg, #5D3EBF, #E74C3C, #F1C40F, #1ABC9C, #2C3E50);
+  background-size: 300% 300%;
+  /* Made size slightly smaller for more color movement */
+  animation: gradient-shift 20s ease infinite;
+  /* Made animation slightly slower */
 }
 
-.title{
-  font-weight: bolder;
-  font-size: 50px;
-  color: #502274;
-  margin-bottom: 40px;
+.wrapper {
+  max-width: 450px;
+  width: 100%;
 }
 
-/* Form */
+/* === Floating Glass Form === */
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  /* Made glass slightly darker for better contrast */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 40px 35px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  animation: float 6s ease-in-out infinite;
 }
 
-.input{
+/* === Staggered Entrance Animations === */
+.title,
+.input-area,
+.check,
+.btn {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.input-area {
+  animation-delay: 0.2s;
+}
+
+.check {
+  animation-delay: 0.4s;
+}
+
+.btn {
+  animation-delay: 0.6s;
+}
+
+
+.title {
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  /* UPDATED: Title is now white for best contrast */
+  color: #FFFFFF;
+}
+
+/* === Interactive Inputs === */
+.input-area {
   width: 100%;
   gap: 20px;
   display: flex;
   flex-direction: column;
-  align-items: left;
-  justify-content: left;
 }
 
-/* Input fields */
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.3s ease;
+}
+
 input[type="text"],
 input[type="password"] {
   width: 100%;
-  border: none;
-  border-radius: 30px;
-  background-color: #502274;
-  color: white;
-  padding: 12px 20px;
-  text-align: left;
   height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  padding: 12px 20px 12px 50px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-input:-webkit-autofill,
-textarea:-webkit-autofill,
-select:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px #502274 inset !important;
-  box-shadow: 0 0 0 1000px #502274 inset !important;
-  -webkit-text-fill-color: white !important;
-  color: white !important;
-  transition: background-color 5000s ease-in-out 0s;
+/* UPDATED: Focus uses Purple, which will contrast against the background */
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #5D3EBF;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 20px rgba(93, 62, 191, 0.4);
 }
 
-.input> input:focus {
-    outline: none;
-    border: none;
+input[type="text"]:focus+.icon,
+input[type="password"]:focus+.icon {
+  color: #5D3EBF;
 }
 
 ::placeholder {
   color: white;
   opacity: 0.6;
-  text-align: left;
 }
 
-/* Checkbox area */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.3) inset !important;
+  -webkit-text-fill-color: white !important;
+}
+
+/* === Checkbox Area === */
 .check {
   display: flex;
   align-items: center;
-  justify-self: space-between;
   width: 100%;
-  gap: 5px;
+  gap: 10px;
   margin-top: 20px;
-  padding: 0 20px;
 }
 
-.check {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 20px;
-  padding: 0 20px;
-}
-
-/* Hide native checkbox */
+/* UPDATED: Checkbox uses Yellow for consistency with Login button */
 .check input[type="checkbox"] {
   appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
   cursor: pointer;
-  position: relative;
-  background-color: #502274;
-  transition: background-color 0.2s, border-color 0.2s;
-}
-
-/* Checked state with checkmark */
-.check input[type="checkbox"]:hover {
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.2s;
 }
 
 .check input[type="checkbox"]:checked {
-  background-color: white;
+  background-color: #F1C40F;
+  border-color: #F1C40F;
 }
 
 .check input[type="checkbox"]:checked::after {
@@ -124,89 +209,111 @@ select:-webkit-autofill {
   position: absolute;
   top: 2px;
   left: 6px;
-  width:6px;
-  height: 10px;
-  border: solid #502274;
-  border-width: 0 2px 2px 0;
+  width: 4px;
+  height: 8px;
+  border: solid #2C3E50;
+  border-width: 0 3px 3px 0;
   transform: rotate(45deg);
 }
 
-/* Label text */
 .check_text {
   user-select: none;
-  font-size: 16px;
-  color: #502274;
-  cursor: default;      
-  pointer-events: none; 
+  font-size: 15px;
+  color: #FFFFFF;
 }
 
-
-/* Button */
-.btn{
+/* === Button Area === */
+.btn {
   display: flex;
   gap: 20px;
-  margin-top: 60px;
+  margin-top: 40px;
+  width: 100%;
 }
 
-.back {
-  padding: 0;
-  height: auto;
-  border: none;
-  background: none;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: color 0.3s ease;
-  text-shadow: 0px 1px 5px rgba(80, 34, 116, 0.6);
-}
-
-.back:hover{
-  color: #254F1A;
-  text-decoration: underline;
-  text-shadow: 0px 1px 5px rgba(233, 192, 233, 0.6);
-}
-
+.back,
 .login {
-  padding: 10px 20px;
-  width: fit-content;
-  height: 45px;
-  border-radius: 30px;
-  border: none;
-  background: #502274;
+  flex: 1;
+  padding: 12px 20px;
+  border-radius: 10px;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  color: white;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
 }
 
-.login:hover{
-  background: white;
-  color: #502274
+/* UPDATED: Back button is now a neutral white outline */
+.back {
+  background: none;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
 }
 
+.back:hover {
+  background: #FFFFFF;
+  color: #2C3E50;
+}
+
+/* Login button still uses Yellow */
+.login {
+  background: #F1C40F;
+  color: #2C3E50;
+  border-color: #F1C40F;
+}
+
+.login:hover {
+  background: #f39c12;
+  border-color: #f39c12;
+  box-shadow: 0 0 20px rgba(241, 196, 15, 0.4);
+}
+
+.login::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: translateX(-150%) skewX(-30deg);
+  transition: transform 0.8s ease;
+}
+
+.login:hover::after {
+  transform: translateX(250%) skewX(-30deg);
+}
+
+/* === Alert === */
 .custom-alert {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #780016;
+  /* Alert uses Red */
+  background-color: #E74C3C;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-size: 16px;
-  font-family: 'Fira Code', Consolas, monospace;
   z-index: 9999;
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.custom-alert.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* === Responsive === */
+@media (max-width: 480px) {
+  form {
+    padding: 40px 25px;
+    animation: none;
+    /* Disable float on mobile */
+  }
 
-.custom-alert.hidden {
-  display: none;
+  .title {
+    font-size: 36px;
+  }
+
+  .btn {
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
 }

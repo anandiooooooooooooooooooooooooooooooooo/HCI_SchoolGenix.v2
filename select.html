@@ -23,18 +23,17 @@
         <div class="wrapper">
             <div class="title">
                 <p class="main-text">Please select your role</p>
-                <p class="sub-text">Choose your user type to continue into the system.</p>
             </div>
 
             <div class="role-wrap">
                 <div class="left-sec">
                     <p class="left-title">Staff</p>
                     <div class="left-wrap">
-                        <button class="role-button" onclick="selectRole('admin', this)">
+                        <button class="role-button admin" onclick="selectRole('admin', this)">
                             <img src="./assets/png/admin.png" alt="Admin Icon" />
                             <p>Admin</p>
                         </button>
-                        <button class="role-button" onclick="selectRole('kepsek', this)">
+                        <button class="role-button principal" onclick="selectRole('kepsek', this)">
                             <img src="./assets/png/principal.png" alt="Principal Icon" />
                             <p>Principal</p>
                         </button>
@@ -44,17 +43,17 @@
                 <div class="right-sec">
                     <p class="right-title">User</p>
                     <div class="right-wrap">
-                        <button class="role-button" onclick="selectRole('teacher', this)">
+                        <button class="role-button teacher" onclick="selectRole('teacher', this)">
                             <img src="./assets/png/teacher.png" alt="Teacher Icon" />
                             <p>Teacher</p>
                         </button>
 
-                        <button class="role-button" onclick="selectRole('student', this)">
+                        <button class="role-button student" onclick="selectRole('student', this)">
                             <img src="./assets/png/student.png" alt="Student Icon" />
                             <p>Student</p>
                         </button>
 
-                        <button class="role-button" onclick="selectRole('wali', this)">
+                        <button class="role-button guardian" onclick="selectRole('wali', this)">
                             <img src="./assets/png/guardian.png" alt="Wali Icon" />
                             <p>Guardian</p>
                     </div>

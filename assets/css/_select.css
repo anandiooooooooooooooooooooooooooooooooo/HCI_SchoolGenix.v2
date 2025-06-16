@@ -1,193 +1,316 @@
-/* Wrapper */
-.wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    /* gap: 40px; */
+/* =================================
+   BASE & VISUAL ENHANCEMENTS
+==================================== */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #254F1A;
+    background-image: linear-gradient(145deg, #2f5f2d, #254F1A);
+    color: #f0f0f0;
 }
 
 .main {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  background: #254F1A;
+    min-height: 100vh; /* Use min-height to prevent content cutoff on small screens */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
-.title{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 40px;
+/* Wrapper as a "glass card" */
+.wrapper {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    max-width: 95vw; /* Max width relative to viewport */
 }
 
-.title .main-text{
-  font-weight: bolder;
-  font-size: 50px;
-  color: #D2E823;
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
-.title .sub-text{
-  text-align: center;
-  font-weight: normal;
-  font-size: 16px;
-  color: #D2E823;
-  width: 600px;
+.title .main-text {
+    font-weight: 700;
+    font-size: 50px;
+    color: #D2E823;
+}
+
+.title .sub-text {
+    font-weight: 400;
+    font-size: 16px;
+    color: #E0E0E0;
+    max-width: 600px;
 }
 
 /* Roles */
 .role-wrap {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    gap: 80px;
+    flex-wrap: wrap;
 }
 
-.left-title, .right-title{
-  font-weight: bold;
-  font-size: 20px;
-  color: #D2E823;
+.left-sec,
+.right-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
-.left-sec{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+.left-title, .right-title {
+    font-weight: 600;
+    font-size: 20px;
+    color: #D2E823;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #D2E823;
 }
 
-.left-wrap{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+.left-wrap,
+.right-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
-.right-sec{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-.right-wrap{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-/* Card */
+/* Card Styling & Hover Effects */
 .role-button {
-  width: 120px;
-  height: 120px;
-  border: none;
-  border-radius: 50%;
-  background: #D2E823;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-  font-weight: normal;
+    width: 120px;
+    height: 120px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background: #D2E823;
+    color: #254F1A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Ensure all properties animate smoothly */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.role-button p {
+    color: #254F1A;
+    font-weight: 600;
+    transition: color 0.3s; /* Add transition for text color */
 }
 
 .role-button img {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 8px;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+    /* Add 'filter' to the transition for the color change effect */
+    transition: transform 0.3s, filter 0.3s; 
 }
 
-/* Active */
+.role-button:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(210, 232, 35, 0.2);
+}
+
+.role-button:hover img {
+    transform: scale(1.1);
+}
+
+/* --- NEW AND IMPROVED SELECTED STYLES --- */
+
+/* 1. This is the BASE style for ANY selected button */
 .role-button.selected {
-  background: white;
-  color: black;
-  transform: scale(1.05);
-  filter: invert(100%);
+    border-color: #D2E823; /* All selected buttons get the highlight border */
+    transform: translateY(-8px) scale(1.05);
 }
 
+/* Make the text white on ANY selected button */
 .role-button.selected p {
-  color: black;
+    color: #FFFFFF;
 }
 
-/* Button */
-.btn{
-  margin-top: 80px;
-  display: flex;
-  gap: 20px;
+/* Make the image white on ANY selected button */
+.role-button.selected img {
+    /* This filter trick first makes the image black, then inverts it to pure white */
+    filter: brightness(0) invert(1);
+}
+
+
+/* 2. Here are the UNIQUE background colors for EACH role when selected */
+
+/* Admin: Dark Slate */
+.role-button.admin.selected {
+    background-color: #2C3E50;
+    /* Shadow now uses the same Dark Slate color for a subtle glow */
+    box-shadow: 0 0 25px rgba(44, 62, 80, 0.5);
+}
+
+/* Principal (Kepsek): Deep Purple */
+.role-button.principal.selected {
+    background-color: #5D3EBF;
+    /* Shadow now uses the same Deep Purple color */
+    box-shadow: 0 0 25px rgba(93, 62, 191, 0.5);
+}
+
+/* Teacher: Professional Teal */
+.role-button.teacher.selected {
+    background-color: #1ABC9C;
+    /* Shadow now uses the same Teal color */
+    box-shadow: 0 0 25px rgba(26, 188, 156, 0.5);
+}
+
+/* Student: Energetic Gold */
+.role-button.student.selected {
+    background-color: #F1C40F;
+    /* Shadow now uses the same Gold color */
+    box-shadow: 0 0 25px rgba(241, 196, 15, 0.5);
+}
+
+/* Guardian (Wali): Strong Red */
+.role-button.guardian.selected {
+    background-color: #E74C3C;
+    /* Shadow now uses the same Strong Red color */
+    box-shadow: 0 0 25px rgba(231, 76, 60, 0.5);
+}
+
+/* Button Container */
+.btn {
+    margin-top: 60px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.back,
+.login {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .back {
-  padding: 0;
-  height: auto;
-  border: none;
-  background: none;
-  color: black;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: color 0.3s ease;
-  text-shadow: 0px 0px 5px rgba(210, 232, 35, 0.2);
-  
+    background: none;
+    border: 2px solid #D2E823;
+    color: #D2E823;
 }
 
-.back:hover{
-  color: white;
-  text-decoration: underline;
+.back:hover {
+    background: #D2E823;
+    color: #254F1A;
+    transform: translateY(-3px);
 }
 
 .login {
-  padding: 10px 30px;
-  width: fit-content;
-  height: 45px;
-  border-radius: 30px;
-  border: none;
-  background: #D2E823;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    background: #D2E823;
+    color: #254F1A;
 }
 
-.login:hover{
-  background: #E9C0E9;
-  color: #502274;
+.login:hover {
+    background: #E9C0E9;
+    color: #502274;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(233, 192, 233, 0.2);
 }
 
+/* Custom Alert Styling */
 .custom-alert {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #780016;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  font-size: 16px;
-  font-family: 'Fira Code', Consolas, monospace;
-  z-index: 9999;
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+    position: fixed;
+    bottom: -100px;
+    right: 20px;
+    background-color: #780016;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    z-index: 9999;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 .custom-alert.show {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    bottom: 20px;
 }
 
-.custom-alert.hidden {
-  display: none;
+/* =================================
+   IMPROVED RESPONSIVE DESIGN
+==================================== */
+
+/* == TABLET (max-width: 820px) == */
+@media (max-width: 820px) {
+    .wrapper {
+        padding: 40px;
+    }
+
+    .title .main-text {
+        font-size: 40px;
+    }
+
+    /* Stack Staff and User sections vertically */
+    .role-wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* == MOBILE (max-width: 500px) == */
+@media (max-width: 500px) {
+    .wrapper {
+        padding: 30px 20px;
+    }
+
+    .title .main-text {
+        font-size: 32px;
+    }
+
+    .title .sub-text {
+        font-size: 14px;
+        max-width: 90%;
+    }
+    
+    /* Allow role buttons to wrap onto the next line */
+    .left-wrap,
+    .right-wrap {
+       flex-wrap: wrap;
+    }
+
+    .role-button {
+       /* Adjust size slightly for a better fit */
+       width: 110px;
+       height: 110px;
+    }
+
+    .btn {
+        margin-top: 40px;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .back,
+    .login {
+        width: 100%;
+        text-align: center;
+    }
 }
