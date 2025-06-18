@@ -1,6 +1,4 @@
-/* VARIABLES */
 :root {
-    /* Colors */
     --color-base-white: white;
     --color-base-black: black;
     --background-panel: #FEF9E7;
@@ -14,9 +12,15 @@
     --shadow-color-dropdown: rgba(0, 0, 0, 0.2);
     --shadow-color-tab: rgba(0, 0, 0, 0.3);
     --shadow-color-tab-active: rgba(0, 0, 0, 0.5);
+    --text-primary: #f0f0f0;
+    --text-secondary: #b8b8b8;
+    --student-accent-primary: #F1C40F;
+    --student-accent-secondary: #F39C12;
+    --sidebar-bg: #18181B;
+    --sidebar-border: #2a2a2e;
+    --bg-hover-light: rgba(255, 255, 255, 0.05)
 }
 
-/* GENERAL STYLES */
 .container {
     display: flex;
     flex-direction: row;
@@ -24,31 +28,39 @@
     background: linear-gradient(to right, var(--background-gradient-start), var(--background-gradient-end));
 }
 
-/* SIDEBAR */
 .sidebar {
     flex-shrink: 0;
     height: 100vh;
-    width: 225px;
-    background: var(--background-panel);
-    color: black;
+    width: 230px;
+    background: var(--sidebar-bg);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 50px 30px;
+    padding: 40px 20px;
     position: fixed;
+    border-right: 1px solid var(--sidebar-border);
+    transition: width 0.3s ease;
 }
 
 .profile-section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .profile-section img {
-    width: 100%;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    border: 3px solid transparent;
+    background-image: linear-gradient(var(--sidebar-bg), var(--sidebar-bg)), 
+                      linear-gradient(45deg, var(--student-accent-primary), var(--student-accent-secondary));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 0 0 20px rgba(241, 196, 15, 0.1);
 }
 
 .profile-wrap {
@@ -59,59 +71,93 @@
 }
 
 .profile-name {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 20px;
+    color: var(--text-primary);
+}
+
+.profile-role {
+    font-size: 14px;
+    color: var(--text-secondary);
 }
 
 .sidebar-menu-section {
     display: flex;
     flex-direction: column;
-    align-items: left;
-    gap: 5px;
-}
-
-.sidebar-menu-section img {
-    width: 20px;
-    height: 20px;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    align-items: center;
 }
 
 .sidebar a {
-    border: none;
-    color: black;
-    font-weight: normal;
-    font-size: 16px;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    gap: 15px;
     border-radius: 10px;
-    padding: 10px 15px;
-    gap: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border: none;
+    cursor: pointer;
 }
 
 .sidebar a:hover {
-    background: var(--background-gradient-end);
-    border: none;
-    color: black;
-    font-weight: normal;
-    font-size: 16px;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-    display: flex;
+    background-color: var(--bg-hover-light);
+    color: var(--text-primary);
+}
+
+.sidebar-menu-section a.active {
+    background: linear-gradient(90deg, var(--student-accent-primary), var(--student-accent-secondary));
+    color: #18181B;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(241, 196, 15, 0.2);
+}
+
+.sidebar-menu-section a img {
+    width: 22px;
+    height: 22px;
+    filter: invert(80%);
+    transition: filter 0.2s ease;
+}
+
+.sidebar-menu-section a:hover img {
+    filter: invert(100%);
+}
+
+.sidebar-menu-section a.active img {
+    filter: none;
+}
+
+.logout-section {
+    width: 100%;
+}
+
+.logout-btn {
     justify-content: center;
-    border-radius: 10px;
-    padding: 10px 15px;
-    gap: 10px;
+}
+
+.logout-btn:hover {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: #ff7b7b;
+}
+
+.logout-section .logout-btn {
+    color: #E74C3C;
+    background: rgba(231, 76, 60, 0.1);
+    border: 1px solid rgba(231, 76, 60, 0.3);
+    font-weight: 600;
 }
 
 .logout-section img {
     width: 20px;
     height: 20px;
+    filter: brightness(0) saturate(100%) invert(33%) sepia(71%) saturate(615%) hue-rotate(343deg) brightness(93%) contrast(92%);
 }
 
-/* MAIN CONTENT */
 .main-content {
     display: flex;
     flex-direction: column;
@@ -119,38 +165,63 @@
     gap: 30px;
     width: 100%;
     padding: 50px 40px;
-    margin-left: 225px;
+    margin-left: 230px;
     overflow: auto;
     min-height: 100vh;
 }
-
 .searchbar-section {
-    background: white;
+    background: var(--glass-bg);
+    border: var(--glass-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: 15px;
-    padding: 10px 20px;
+    padding: 12px 20px;
     gap: 20px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .searchbar {
     flex: 1;
     width: 100%;
-    padding: 5px 15px;
-    border: 1px solid black;
-    border-radius: 30px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--text-primary);
+    font-size: 16px;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.searchbar::placeholder {
+    color: var(--text-secondary);
+    opacity: 1;
+}
+
+.searchbar:focus {
+    outline: none;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 2px var(--student-accent-primary);
 }
 
 .search-right-icon {
     display: flex;
     align-items: center;
-    width: auto;
     gap: 20px;
 }
 
 .search-right-icon img {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
+    filter: invert(80%);
+    cursor: pointer;
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.search-right-icon img:hover {
+    filter: invert(100%);
+    transform: scale(1.1);
 }
