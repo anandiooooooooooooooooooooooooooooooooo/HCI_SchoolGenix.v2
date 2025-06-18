@@ -19,16 +19,17 @@
         <section class="hero">
             <div class="hero-navbar">
                 <p class="hero-brand">SchoolGenix</p>
-                <button class="hamburger-menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-                <div class="hero-menu">
+                <div class="hero-menu" id="mobile-menu">
                     <a href="#features">Features</a>
                     <a href="#demo">Demo</a>
                     <a href="#testimoni">Testimoni</a>
                 </div>
+
+                <button class="hamburger-menu" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
                 <div class="hero-login">
                     <a href="./select.html">Login</a>
                 </div>
@@ -190,7 +191,9 @@
             </div>
         </footer>
 
-        <button id="backToTop" class="back-to-top">↑</button>
+        <button id="backToTop" class="back-to-top">
+            <img src="./assets/png/back-to-top.png" alt="">
+        </button>
     </div>
     <script src="./assets/js/index.js"></script>
 </body>

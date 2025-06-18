@@ -43,6 +43,16 @@
   }
 }
 
+@keyframes fadeInOnly {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 /* === Base Styles === */
 body {
   font-family: 'Poppins', sans-serif;
@@ -58,14 +68,37 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px;
+  /* UPDATED: Transition now handles background changes smoothly */
   transition: background-image 1s ease;
-  /* Smooth transition when role is selected */
 
-  /* UPDATED: Animated Background */
-  background: linear-gradient(145deg, #34495E, #2C3E50);
+  /* Default animated background */
+  background: #254F1A;
   background-size: 400% 400%;
   animation: gradient-shift 15s ease infinite;
 }
+
+/* === NEW: Role-based Background Themes === */
+/* These classes will be added by JavaScript */
+.main.main-theme-admin {
+  background-image: linear-gradient(145deg, #34495E, #2C3E50);
+}
+
+.main.main-theme-kepsek {
+  background-image: linear-gradient(145deg, #6E45E2, #5D3EBF);
+}
+
+.main.main-theme-teacher {
+  background-image: linear-gradient(145deg, #1DCDAF, #1ABC9C);
+}
+
+.main.main-theme-student {
+  background-image: linear-gradient(145deg, #F3D054, #F1C40F);
+}
+
+.main.main-theme-wali {
+  background-image: linear-gradient(145deg, #F16B5C, #E74C3C);
+}
+
 
 /* === UPDATED: Floating Glass Wrapper === */
 .wrapper {
@@ -130,7 +163,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* Changed for better alignment when wrapping */
   align-items: flex-start;
   width: 100%;
   gap: 60px;
@@ -180,11 +212,29 @@ body {
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-
-  /* Base animation style */
   opacity: 0;
-  animation: fadeInUp 0.5s ease-out forwards;
+  animation: fadeInOnly 0.5s ease-out forwards;
 }
+
+/* --- THE FIX IS HERE --- */
+/* This general rule applies the lift effect to ANY .role-button on hover */
+.role-button:hover {
+  transform: translateY(-10px) scale(1.08);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+/* This applies a more subtle lift when a button is SELECTED */
+.role-button.selected {
+  border-color: #FFFFFF;
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* NEW: This ensures the hover lift effect also works on a SELECTED button */
+.role-button.selected:hover {
+  transform: translateY(-10px) scale(1.08);
+  /* Matches the standard hover for consistency */
+}
+
 
 /* Stagger the delay for each button individually */
 .left-sec .role-button:nth-child(1) {
@@ -221,16 +271,6 @@ body {
   transition: transform 0.3s, filter 0.3s;
 }
 
-.role-button:hover {
-  transform: translateY(-8px) scale(1.05);
-}
-
-/* Selected Styles */
-.role-button.selected {
-  border-color: #FFFFFF;
-  transform: translateY(-8px) scale(1.05);
-}
-
 .role-button.selected p {
   color: #FFFFFF;
 }
@@ -239,7 +279,7 @@ body {
   filter: brightness(0) invert(1);
 }
 
-/* Unique selected colors */
+/* Unique selected colors (these are correct and do not need to change) */
 .role-button.admin.selected {
   background-color: #2C3E50;
   box-shadow: 0 0 25px rgba(44, 62, 80, 0.5);
@@ -286,10 +326,8 @@ body {
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
-  /* Add transform and box-shadow to the transition for smooth animation */
   transition: all 0.3s ease;
   will-change: transform, box-shadow;
-  /* Performance hint for animations */
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -303,21 +341,17 @@ body {
 .back:hover {
   background: #FFFFFF;
   color: #2C3E50;
-  /* Add the lift effect */
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
 }
 
 /* --- Login / Next Button --- */
 .login {
-  /* Default style before a role is selected */
   background: #FFFFFF;
   color: #2C3E50;
   border-color: #FFFFFF;
   position: relative;
-  /* Required for the shimmer effect */
   overflow: hidden;
-  /* Hides the shimmer outside the button */
 }
 
 /* Shimmer Effect Pseudo-Element */
@@ -339,84 +373,68 @@ body {
 
 .login:hover {
   transform: translateY(-3px);
-  /* Add the lift effect to all login buttons on hover */
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
 }
 
 
 /* --- Role-Based Login Button Styles --- */
-
-/* Admin: Dark Slate (This is our reference style) */
 .login.login-btn-admin {
   background-image: linear-gradient(145deg, #34495E, #2C3E50);
   color: white;
   border-color: white;
-  /* Starts with a white border */
   box-shadow: 0 4px 15px -5px rgba(44, 62, 80, 0.6);
 }
 
 .login.login-btn-admin:hover {
   border-color: #4A6572;
-  /* Changes border color on hover */
   box-shadow: 0 8px 25px -5px rgba(44, 62, 80, 0.6);
 }
 
-/* Principal (kepsek): Deep Purple - UPDATED */
 .login.login-btn-kepsek {
   background-image: linear-gradient(145deg, #6E45E2, #5D3EBF);
   color: white;
   border-color: white;
-  /* UPDATED to white */
   box-shadow: 0 4px 15px -5px rgba(93, 62, 191, 0.6);
 }
 
 .login.login-btn-kepsek:hover {
   border-color: #8A6EBF;
-  /* ADDED hover border color */
   box-shadow: 0 8px 25px -5px rgba(93, 62, 191, 0.6);
 }
 
-/* Teacher: Professional Teal - UPDATED */
 .login.login-btn-teacher {
   background-image: linear-gradient(145deg, #1DCDAF, #1ABC9C);
   color: white;
   border-color: white;
-  /* UPDATED to white */
   box-shadow: 0 4px 15px -5px rgba(26, 188, 156, 0.6);
 }
 
 .login.login-btn-teacher:hover {
   border-color: #58D68D;
-  /* ADDED hover border color */
   box-shadow: 0 8px 25px -5px rgba(26, 188, 156, 0.6);
 }
 
-/* Student: Energetic Gold - UPDATED */
 .login.login-btn-student {
   background-image: linear-gradient(145deg, #F3D054, #F1C40F);
   color: white;
   border-color: white;
-  /* UPDATED to white */
   box-shadow: 0 4px 15px -5px rgba(241, 196, 15, 0.6);
 }
 
 .login.login-btn-student:hover {
   border-color: #FAD7A0;
-  /* ADDED hover border color */
   box-shadow: 0 8px 25px -5px rgba(241, 196, 15, 0.6);
 }
 
-/* Guardian (wali): Strong Red - UPDATED */
 .login.login-btn-wali {
   background-image: linear-gradient(145deg, #F16B5C, #E74C3C);
   color: white;
   border-color: white;
-  /* UPDATED to white */
   box-shadow: 0 4px 15px -5px rgba(231, 76, 60, 0.6);
 }
 
 .login.login-btn-wali:hover {
   border-color: #F5B7B1;
-  /* ADDED hover border color */
   box-shadow: 0 8px 25px -5px rgba(231, 76, 60, 0.6);
 }
 

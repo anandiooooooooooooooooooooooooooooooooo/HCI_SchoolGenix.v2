@@ -417,19 +417,33 @@ body {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #333;
     color: white;
-    border: none;
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    font-size: 24px;
+    /* Slightly larger for better balance */
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+
+    /* === ADD THESE 3 LINES FOR PERFECT CENTERING === */
+    display: flex;
+    justify-content: center;
+    /* Centers horizontally */
+    align-items: center;
+    /* Centers vertically */
+}
+
+.back-to-top img {
+    width: 30px;
+    height: 30px;
+    /* Adjusted size for better visibility */
+    filter: invert();
 }
 
 .back-to-top.show {
@@ -520,66 +534,78 @@ body {
         padding: 0 20px;
     }
 
-    /* === Hamburger Menu Display & Logic === */
+    /* === Hamburger Menu Fixes & Logic === */
 
-    /* Show the hamburger on mobile */
-    .hamburger-menu {
-        display: block;
-        cursor: pointer;
-        /* ADDED: To show it's clickable */
-        z-index: 1002;
-        /* ADDED: To place it above everything */
-    }
-
-    /* ADDED: This new rule makes the hamburger bars white and visible */
-    .hamburger-menu .bar {
-        background-color: #FFFFFF;
-    }
-
-    /* Hide the desktop login button */
-    .hero-login {
-        display: none;
-    }
-
-    /* Style the mobile menu container */
+    /* This is the most important fix.
+       By setting position: fixed, the entire menu element is removed
+       from the navbar's layout, preventing it from interfering with
+       the hamburger button's position. */
     .hero-menu {
         position: fixed;
         top: 0;
-        right: -100%;
-        /* Start off-screen */
+        right: -105%;
         width: 100%;
         height: 100vh;
-
-        /* Glass effect for the background */
         background-color: rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
-
-        /* Layout for menu items */
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 40px;
-
-        /* Smooth transition for sliding in/out */
         transition: right 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-
-        /* Ensure menu appears above all other content */
         z-index: 1001;
+        /* Below the hamburger button */
     }
 
-    /* The active state for the menu (when hamburger is clicked) */
     .hero-menu.active {
         right: 0;
-        /* Slide into view */
     }
 
-    /* Style for links inside the mobile menu */
+    /* Make the hamburger button visible and place it on top */
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        z-index: 1002;
+        /* Above the menu overlay */
+        background: none;
+        border: none;
+    }
+
+    /* Force the hamburger bars to be white to prevent visibility bugs */
+    .hamburger-menu .bar {
+        background-color: white !important;
+    }
+
+    .hero-login {
+        display: none;
+    }
+
+    /* Staggered Link Animation */
     .hero-menu a {
         font-size: 24px;
         color: #FFFFFF;
-        /* Ensure text is white and visible */
+        opacity: 0;
+        transform: translateY(15px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .hero-menu.active a {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .hero-menu.active a:nth-child(1) {
+        transition-delay: 0.2s;
+    }
+
+    .hero-menu.active a:nth-child(2) {
+        transition-delay: 0.3s;
+    }
+
+    .hero-menu.active a:nth-child(3) {
+        transition-delay: 0.4s;
     }
 
     /* Animate hamburger bars into an 'X' shape */
@@ -595,7 +621,7 @@ body {
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    /* Other mobile styles */
+    /* --- Other original mobile styles --- */
     .hero-main-text,
     .features-title,
     .demo-title,

@@ -1,77 +1,73 @@
-// assets/js/select.js
-
 document.addEventListener('DOMContentLoaded', () => {
 
   // --- DOM Element References ---
   const mainElement = document.querySelector('.main');
-  const loginButton = document.querySelector('.login'); // Get the "Next" button
+  const loginButton = document.querySelector('.login');
   const allRoleButtons = document.querySelectorAll('.role-button');
   const alertElement = document.getElementById('custom-alert');
 
-  // --- Theme Mapping for Roles ---
+  // --- UPDATED: Theme Mapping now uses CSS classes ---
   const roleThemes = {
     admin: {
-      background: 'linear-gradient(145deg, #34495E, #2C3E50)',
+      backgroundClass: 'main-theme-admin',
       buttonClass: 'login-btn-admin'
     },
     kepsek: {
-      background: 'linear-gradient(145deg, #6E45E2, #5D3EBF)',
+      backgroundClass: 'main-theme-kepsek',
       buttonClass: 'login-btn-kepsek'
     },
     teacher: {
-      background: 'linear-gradient(145deg, #1DCDAF, #1ABC9C)',
+      backgroundClass: 'main-theme-teacher',
       buttonClass: 'login-btn-teacher'
     },
     student: {
-      background: 'linear-gradient(145deg, #F3D054, #F1C40F)',
+      backgroundClass: 'main-theme-student',
       buttonClass: 'login-btn-student'
     },
     wali: {
-      background: 'linear-gradient(145deg, #F16B5C, #E74C3C)',
+      backgroundClass: 'main-theme-wali',
       buttonClass: 'login-btn-wali'
     }
   };
-  const defaultBackground = 'linear-gradient(145deg, #2f5f2d, #254F1A)';
+  // REMOVED: No need for a default background variable here anymore
 
   // --- State Variable ---
   let selectedRole = localStorage.getItem("selectedRole") || null;
 
   /**
-   * Updates the entire UI based on the current selectedRole.
+   * UPDATED: Updates the UI by toggling CSS classes.
    */
   function updateUI() {
-    // Update the selection state of the role buttons
+    // --- 1. Update Role Button Selection State ---
     allRoleButtons.forEach(button => {
-      // Find the role associated with the button from its onclick attribute
       const buttonRole = button.getAttribute('onclick').match(/'([^']+)'/)[1];
-
-      // First, remove any existing role classes to reset the button
       button.classList.remove('selected', ...Object.keys(roleThemes));
-
-      // If this button's role is the one currently selected, add the correct classes
       if (buttonRole === selectedRole) {
         button.classList.add('selected', buttonRole);
       }
     });
 
-    // --- UPDATE THE "NEXT" BUTTON AND BACKGROUND ---
+    // --- 2. Get all possible theme classes ---
+    const allThemeClasses = Object.values(roleThemes).map(theme => theme.buttonClass);
+    const allBackgroundClasses = Object.values(roleThemes).map(theme => theme.backgroundClass);
 
-    // First, reset the "Next" button by removing all possible theme classes
-    Object.values(roleThemes).forEach(theme => {
-      loginButton.classList.remove(theme.buttonClass);
-    });
+    // --- 3. Reset Button and Background ---
+    loginButton.classList.remove(...allThemeClasses);
+    mainElement.classList.remove(...allBackgroundClasses);
 
+    // --- 4. Apply New Theme if a role is selected ---
     if (selectedRole && roleThemes[selectedRole]) {
-      // If a role is selected, apply its theme to the background AND the "Next" button
-      mainElement.style.backgroundImage = roleThemes[selectedRole].background;
-      loginButton.classList.add(roleThemes[selectedRole].buttonClass);
-    } else {
-      // Otherwise, revert to the default theme
-      mainElement.style.backgroundImage = defaultBackground;
+      const theme = roleThemes[selectedRole];
+      // Add the correct classes to the main background and the login button
+      mainElement.classList.add(theme.backgroundClass);
+      loginButton.classList.add(theme.buttonClass);
     }
+    // If no role is selected, the elements automatically revert to their default styles
+    // defined in the CSS, so no 'else' block is needed.
   }
 
-  // Run once on page load to apply any saved theme from previous visits
+
+  // Run once on page load to apply any saved theme
   updateUI();
 
   /**
@@ -79,11 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   window.selectRole = (roleName) => {
     if (selectedRole === roleName) {
-      // If clicking the same role, deselect it
       selectedRole = null;
       localStorage.removeItem("selectedRole");
     } else {
-      // Otherwise, select the new role
       selectedRole = roleName;
       localStorage.setItem("selectedRole", roleName);
     }
