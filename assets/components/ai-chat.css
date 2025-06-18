@@ -1,0 +1,247 @@
+/* =================================
+   AI CHAT WIDGET - VISUAL OVERHAUL
+   ================================= */
+
+/* [NEW] Variabel dan Keyframe untuk efek "bernapas" */
+:root {
+    --student-accent-primary: #F1C40F;
+    --glass-bg: rgba(30, 30, 30, 0.4);
+    /* Dibuat sedikit lebih transparan */
+    --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+    --text-primary: #f0f0f0;
+    --text-secondary: #b8b8b8;
+}
+
+@keyframes breathing-glow {
+    0% {
+        box-shadow: 0 0 15px 0px rgba(241, 196, 15, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 25px 8px rgba(241, 196, 15, 0.2);
+    }
+
+    100% {
+        box-shadow: 0 0 15px 0px rgba(241, 196, 15, 0.4);
+    }
+}
+
+/* [UPDATED] Container utama widget */
+.chat-widget-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    width: 70px;
+    /* Ukuran disesuaikan */
+    height: 70px;
+    border-radius: 50%;
+    background: var(--student-accent-primary);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* [NEW] Terapkan animasi "bernapas" saat widget tertutup */
+.chat-widget-container:not(.active) {
+    animation: breathing-glow 4s infinite ease-in-out;
+}
+
+.chat-widget-container:not(.active):hover {
+    transform: scale(1.1);
+    animation-play-state: paused;
+    /* Hentikan animasi saat hover */
+}
+
+/* [UPDATED] Ikon di dalam tombol */
+.chat-widget-icon img {
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+}
+
+/* [UPDATED] Gaya saat widget aktif (terbuka) */
+.chat-widget-container.active {
+    width: 350px;
+    height: 550px;
+    border-radius: 15px;
+    background: var(--glass-bg);
+    border: var(--glass-border);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    cursor: default;
+    animation: none;
+    /* Hentikan animasi glow saat aktif */
+}
+
+.chat-widget-container.active .chat-widget-icon {
+    opacity: 0;
+    transform: scale(0);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* [UPDATED] Jendela Popup */
+.chat-widget-popup {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.95);
+    transition: opacity 0.3s ease 0.2s, transform 0.3s ease 0.2s;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-widget-container.active .chat-widget-popup {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+/* [UPDATED] Header Obrolan */
+.chat-header {
+    flex-shrink: 0;
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--text-primary);
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-close-btn {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 24px;
+    opacity: 0.8;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.chat-close-btn:hover {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+/* [UPDATED] Area Pesan */
+.chat-messages {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* [NEW] Styling untuk scrollbar */
+.chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* [UPDATED] Bubble Pesan */
+.message {
+    display: flex;
+    max-width: 85%;
+}
+
+.message-bubble {
+    padding: 12px 16px;
+    border-radius: 18px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.message.user {
+    align-self: flex-end;
+}
+
+.message.user .message-bubble {
+    background: var(--student-accent-primary);
+    color: #2C3E50;
+    font-weight: 500;
+    border-bottom-right-radius: 5px;
+}
+
+.message.ai {
+    align-self: flex-start;
+}
+
+.message.ai .message-bubble {
+    background: #333333;
+    color: var(--text-primary);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom-left-radius: 5px;
+}
+
+/* [UPDATED] Area Input */
+.chat-input-container {
+    flex-shrink: 0;
+    padding: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-input {
+    flex-grow: 1;
+    padding: 12px 18px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--text-primary);
+    transition: box-shadow 0.3s ease;
+}
+
+.chat-input:focus {
+    box-shadow: 0 0 0 2px var(--student-accent-primary);
+}
+
+.chat-send-btn {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: var(--student-accent-primary);
+    color: #2C3E50;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.chat-send-btn:hover {
+    background-color: var(--student-accent-secondary);
+    transform: scale(1.1);
+}
+
+.chat-send-btn svg {
+    width: 22px;
+    height: 22px;
+}

@@ -4,16 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TABS-TITLE -->
-    <title>SchoolGenix - Student - Classes</title>
+    <title>SchoolGenix - Student - Classes_1</title>
     <link rel="shortcut icon" href="../../assets/png/logo.png" type="image/png" />
-    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&family=Vampiro+One&display=swap"
-        rel="stylesheet" />
-    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../../assets/css/__reset.css" />
+    <link rel="stylesheet" href="../../assets/css/siswa.css" />
     <link rel="stylesheet" href="../../assets/css/siswa-classes-1.css" />
 </head>
 
@@ -41,9 +38,10 @@
             </div>
 
             <!-- logout button -->
-            <a href="../../index.html" class="logout-btn"><img src="../../assets/png/shutdown.png" alt="">Logout</a>
+            <div class="logout-section">
+                <a href="../../index.html" class="logout-btn"><img src="../../assets/png/shutdown.png" alt="">Logout</a>
+            </div>
         </navbar>
-
         <!-- MAIN CONTENT -->
         <div class="main-content">
             <!-- SEARCH BAR -->
@@ -61,55 +59,45 @@
                 <p class="welcome-main"">My Classes</p>
 
                 <!-- DROPDOWN -->
-                <div class="dropdown">
-                    <p class="dropdown-btn">
-                        2025, 1st Semester <span class="arrow">&#9662;</span>
-                    </p>
-                    <ul class="dropdown-menu">
-                        <li>2024, 2nd Semester</li>
-                        <li>2025, 1st Semester</li>
-                        <li>2025, 2nd Semester</li>
-                    </ul>
-                </div>
+                <div class=" dropdown">
+                <p class="dropdown-btn">
+                    2025, 1st Semester <span class="arrow">&#9662;</span>
+                </p>
+                <ul class="dropdown-menu">
+                    <li>2024, 2nd Semester</li>
+                    <li>2025, 1st Semester</li>
+                    <li>2025, 2nd Semester</li>
+                </ul>
             </div>
+        </div>
 
-            <div class="classes-content">
-                <div class="class-group">
-                    <div class="class-header">A</div>
-                    <div class="class-list">
-                        <div class="class-item">
-                            <a href="#" onclick="selectClass('Agama')"><img src="../../assets/png/religion-icon.png"
-                                    alt=""></a>
-                            <p>Agama</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-bar"></div>
-                <div class="class-group">
-                    <div class="class-header">B</div>
-                    <div class="class-list">
-                        <div class="class-item">
-                            <a href="#" onclick="selectClass('Biology')"><img src="../../assets/png/biology.png"
-                                    alt=""></a>
-                            <p>biology</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-bar"></div>
-                <div class="class-group">
-                    <div class="class-header">M</div>
-                    <div class="class-list">
-                        <div class="class-item">
-                            <a href="#" onclick="selectClass('Matematika')"><img src="../../assets/png/math-icon.png"
-                                    alt=""></a>
-                            <p>Matematika</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="classes-content">
+            <div class="class-item class-card" data-subject-name="Matematika">
+                <a>
+                    <img src="../../assets/png/math-icon.png" alt="Matematika Icon">
+                    <p>Matematika</p>
+                </a>
+            </div>
+            <div class="class-item class-card" data-subject-name="Biologi">
+                <a>
+                    <img src="../../assets/png/biology.png" alt="Biologi Icon">
+                    <p>Biologi</p>
+                </a>
+            </div>
+            <div class="class-item class-card" data-subject-name="Agama">
+                <a>
+                    <img src="../../assets/png/religion-icon.png" alt="Agama Icon">
+                    <p>Agama</p>
+                </a>
             </div>
         </div>
     </div>
+
+    <ai-chat-widget></ai-chat-widget>
+    <logout-modal></logout-modal>
+
     <script src="../../assets/js/siswa.js"></script>
+    <script src="../../assets/components/_components.js"></script>
 </body>
 
 </html>

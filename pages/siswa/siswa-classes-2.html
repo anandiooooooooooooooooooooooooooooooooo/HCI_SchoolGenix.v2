@@ -4,16 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TABS-TITLE -->
-    <title>SchoolGenix - Student - Classes</title>
+    <title>SchoolGenix - Student - Classes_2</title>
     <link rel="shortcut icon" href="../../assets/png/logo.png" type="image/png" />
-    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&family=Vampiro+One&display=swap"
-        rel="stylesheet" />
-    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../../assets/css/__reset.css" />
+    <link rel="stylesheet" href="../../assets/css/siswa.css" />
     <link rel="stylesheet" href="../../assets/css/siswa-classes-2.css" />
 </head>
 
@@ -22,9 +19,7 @@
         <div class="creator">
             <p>Created by Anandhio Varistama</p>
         </div>
-        <!-- SIDEBAR -->
         <navbar class="sidebar">
-            <!-- PROFILE -->
             <div class="profile-section">
                 <img src="../../assets/jpg/profile.png" alt="photo profile">
                 <div class="profile-wrap">
@@ -33,20 +28,18 @@
                 </div>
             </div>
 
-            <!-- sidebar menu -->
             <div class="sidebar-menu-section">
                 <a href="./siswa-dashboard.html"><img src="../../assets/png/dashboard.png" alt="">Dashboard</a>
                 <a href="./siswa-classes-1.html"><img src="../../assets/png/classes-2.png" alt="">Classes</a>
                 <a href="./siswa-schedule.html"><img src="../../assets/png/schedule-icon.png" alt="">Schedule</a>
             </div>
 
-            <!-- logout button -->
-            <a href="../../index.html" class="logout-btn"><img src="../../assets/png/shutdown.png" alt="">Logout</a>
+            <div class="logout-section">
+                <a href="../../index.html" class="logout-btn"><img src="../../assets/png/shutdown.png" alt="">Logout</a>
+            </div>
         </navbar>
 
-        <!-- MAIN CONTENT -->
         <div class="main-content">
-            <!-- SEARCH BAR -->
             <div class="searchbar-section">
                 <input class="searchbar" type="text" placeholder="Search...">
                 <div class="search-right-icon">
@@ -56,40 +49,35 @@
                 </div>
             </div>
 
-            <!-- WELCOME TEXT -->
             <div class="welcome-text-section">
-                <p class="welcome-main" id="class-name">My Classes</p>
+                <p class="welcome-main" id="class-name">Mathematics</p>
 
-                <!-- DROPDOWN -->
-                <div class=" dropdown">
-                <p class="dropdown-btn">
-                    2025, 1st Semester <span class="arrow">&#9662;</span>
-                </p>
-                <ul class="dropdown-menu">
-                    <li>2024, 2nd Semester</li>
-                    <li>2025, 1st Semester</li>
-                    <li>2025, 2nd Semester</li>
-                </ul>
+                <div class="dropdown">
+                    <p class="dropdown-btn">
+                        2025, 1st Semester <span class="arrow">&#9662;</span>
+                    </p>
+                    <ul class="dropdown-menu">
+                        <li>2024, 2nd Semester</li>
+                        <li>2025, 1st Semester</li>
+                        <li>2025, 2nd Semester</li>
+                    </ul>
                 </div>
             </div>
 
             <div class="classes-content">
-                <!-- NAV TABS -->
                 <div class="tabs">
-                    <div class="tab active" data-page="absence">Absence</div>
+                    <div class="tab" data-page="absence">Absence</div>
                     <div class="tab" data-page="sessions">Sessions</div>
                     <div class="tab" data-page="assessment">Assessment</div>
                     <div class="tab" data-page="forum">Forum</div>
                     <div class="tab" data-page="grades">Grades</div>
                 </div>
 
-                <!-- PAGES/CONTENT -->
                 <div class="pages">
-                    <!-- ABSENCE -->
                     <div id="absence" class="page">
                         <div class="absence-summary-container">
                             <p>Absence Summary</p>
-                            <p>2/25</p>
+                            <p>2 / 25 Meetings</p>
                         </div>
                         <div class="table-absence-container">
                             <table>
@@ -102,9 +90,19 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>04 Feb 2025, 09:20 GMT+7</td>
-                                        <td>Sakit</td>
-                                        <td class="requirement"></td>
+                                        <td>18 Jun 2025, 10:00 GMT+7</td>
+                                        <td>-</td>
+                                        <td class="requirement check">Present</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11 Jun 2025, 10:00 GMT+7</td>
+                                        <td>Sick</td>
+                                        <td class="requirement cross">Absent</td>
+                                    </tr>
+                                    <tr>
+                                        <td>04 Jun 2025, 10:00 GMT+7</td>
+                                        <td>Family Matter</td>
+                                        <td class="requirement cross">Absent</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -113,16 +111,30 @@
 
                     <div id="sessions" class="page">
                         <div class="left">
-                            <div class="content">
-                                <p>Sesi 1</p>
-                                <p>11, Januari 2025</p>
+                            <div class="session-card">
+                                <span>Session 3</span>
+                                <span>18, June 2025</span>
+                            </div>
+                            <div class="session-card">
+                                <span>Session 2</span>
+                                <span>11, June 2025</span>
+                            </div>
+                            <div class="session-card">
+                                <span>Session 1</span>
+                                <span>04, June 2025</span>
                             </div>
                         </div>
                         <div class="right">
-                            <p class="poppins-bold">What to do?</p>
-                            <div class="content">
-                                <img src="../../assets/test-img/testing.png" alt="materi">
-                                <p>Materi 1</p>
+                            <div class="session-content-card">
+                                <p class="poppins-bold">What to do?</p>
+                                <div class="content">
+                                    <img src="../../assets/png/math-icon.png" alt="materi">
+                                    <p>Materi 1 - Introduction to Algebra</p>
+                                </div>
+                                <div class="content">
+                                    <img src="../../assets/png/math-icon.png" alt="materi">
+                                    <p>Materi 2 - Advanced Equations</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -134,18 +146,25 @@
                                     <tr>
                                         <th>Session</th>
                                         <th>Title</th>
-                                        <th>Issues Date</th>
+                                        <th>Issued Date</th>
                                         <th>Deadline</th>
                                         <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>04 Feb 2025, 09:20 GMT+7</td>
-                                        <td>Blablablbalbaabla</td>
-                                        <td>01/01/2025</td>
-                                        <td>11/01/2025</td>
-                                        <td>Submitted</td>
+                                        <td>Session 2</td>
+                                        <td>Homework - Algebra Problems</td>
+                                        <td>11/06/2025</td>
+                                        <td>17/06/2025</td>
+                                        <td class="requirement check">Submitted</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Session 1</td>
+                                        <td>Quiz - Basic Equations</td>
+                                        <td>04/06/2025</td>
+                                        <td>05/06/2025</td>
+                                        <td class="requirement check">Graded</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -154,31 +173,43 @@
 
                     <div id="forum" class="page">
                         <div class="left">
-                            <div class="content">
-                                <p>Sesi 1</p>
+                            <div class="forum-topic-card active">
+                                <span>Session 2 - Homework Questions</span>
+                                <span>3 new messages</span>
+                            </div>
+                            <div class="forum-topic-card">
+                                <span>Session 1 - General Discussion</span>
+                                <span>No new messages</span>
+                            </div>
+                            <div class="forum-topic-card">
+                                <span>Off Topic</span>
+                                <span>1 new message</span>
                             </div>
                         </div>
                         <div class="right">
-                            <p>Session 1</p>
-                            <div class="bubble-left">
-                                <img src="../../assets/jpg/profile.png" alt="materi">
-                                <p>Guys, soal trigonometri yang di latihan kemarin susah banget Ada yang ngerti cara ngerjain nomor 7?</p>
-                            </div>
-                            <div class="bubble-right">
-                                <p>Itu yang pakai rumus sinus dua sudut kan? Aku pakai rumus sin(2x) = 2sin(x)cos(x), coba deh pake itu.</p>
-                                <img src="../../assets/jpg/profile.png" alt="materi">
-                            </div>
-                            <div class="bubble-left">
-                                <img src="../../assets/jpg/profile.png" alt="materi">
-                                <p>Betul, Farhan. Nomor 7 memang uji pemahaman rumus identitas trigonometri. Saya sudah unggah video penjelasannya juga di bagian Materi Digital, silakan dicek ya.</p>
-                            </div>
-                            <div class="bubble-right">
-                                <p>Itu yang pakai rumus sinus dua sudut kan? Aku pakai rumus sin(2x) = 2sin(x)cos(x), coba deh pake itu.</p>
-                                <img src="../../assets/jpg/profile.png" alt="materi">
-                            </div>
-                            <div class="input-chat">
-                                <input type="text" placeholder="Type a message">
-                                <img src="../../assets/png/send.png" alt="send">
+                            <p class="forum-title">Forum: Session 2 - Homework Questions</p>
+                            <div class="forum-chat-container">
+                                <div class="chat-area">
+                                    <div class="bubble-left">
+                                        <img src="../../assets/jpg/profile.png" alt="User Avatar">
+                                        <p>Guys, I'm stuck on problem number 7 from the homework. Can anyone help?</p>
+                                    </div>
+                                    <div class="bubble-right">
+                                        <img src="../../assets/jpg/profile.png" alt="User Avatar">
+                                        <p>That's the one using the quadratic formula, right? Remember to check the
+                                            discriminant (b²-4ac) first!</p>
+                                    </div>
+                                    <div class="bubble-left">
+                                        <img src="../../assets/jpg/profile.png" alt="Teacher Avatar">
+                                        <p>That's a great tip, Farhan. For everyone, I've also uploaded a video
+                                            explanation
+                                            in the Digital Materials section. Please check it out.</p>
+                                    </div>
+                                </div>
+                                <div class="input-chat">
+                                    <input type="text" placeholder="Type a message...">
+                                    <img src="../../assets/png/send.png" alt="send">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -187,24 +218,49 @@
                         <div class="grade-block">
                             <div class="above">
                                 <div class="left">
-                                    <img src="../../assets/test-img/testing.png" alt="">
-                                    <p>Mathematics</p>
+                                    <img src="../../assets/png/math-icon.png" alt="Icon">
+                                    <p>Algebra Homework</p>
                                 </div>
                                 <div class="right">
-                                    <img src="../../assets/test-img/testing.png" alt="">
+                                    <p style="color: var(--status-success);">88</p>
                                 </div>
                             </div>
                             <div class="below">
+                                <p>Type: Homework</p>
+                                <p>Weight: 15%</p>
+                                <p>Status: Graded</p>
+                            </div>
+                        </div>
+                        <div class="grade-block">
+                            <div class="above">
                                 <div class="left">
-                                    <p>24</p>
-                                </div>
-                                <div class="middle">
-                                    <p>3
-                                    </p>
+                                    <img src="../../assets/png/math-icon.png" alt="Icon">
+                                    <p>Mid-term Exam</p>
                                 </div>
                                 <div class="right">
-                                    <p>2/17</p>
+                                    <p style="color: var(--status-danger);">72</p>
                                 </div>
+                            </div>
+                            <div class="below">
+                                <p>Type: Exam</p>
+                                <p>Weight: 40%</p>
+                                <p>Status: Graded</p>
+                            </div>
+                        </div>
+                        <div class="grade-block">
+                            <div class="above">
+                                <div class="left">
+                                    <img src="../../assets/png/math-icon.png" alt="Icon">
+                                    <p>Final Project</p>
+                                </div>
+                                <div class="right">
+                                    <p>--</p>
+                                </div>
+                            </div>
+                            <div class="below">
+                                <p>Type: Project</p>
+                                <p>Weight: 30%</p>
+                                <p>Status: Not Submitted</p>
                             </div>
                         </div>
                     </div>
@@ -212,7 +268,11 @@
             </div>
         </div>
     </div>
+    <ai-chat-widget></ai-chat-widget>
+    <logout-modal></logout-modal>
+
     <script src="../../assets/js/siswa.js"></script>
+    <script src="../../assets/components/_components.js"></script>
 </body>
 
 </html>

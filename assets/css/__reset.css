@@ -249,3 +249,13 @@ template {
 [hidden] {
     display: none
 }
+
+.creator p{
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: red;;
+    font-size: 12px;
+    z-index: 1000;
+    font-family: 'Fira Code', Consolas, monospace;
+}
