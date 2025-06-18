@@ -1,12 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // --- DOM Element References ---
   const mainElement = document.querySelector('.main');
   const loginButton = document.querySelector('.login');
   const allRoleButtons = document.querySelectorAll('.role-button');
   const alertElement = document.getElementById('custom-alert');
 
-  // --- UPDATED: Theme Mapping now uses CSS classes ---
   const roleThemes = {
     admin: {
       backgroundClass: 'main-theme-admin',
@@ -29,16 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
       buttonClass: 'login-btn-wali'
     }
   };
-  // REMOVED: No need for a default background variable here anymore
 
-  // --- State Variable ---
   let selectedRole = localStorage.getItem("selectedRole") || null;
 
   /**
    * UPDATED: Updates the UI by toggling CSS classes.
    */
   function updateUI() {
-    // --- 1. Update Role Button Selection State ---
     allRoleButtons.forEach(button => {
       const buttonRole = button.getAttribute('onclick').match(/'([^']+)'/)[1];
       button.classList.remove('selected', ...Object.keys(roleThemes));

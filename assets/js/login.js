@@ -1,14 +1,10 @@
-// assets/js/login.js
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- Referensi Elemen DOM ---
     const mainElement = document.querySelector('.main');
-    const loginButton = document.querySelector('.login'); // BARU: Dapatkan referensi tombol Login
+    const loginButton = document.querySelector('.login');
     const alertElement = document.getElementById('custom-alert');
 
-    // --- Peta Tema (Termasuk Kelas Tombol) ---
-    // UPDATED: Menambahkan 'buttonClass' untuk setiap role
     const roleThemes = {
         admin: {
             background: 'linear-gradient(135deg, #34495E, #2C3E50)',
@@ -33,23 +29,17 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     const defaultLoginBackground = 'linear-gradient(135deg, #e9c0e9, #502274)';
 
-    // --- Logika Latar Belakang & Tombol Dinamis ---
     const role = localStorage.getItem("selectedRole");
 
     if (role && roleThemes[role]) {
-        // Jika role valid ditemukan:
-        // 1. Ubah latar belakang halaman.
         mainElement.style.backgroundImage = roleThemes[role].background;
 
-        // 2. BARU: Tambahkan kelas tema yang sesuai ke tombol Login.
         loginButton.classList.add(roleThemes[role].buttonClass);
 
     } else {
-        // Jika tidak ada role, gunakan latar belakang default.
         mainElement.style.backgroundImage = defaultLoginBackground;
     }
 
-    // --- Fungsi Halaman yang Ada ---
 
     window.goToBack = () => {
         window.location.href = "select.html";
@@ -60,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = document.getElementById("password").value.trim();
         const currentRole = localStorage.getItem("selectedRole");
 
-        if(!username && !password) {
+        if (!username && !password) {
             showAlert("Please enter both username and password.");
             return false;
         }
@@ -78,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return false;
         }
 
-        // Logika redirect Anda sudah benar
         const dashboardPaths = {
             student: "pages/siswa/siswa-dashboard.html",
             teacher: "pages/guru/guru-dashboard.html",

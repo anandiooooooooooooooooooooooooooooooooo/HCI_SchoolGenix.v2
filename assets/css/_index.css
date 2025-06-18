@@ -1,13 +1,10 @@
-/* =================================
-   GLOBAL & ANIMATION STYLES
-==================================== */
-
 html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
+    margin: 0;
 }
 
 .reveal-on-scroll {
@@ -21,9 +18,6 @@ body {
     transform: translateY(0);
 }
 
-/* =================================
-   MAIN STYLES WITH UNIFIED GLASS
-==================================== */
 
 .container {
     width: 100%;
@@ -41,17 +35,16 @@ body {
     gap: 50px;
 }
 
-/* HERO - Original background color is kept */
 .hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #254F1A;
     padding: 50px 90px 120px;
+    box-sizing: border-box;
     gap: 110px;
 }
 
-/* UPDATED: Navbar with your specified glass style */
 .hero-navbar {
     display: flex;
     justify-content: space-between;
@@ -61,11 +54,9 @@ body {
     max-width: 1400px;
     padding: 0 30px;
     z-index: 1001;
-    /* Your new glass style */
     background: rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-    /* Essential additions for the glass effect */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 50px;
@@ -75,14 +66,12 @@ body {
     display: none;
 }
 
-/* PENTING: Aturan yang hilang untuk menata garis-garis */
 .hamburger-menu .bar {
     display: block;
     width: 25px;
     height: 3px;
     margin: 5px auto;
     background-color: #333;
-    /* Warna default, akan diubah untuk mobile */
     transition: all 0.3s ease-in-out;
     border-radius: 2px;
 }
@@ -91,7 +80,6 @@ body {
     font-weight: 900;
     font-size: 24px;
     color: #FFFFFF;
-    /* White text for contrast on dark glass */
 }
 
 .hero-menu {
@@ -106,7 +94,6 @@ body {
 .hero-menu a {
     text-decoration: none;
     color: #FFFFFF;
-    /* White text */
     font-weight: 500;
     position: relative;
 }
@@ -126,7 +113,6 @@ body {
     width: 100%;
 }
 
-/* HERO CONTENT - Original colors are kept */
 .hero-content {
     display: flex;
     justify-content: space-between;
@@ -157,21 +143,24 @@ body {
     text-align: justify;
 }
 
+.hero img {
+    filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.3));
+}
 
-/* UPDATED: Buttons with your specified glass style */
 .hero-login,
 .hero-start-btn,
 .CTA-btn {
     border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
-    /* Your new glass style */
     background: rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-    /* Essential additions for the glass effect */
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-login a,
@@ -193,19 +182,46 @@ body {
 }
 
 .CTA-btn {
-    padding: 20px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 50px;
+    font-size: 20px;
 }
 
 .hero-login:hover,
 .hero-start-btn:hover,
 .CTA-btn:hover {
     background: rgba(0, 0, 0, 0.3);
-    /* Darken slightly on hover */
     transform: translateY(-3px);
 }
 
+.hero-login:hover{
+    transform: translateY(-1px);
+}
 
-/* SECTION STYLES - Original backgrounds are kept */
+.hero-login::after,
+.hero-start-btn::after,
+.CTA-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transform: translateX(-150%) skewX(-25deg);
+    transition: transform 0.85s ease;
+}
+
+.hero-login:hover::after,
+.hero-start-btn:hover::after,
+.CTA-btn:hover::after {
+    transform: translateX(250%) skewX(-25deg);
+}
+
+
 .features,
 .demo,
 .testimoni,
@@ -213,6 +229,7 @@ body {
 .footer {
     padding: 120px 90px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .features {
@@ -251,7 +268,6 @@ body {
     text-align: center;
 }
 
-/* FEATURES SECTION */
 .features-sec-1,
 .features-sec-2 {
     display: flex;
@@ -276,9 +292,21 @@ body {
     width: 150px;
 }
 
+.features-left-sec-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
 .features-left-sec-2 img {
-    width: 100%;
-    max-width: 500px;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
 .features-right-sec-2 {
@@ -309,23 +337,24 @@ body {
     line-height: 1.6;
 }
 
-
-/* UPDATED: Content cards with your specified glass style */
 .features-text,
 .testimoni-wrap {
+    display: flex;
+    flex-direction: column;;
     gap: 15px;
     padding: 25px;
-    /* Your new glass style */
     background: rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-    /* Essential additions for the glass effect */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
 }
 
-/* Text color inside these new dark cards must be light */
+.testimoni-wrap{
+    width: 100%;
+}
+
 .features-text,
 .features-text .features-main,
 .features-text .features-sub,
@@ -336,7 +365,10 @@ body {
     color: #FFFFFF;
 }
 
-/* DEMO & TESTIMONI */
+.features-right-sec-2 .features-text{
+    width: 100%;
+}
+
 .demo .demo-sub {
     padding: 0 100px;
     text-align: center;
@@ -346,6 +378,9 @@ body {
 .testimoni-video video {
     border-radius: 10px;
     max-width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
 .testimoni .sec {
@@ -360,7 +395,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    max-width: 600px;
+    width: 100%;
 }
 
 .testimoni-profile {
@@ -380,10 +415,11 @@ body {
     flex-direction: column;
     gap: 15px;
     align-items: center;
+    width: 100%;
 }
 
 .testimoni-video {
-    width: 350px;
+    width: 100%;
     height: 550px;
     overflow: hidden;
     border-radius: 10px;
@@ -394,9 +430,11 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
-/* CTA & FOOTER */
 .CTA>.wrapper,
 .footer>.wrapper {
     flex-direction: row;
@@ -411,8 +449,6 @@ body {
     width: 24px;
 }
 
-
-/* RESPONSIVE & BACK-TO-TOP (Unchanged but with fixes for glass effect) */
 .back-to-top {
     position: fixed;
     bottom: 30px;
@@ -421,28 +457,22 @@ body {
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    /* Slightly larger for better balance */
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-
-    /* === ADD THESE 3 LINES FOR PERFECT CENTERING === */
     display: flex;
     justify-content: center;
-    /* Centers horizontally */
     align-items: center;
-    /* Centers vertically */
 }
 
 .back-to-top img {
     width: 30px;
     height: 30px;
-    /* Adjusted size for better visibility */
     filter: invert();
 }
 
@@ -455,6 +485,10 @@ body {
     .hero {
         padding: 30px 40px 80px;
         gap: 60px;
+    }
+
+    .wrapper{
+        max-width: 750px;
     }
 
     .features,
@@ -521,7 +555,8 @@ body {
     }
 
     .wrapper {
-        padding: 0 20px;
+        padding: 0;
+        max-width: 650px;
     }
 
     .features,
@@ -534,12 +569,6 @@ body {
         padding: 0 20px;
     }
 
-    /* === Hamburger Menu Fixes & Logic === */
-
-    /* This is the most important fix.
-       By setting position: fixed, the entire menu element is removed
-       from the navbar's layout, preventing it from interfering with
-       the hamburger button's position. */
     .hero-menu {
         position: fixed;
         top: 0;
@@ -556,24 +585,20 @@ body {
         gap: 40px;
         transition: right 0.5s cubic-bezier(0.77, 0, 0.175, 1);
         z-index: 1001;
-        /* Below the hamburger button */
     }
 
     .hero-menu.active {
         right: 0;
     }
 
-    /* Make the hamburger button visible and place it on top */
     .hamburger-menu {
         display: block;
         cursor: pointer;
         z-index: 1002;
-        /* Above the menu overlay */
         background: none;
         border: none;
     }
 
-    /* Force the hamburger bars to be white to prevent visibility bugs */
     .hamburger-menu .bar {
         background-color: white !important;
     }
@@ -582,7 +607,6 @@ body {
         display: none;
     }
 
-    /* Staggered Link Animation */
     .hero-menu a {
         font-size: 24px;
         color: #FFFFFF;
@@ -608,7 +632,6 @@ body {
         transition-delay: 0.4s;
     }
 
-    /* Animate hamburger bars into an 'X' shape */
     .hamburger-menu.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
@@ -621,7 +644,6 @@ body {
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    /* --- Other original mobile styles --- */
     .hero-main-text,
     .features-title,
     .demo-title,
@@ -639,6 +661,7 @@ body {
 
     .hero-img {
         height: 250px;
+        filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.3));
     }
 
     .features-wrap {
@@ -659,8 +682,13 @@ body {
     .back-to-top {
         width: 40px;
         height: 40px;
-        font-size: 20px;
-        bottom: 20px;
         right: 20px;
+        bottom: 20px;
     }
+
+    .back-to-top img {
+        width: 24px;
+        height: 24px;
+    }
+
 }

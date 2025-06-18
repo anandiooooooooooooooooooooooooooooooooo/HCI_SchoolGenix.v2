@@ -1,8 +1,3 @@
-/* =================================
-   DYNAMIC & THEMED LOGIN STYLES
-==================================== */
-
-/* === Keyframe Animations === */
 @keyframes gradient-shift {
   0% {
     background-position: 0% 50%;
@@ -43,7 +38,6 @@
   }
 }
 
-/* === Base Styles === */
 body {
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
@@ -57,7 +51,6 @@ body {
   width: 100%;
   padding: 20px;
   transition: background 1s ease;
-  /* This is the DEFAULT background. JS will override it based on role. */
   background: linear-gradient(135deg, #34495E, #2C3E50);
   background-size: 400% 400%;
   animation: gradient-shift 15s ease infinite;
@@ -68,13 +61,11 @@ body {
   width: 100%;
 }
 
-/* === Floating Glass Form === */
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  /* Glass Effect */
   background: rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
@@ -82,11 +73,9 @@ form {
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-  /* Animations */
   animation: float 8s ease-in-out infinite, fadeInUp 0.8s ease-out forwards;
 }
 
-/* === Staggered Entrance Animations === */
 .title,
 .input-area,
 .check,
@@ -120,7 +109,6 @@ form {
   color: #FFFFFF;
 }
 
-/* === Interactive Inputs === */
 .input-area {
   width: 100%;
   gap: 20px;
@@ -159,16 +147,14 @@ input[type="password"] {
 input[type="text"]:focus,
 input[type="password"]:focus {
   outline: none;
-  border-color: #1ABC9C;
-  /* Teal Focus */
+  border-color: #FFFFFF;
   background-color: rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 20px rgba(26, 188, 156, 0.4);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
 input[type="text"]:focus+.icon,
 input[type="password"]:focus+.icon {
   color: #1ABC9C;
-  /* Teal Focus */
 }
 
 ::placeholder {
@@ -181,7 +167,6 @@ input:-webkit-autofill {
   -webkit-text-fill-color: white !important;
 }
 
-/* === Checkbox & Buttons === */
 .check {
   display: flex;
   align-items: center;
@@ -252,42 +237,65 @@ input:-webkit-autofill {
 .back:hover {
   background: #FFFFFF;
   color: #2C3E50;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
 }
 
 .login {
-  /* Default style before JS applies a role-specific class */
   background: #FFFFFF;
   color: #2C3E50;
   border-color: #FFFFFF;
+
+  position: relative;
+  overflow: hidden;
 }
 
-/* === Alert & Responsive === */
+.login::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+
+  transform: translateX(-150%) skewX(-25deg);
+
+  transition: transform 0.85s ease;
+}
+
+.login:hover::after {
+  transform: translateX(250%) skewX(-25deg);
+}
+
+.login:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+
 .custom-alert {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #E74C3C;
-  /* Using the Red from your palette */
   color: white;
   padding: 14px 22px;
   border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0px 30px rgba(255, 0, 0, 0.3);
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
-  /* Consistent font */
   z-index: 9999;
 
-  /* 1. Start invisible and slightly moved down */
   opacity: 0;
   transform: translateY(20px);
   visibility: hidden;
 
-  /* 2. Define a smooth transition for all changes */
   transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
 }
 
 .custom-alert.show {
-  /* 3. When .show is added, become visible and move to final position */
   opacity: 1;
   transform: translateY(0);
   visibility: visible;

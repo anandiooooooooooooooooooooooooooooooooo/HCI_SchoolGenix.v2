@@ -1,12 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // =========================================================================
-    // 1. IMPROVED HAMBURGER MENU
-    // =========================================================================
     const hamburger = document.querySelector('.hamburger-menu');
     const heroMenu = document.querySelector('.hero-menu');
     const menuLinks = document.querySelectorAll('.hero-menu a');
 
-    // Make sure all elements were found before adding event listeners
     if (hamburger && heroMenu && menuLinks.length > 0) {
         function openMenu() {
             hamburger.classList.add('active');
@@ -48,9 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // =========================================================================
-    // 2. REVEAL ON SCROLL ANIMATION
-    // =========================================================================
     const revealElements = document.querySelectorAll('.reveal-on-scroll');
     if (revealElements.length > 0) {
         const revealObserver = new IntersectionObserver((entries) => {
@@ -68,9 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // =========================================================================
-    // 3. BACK TO TOP BUTTON
-    // =========================================================================
     const backToTopButton = document.querySelector('.back-to-top');
     if (backToTopButton) {
         window.addEventListener('scroll', () => {
